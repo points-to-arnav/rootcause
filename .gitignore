@@ -12,7 +12,8 @@ __pycache__/
 htmlcov/
 
 # DuckDB / Ingested data artifacts & runtime databases
-**/data/
+/backend/data/
+/data/
 *.duckdb
 *.duckdb.wal
 *.jsonl
