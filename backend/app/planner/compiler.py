@@ -4,6 +4,20 @@ from app.planner.plan_schema import Plan, AdHocMetric
 from app.semantic.model import Metric, SemanticLayer
 from app.semantic.join_graph import JoinGraph
 
+
+def period_expr(metric_obj: Optional[Metric], metric_expr: str, cond_sql: str) -> str:
+    """
+    Restricts a metric to one time window.
+
+    DuckDB accepts FILTER only directly after a single aggregate call, so appending
+    it to a compound expression (`SUM(a) / COUNT(b)`) is a syntax error. Metrics that
+    need it therefore carry an `expr_conditional` template that places the predicate
+    inside each aggregate; everything else takes the plain FILTER suffix.
+    """
+    if metric_obj is not None and metric_obj.expr_conditional:
+        return metric_obj.expr_conditional.replace("{cond}", cond_sql)
+    return f"{metric_expr} FILTER (WHERE {cond_sql})"
+
 def compile_plan_to_sql(
     plan: Plan,
     semantic: SemanticLayer,
@@ -135,8 +149,10 @@ def compile_plan_to_sql(
             all_params = [min_start, max_end] + params
 
             # Use DuckDB native FILTER (WHERE ...) syntax
-            cur_agg = f"{metric_expr} FILTER (WHERE \"{t_tbl}\".\"{t_col}\" >= '{t_start}' AND \"{t_tbl}\".\"{t_col}\" < '{t_end}')"
-            prev_agg = f"{metric_expr} FILTER (WHERE \"{t_tbl}\".\"{t_col}\" >= '{b_start}' AND \"{t_tbl}\".\"{t_col}\" < '{b_end}')"
+            cur_cond = f"\"{t_tbl}\".\"{t_col}\" >= '{t_start}' AND \"{t_tbl}\".\"{t_col}\" < '{t_end}'"
+            prev_cond = f"\"{t_tbl}\".\"{t_col}\" >= '{b_start}' AND \"{t_tbl}\".\"{t_col}\" < '{b_end}'"
+            cur_agg = period_expr(metric_obj, metric_expr, cur_cond)
+            prev_agg = period_expr(metric_obj, metric_expr, prev_cond)
 
             sql = f'''
             SELECT 
@@ -233,8 +249,10 @@ def compile_plan_to_sql(
             all_where = [f'"{t_tbl}"."{t_col}" >= ? AND "{t_tbl}"."{t_col}" < ?'] + where_parts
             all_params = [min_start, max_end] + params
 
-            cur_agg = f"{metric_expr} FILTER (WHERE \"{t_tbl}\".\"{t_col}\" >= '{t_start}' AND \"{t_tbl}\".\"{t_col}\" < '{t_end}')"
-            prev_agg = f"{metric_expr} FILTER (WHERE \"{t_tbl}\".\"{t_col}\" >= '{b_start}' AND \"{t_tbl}\".\"{t_col}\" < '{b_end}')"
+            cur_cond = f"\"{t_tbl}\".\"{t_col}\" >= '{t_start}' AND \"{t_tbl}\".\"{t_col}\" < '{t_end}'"
+            prev_cond = f"\"{t_tbl}\".\"{t_col}\" >= '{b_start}' AND \"{t_tbl}\".\"{t_col}\" < '{b_end}'"
+            cur_agg = period_expr(metric_obj, metric_expr, cur_cond)
+            prev_agg = period_expr(metric_obj, metric_expr, prev_cond)
 
             sort_col = '"delta" ASC' if (plan.sort and plan.sort.by == "delta" and plan.sort.dir == "asc") else '"delta" DESC'
             if plan.sort and plan.sort.by == "metric":

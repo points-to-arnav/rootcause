@@ -23,7 +23,7 @@ def format_schema_context(semantic: SemanticLayer) -> str:
             sample_str = f"[{', '.join(str(s) for s in cmeta.samples[:4])}]" if cmeta.samples else ""
             cols_desc.append(f"{cname}:{cmeta.role}:{cmeta.dtype}{sample_str}")
         lines.append(f"Table {tname} ({tmeta.role}, {tmeta.row_count} rows): " + "; ".join(cols_desc))
-    
+
     # Joins
     joins_desc = [f"{r.from_col} -> {r.to_col}" for r in semantic.relationships]
     lines.append("Relationships: " + (", ".join(joins_desc) if joins_desc else "None"))
@@ -36,31 +36,15 @@ def format_metrics_context(semantic: SemanticLayer) -> str:
         lines.append(f"- {m.name}: {m.label} ({'additive' if m.additive else 'non-additive'}, time: {m.time_behavior}) {syn}")
     return "\n".join(lines)
 
-def plan_query(
-    question: str,
-    semantic: SemanticLayer,
-    value_index: Optional[ValueIndex] = None,
-    current_plan: Optional[Dict[str, Any]] = None,
-    recent_turns: Optional[List[Dict[str, Any]]] = None,
-    last_result_head: Optional[Dict[str, Any]] = None
-) -> PlannerOutput:
+def build_dataset_context(semantic: SemanticLayer) -> str:
     """
-    Translates user's question into structured PlannerOutput using LLM.
+    The part of the prompt that is identical for every question asked about this
+    dataset. It is sent as its own block so the Anthropic path can put a cache
+    breakpoint after it - the schema is re-read on every turn but paid for once.
+    Nothing volatile (a question, a turn counter, a timestamp) may appear here,
+    or the cache entry is invalidated on every call.
     """
-    system_prompt = load_system_prompt()
-
-    # Find value matches
-    value_matches = []
-    if value_index:
-        matches = value_index.search_question(question, score_threshold=85.0)
-        for m in matches[:6]:
-            if m["kind"] == "value":
-                value_matches.append(f"'{m['term']}' -> {m['target']} = '{m['value']}'")
-            elif m["kind"] == "metric":
-                value_matches.append(f"'{m['term']}' -> metric {m['target']}")
-
-    user_prompt = f"""
-<schema>
+    return f"""<schema>
 {format_schema_context(semantic)}
 </schema>
 
@@ -70,9 +54,33 @@ def plan_query(
 
 <time_info>
 Data range: {semantic.time.min} to {semantic.time.max}; Latest date (anchor): {semantic.time.anchor_date}
-</time_info>
+</time_info>"""
 
-<value_matches>
+def plan_query(
+    question: str,
+    semantic: SemanticLayer,
+    value_index: Optional[ValueIndex] = None,
+    current_plan: Optional[Dict[str, Any]] = None,
+    recent_turns: Optional[List[Dict[str, Any]]] = None,
+    last_result_head: Optional[Dict[str, Any]] = None
+) -> PlannerOutput:
+    """
+    Translates the user's question into a structured PlannerOutput using the LLM.
+    """
+    system_prompt = load_system_prompt()
+    dataset_context = build_dataset_context(semantic)
+
+    # Find value matches (question-dependent, so this stays out of the cached prefix)
+    value_matches = []
+    if value_index:
+        matches = value_index.search_question(question, score_threshold=85.0)
+        for m in matches[:6]:
+            if m["kind"] == "value":
+                value_matches.append(f"'{m['term']}' -> {m['target']} = '{m['value']}'")
+            elif m["kind"] == "metric":
+                value_matches.append(f"'{m['term']}' -> metric {m['target']}")
+
+    turn_prompt = f"""<value_matches>
 {chr(10).join(value_matches) if value_matches else "None"}
 </value_matches>
 
@@ -95,8 +103,10 @@ Data range: {semantic.time.min} to {semantic.time.max}; Latest date (anchor): {s
 
     return complete_json(
         system_prompt=system_prompt,
-        user_prompt=user_prompt,
+        user_prompt=turn_prompt,
         schema_cls=PlannerOutput,
         temperature=0.1,
-        max_tokens=600
+        max_tokens=1500,
+        stable_parts=[system_prompt, dataset_context],
+        stage="planner",
     )

@@ -6,7 +6,15 @@ from app.memory.session import SessionState, Turn, save_session
 from app.narrator.narrator import narrate_result
 from app.planner.compiler import compile_plan_to_sql
 from app.planner.executor import execute_query
-from app.planner.plan_schema import Plan, PlannerOutput
+from app.planner.plan_schema import (
+    Calendar,
+    Comparison,
+    LastN,
+    Plan,
+    PlannerOutput,
+    TimeSpec,
+)
+from app.llm.stats import STATS
 from app.planner.planner import plan_query
 from app.planner.timeutil import resolve_comparison_window, resolve_time_window
 from app.planner.validator import validate_plan
@@ -79,6 +87,9 @@ def run_ask_pipeline(
     """
     db_path = os.path.join(settings.DATA_DIR, session.dataset_id, "data.duckdb")
 
+    # Marker so we can report the LLM usage for this turn alone, not the process total.
+    stats_mark = STATS.current_seq()
+
     norm_q = question.strip().lower()
     cache_key = f"{session.dataset_id}:{norm_q}"
 
@@ -93,6 +104,10 @@ def run_ask_pipeline(
         ))
         save_session(session)
         logger.info(f"Serving cached demo query response for: '{question}'")
+        # A replayed answer cost nothing, so it must not inflate this turn's usage.
+        cached_resp["from_cache"] = True
+        cached_resp["llm_stats"] = STATS.turn_summary(STATS.current_seq())
+        cached_resp["llm_totals"] = STATS.summary()
         return cached_resp
 
     # 1. LLM Planning with network-resilient heuristic fallback
@@ -177,11 +192,17 @@ def run_ask_pipeline(
             "dq_warnings": [],
             "why": None,
             "suggestions": ["Show total revenue", "Monthly revenue for 2026", "Create management dashboard"],
-            "mode": "plan"
+            "mode": "plan",
+            "from_cache": False,
+            "llm_stats": STATS.turn_summary(stats_mark),
+            "llm_totals": STATS.summary(),
         }
 
     # 2. Follow-up Patch or New Plan
-    if planner_out.is_follow_up and planner_out.changes and current_plan_dict:
+    # `changes` may legitimately be an empty dict - a follow-up that alters no
+    # fields, such as "show that as a pie chart". Testing it for truthiness would
+    # drop the current plan and reset to a default KPI, so test for presence.
+    if planner_out.is_follow_up and planner_out.changes is not None and current_plan_dict:
         plan = patch_plan(current_plan_dict, planner_out.changes)
     else:
         plan = planner_out.plan or Plan(intent="kpi", metric="revenue")
@@ -210,7 +231,10 @@ def run_ask_pipeline(
             "dq_warnings": [],
             "why": None,
             "suggestions": ["Show total revenue", "Revenue by region"],
-            "mode": "plan"
+            "mode": "plan",
+            "from_cache": False,
+            "llm_stats": STATS.turn_summary(stats_mark),
+            "llm_totals": STATS.summary(),
         }
 
     # 4. Resolve Time
@@ -334,6 +358,10 @@ def run_ask_pipeline(
         "suggestions": suggestions,
         "mode": "plan"
     }
-    _DEMO_QUERY_CACHE[cache_key] = resp
+    # Cache the analysis, not the telemetry - a replay has its own (zero) usage.
+    _DEMO_QUERY_CACHE[cache_key] = dict(resp)
+    resp["from_cache"] = False
+    resp["llm_stats"] = STATS.turn_summary(stats_mark)
+    resp["llm_totals"] = STATS.summary()
     return resp
 

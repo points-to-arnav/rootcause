@@ -1,0 +1,204 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Design tokens
+   Dark is the only theme. Neutrals carry the interface; colour is reserved
+   for two jobs: interactive state (accent) and the direction of a number
+   (up / down). Nothing is coloured for decoration.
+--------------------------------------------------------------------------- */
+@theme {
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Surfaces, from furthest back to nearest front */
+  --color-ground: #0f1115;
+  --color-surface: #15181d;
+  --color-raised: #1c2026;
+  --color-overlay: #1a1e24;
+
+  /* Hairlines */
+  --color-line: #262b33;
+  --color-line-strong: #343a44;
+
+  /* Text */
+  --color-ink: #e6e8eb;
+  --color-ink-2: #9ba3ae;
+  --color-ink-3: #6b7480;
+
+  /* Interactive */
+  --color-accent: #5b8def;
+  --color-accent-hi: #7ba5f5;
+  --color-accent-dim: #2b3f66;
+
+  /* Data direction */
+  --color-up: #3fb47f;
+  --color-down: #e5606b;
+  --color-warn: #d8a13a;
+
+  /* Radii — hierarchy is expressed by size, not by a single global value */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background-color: var(--color-ground);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Figures line up in columns everywhere they appear. */
+  code,
+  pre,
+  kbd,
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 600;
+    letter-spacing: -0.011em;
+    margin: 0;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  /* Keep the pointer honest: only things that do something get the hand. */
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  summary,
+  a[href] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled='true'] {
+    cursor: not-allowed;
+  }
+
+  ::selection {
+    background: var(--color-accent-dim);
+    color: var(--color-ink);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line);
+    border: 3px solid var(--color-ground);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-line-strong);
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-ink-3);
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+}
+
+@layer components {
+  /* One reveal, used when an answer or a panel of results first appears.
+     Nothing else in the app animates on its own. */
+  .reveal {
+    animation: reveal 260ms var(--ease-out) both;
+  }
+
+  .reveal-row {
+    animation: reveal 220ms var(--ease-out) both;
+    animation-delay: calc(var(--row, 0) * 35ms);
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--color-raised) 0%,
+      #242931 50%,
+      var(--color-raised) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.4s linear infinite;
+  }
+
+  @keyframes shimmer {
+    to {
+      background-position: -200% 0;
+    }
+  }
+
+  .spin {
+    animation: spin 700ms linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
