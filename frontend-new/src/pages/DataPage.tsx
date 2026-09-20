@@ -54,7 +54,12 @@ export function DataPage() {
   }
 
   const totalRows = semantic.tables.reduce((sum, table) => sum + table.row_count, 0);
-  const summary = semantic.quality_summary;
+  // GET /semantic carries no quality_summary (only the upload response does), and
+  // the store always holds the /semantic shape, so count from the issue list.
+  const summary = {
+    total: qualityIssues.length,
+    high: qualityIssues.filter((issue) => issue.severity === 'high').length,
+  };
 
   return (
     <AppShell
