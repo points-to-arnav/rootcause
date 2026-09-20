@@ -110,6 +110,7 @@ _None yet._
 | D10 | Why engine: driver = top contribution ≥ 0.30 and lift ≥ 1.5; `(missing)` bucket keeps contributions summing to the total | Meaningful drivers, correct decomposition |
 | D11 | Default day-first when `dd/mm` vs `mm/dd` cannot be resolved; the ambiguity is flagged | Avoid silent misparse |
 | D12 | Core docs live at repo root as flat `.md` files | Simple for the coding assistant to find |
+| D13 | Detailed specs refine `architecture.md`; on conflict the detailed spec wins. Refinements: metric fields `time_behavior` and `extra_joins`; column flag `entity`; all joins are `LEFT JOIN`; `previous_period` is calendar-aware; `delta_pct` is in percent; `detail` intent rules; `time`/`why` patches merge one level deep; session stores `last_result_head`; `chart.value_format`; upload `notices`; optional `POST /datasets/sample`; DQ severity thresholds | Needed for correctness and follow-ups; see the individual spec files |
 
 ## Session notes
 _Add short dated notes here as work proceeds._

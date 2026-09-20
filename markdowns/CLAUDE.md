@@ -8,6 +8,8 @@ Users upload Excel/CSV data, ask questions in plain language, and get charts, KP
 - `architecture.md`: components, plan schema, API contract, folder layout
 - `implementation.md`: ordered build steps with "done when" criteria. Follow this order.
 - `progress.md`: live status. Update it after every completed task.
+- Detailed specs (they refine `architecture.md`; on conflict the detailed spec wins): `data-engine.md`, `semantic-layer.md`, `query-plan-spec.md`, `conversation-memory.md`, `analysis-modules.md`, `prompts.md`, `api-spec.md`, `frontend.md`, `viz-rules.md`
+- `test-cases.md` (datasets, golden questions), `demo-script.md`, `README.md` (submission deliverable)
 
 ## Non-negotiable rules
 1. **The LLM never does math and never sees the full dataset.** It turns a question into a structured query plan and turns aggregated results into words. All numbers come from DuckDB.
