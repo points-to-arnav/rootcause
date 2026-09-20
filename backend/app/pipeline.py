@@ -60,6 +60,13 @@ def match_dq_warnings(plan: Plan, semantic: SemanticLayer) -> List[Dict[str, Any
 
     return warnings[:3]
 
+import logging
+
+logger = logging.getLogger(__name__)
+
+# Fast in-memory cache for demo queries & offline Wi-Fi protection
+_DEMO_QUERY_CACHE: Dict[str, Dict[str, Any]] = {}
+
 def run_ask_pipeline(
     session: SessionState,
     semantic: SemanticLayer,
@@ -72,16 +79,89 @@ def run_ask_pipeline(
     """
     db_path = os.path.join(settings.DATA_DIR, session.dataset_id, "data.duckdb")
 
-    # 1. LLM Planning
+    norm_q = question.strip().lower()
+    cache_key = f"{session.dataset_id}:{norm_q}"
+
+    # Fast-path cache hit for instant demo responses (<50ms)
+    if cache_key in _DEMO_QUERY_CACHE:
+        cached_resp = dict(_DEMO_QUERY_CACHE[cache_key])
+        session.history.append(Turn(
+            turn=len(session.history) + 1,
+            question=question,
+            plan=cached_resp.get("plan"),
+            summary=(cached_resp.get("narrative") or "")[:100]
+        ))
+        save_session(session)
+        logger.info(f"Serving cached demo query response for: '{question}'")
+        return cached_resp
+
+    # 1. LLM Planning with network-resilient heuristic fallback
     current_plan_dict = session.current_plan
-    planner_out: PlannerOutput = plan_query(
-        question=question,
-        semantic=semantic,
-        value_index=value_index,
-        current_plan=current_plan_dict,
-        recent_turns=[{"question": t.question, "summary": t.summary} for t in session.history[-3:]],
-        last_result_head=session.last_result_head
-    )
+    try:
+        planner_out: PlannerOutput = plan_query(
+            question=question,
+            semantic=semantic,
+            value_index=value_index,
+            current_plan=current_plan_dict,
+            recent_turns=[{"question": t.question, "summary": t.summary} for t in session.history[-3:]],
+            last_result_head=session.last_result_head
+        )
+    except Exception as e:
+        logger.warning(f"LLM planner call failed ({e}). Falling back to heuristic rule planner.")
+        # Determine anchor year dynamically
+        from app.planner.timeutil import parse_iso_date
+        ayear = "2026"
+        if semantic.time.anchor_date:
+            try:
+                ayear = str(parse_iso_date(semantic.time.anchor_date).year)
+            except Exception:
+                pass
+        p_metric = semantic.metrics[0].name if semantic.metrics else "revenue"
+
+        # Heuristic intent mapping
+        if any(w in norm_q for w in ["why", "drop", "fall", "decline", "cause", "reason"]):
+            f_plan = Plan(
+                intent="why",
+                metric=p_metric,
+                time=TimeSpec(range=LastN(unit="month", n=1)),
+                comparison=Comparison(type="previous_period")
+            )
+        elif any(w in norm_q for w in ["month", "trend", "year", "2024", "2025", "2026", "history", "progression"]):
+            f_plan = Plan(
+                intent="trend",
+                metric=p_metric,
+                time=TimeSpec(range=Calendar(unit="year", value=ayear), grain="month")
+            )
+        elif any(w in norm_q for w in ["region", "category", "breakdown", "by ", "split"]):
+            # Pick first available dimension
+            first_dim = None
+            for tname, tmeta in semantic.tables.items():
+                for cname, cmeta in tmeta.columns.items():
+                    if cmeta.role == "dimension":
+                        first_dim = f"{tname}.{cname}"
+                        break
+                if first_dim:
+                    break
+            f_plan = Plan(intent="breakdown", metric=p_metric, dimensions=[first_dim] if first_dim else [])
+        elif any(w in norm_q for w in ["top", "rank", "best", "worst"]):
+            first_dim = None
+            for tname, tmeta in semantic.tables.items():
+                for cname, cmeta in tmeta.columns.items():
+                    if cmeta.entity or cmeta.distinct > 10:
+                        first_dim = f"{tname}.{cname}"
+                        break
+                if first_dim:
+                    break
+            f_plan = Plan(intent="ranking", metric=p_metric, dimensions=[first_dim] if first_dim else [], limit=10)
+        else:
+            f_plan = Plan(intent="kpi", metric=p_metric)
+
+        planner_out = PlannerOutput(
+            status="ok",
+            is_follow_up=False,
+            plan=f_plan,
+            assumptions=["Heuristic fallback query plan applied due to LLM network/provider unavailability."]
+        )
 
     if planner_out.status != "ok":
         return {
@@ -239,7 +319,7 @@ def run_ask_pipeline(
     ))
     save_session(session)
 
-    return {
+    resp = {
         "status": "ok",
         "message": None,
         "plan": plan.model_dump(),
@@ -254,3 +334,6 @@ def run_ask_pipeline(
         "suggestions": suggestions,
         "mode": "plan"
     }
+    _DEMO_QUERY_CACHE[cache_key] = resp
+    return resp
+

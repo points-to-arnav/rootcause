@@ -41,6 +41,14 @@ def health_check():
         "nvidia_nim_model": settings.NVIDIA_NIM_MODEL
     }
 
+from typing import Optional, Literal
+from pydantic import BaseModel
+
+class UpdateSettingsRequest(BaseModel):
+    active_provider: Optional[Literal["openrouter", "nvidia_nim"]] = None
+    openrouter_model: Optional[str] = None
+    nvidia_nim_model: Optional[str] = None
+
 @app.get("/api/settings")
 def get_settings():
     return {
@@ -52,9 +60,40 @@ def get_settings():
     }
 
 @app.post("/api/settings")
-def update_provider(provider: str):
-    if provider not in ["openrouter", "nvidia_nim"]:
-        return {"status": "error", "message": "Invalid provider. Choose 'openrouter' or 'nvidia_nim'"}
-    settings.LLM_PROVIDER = provider
-    logger.info(f"Switched LLM provider to: {provider}")
-    return {"status": "ok", "active_provider": settings.LLM_PROVIDER}
+def update_settings(req: Optional[UpdateSettingsRequest] = None, provider: Optional[str] = None):
+    chosen_provider = None
+    if req and req.active_provider:
+        chosen_provider = req.active_provider
+    elif provider:
+        chosen_provider = provider
+
+    if chosen_provider:
+        if chosen_provider not in ["openrouter", "nvidia_nim"]:
+            return {"status": "error", "message": "Invalid provider. Choose 'openrouter' or 'nvidia_nim'"}
+        settings.LLM_PROVIDER = chosen_provider
+        logger.info(f"Switched LLM provider to: {chosen_provider}")
+
+    if req and req.openrouter_model:
+        settings.OPENROUTER_MODEL = req.openrouter_model.strip()
+        logger.info(f"Updated OpenRouter model to: {settings.OPENROUTER_MODEL}")
+
+    if req and req.nvidia_nim_model:
+        settings.NVIDIA_NIM_MODEL = req.nvidia_nim_model.strip()
+        logger.info(f"Updated NVIDIA NIM model to: {settings.NVIDIA_NIM_MODEL}")
+
+    return {
+        "active_provider": settings.LLM_PROVIDER,
+        "openrouter_model": settings.OPENROUTER_MODEL,
+        "nvidia_nim_model": settings.NVIDIA_NIM_MODEL,
+        "max_result_rows": settings.MAX_RESULT_ROWS,
+        "query_timeout_s": settings.QUERY_TIMEOUT_S
+    }
+
+@app.on_event("startup")
+def warmup_on_startup():
+    import os
+    os.makedirs(settings.DATA_DIR, exist_ok=True)
+    sample_db = os.path.join(settings.DATA_DIR, "ds_retail_sample", "data.duckdb")
+    if os.path.exists(sample_db):
+        logger.info("Warmup: Demo dataset 'ds_retail_sample' pre-loaded and ready.")
+
