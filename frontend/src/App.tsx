@@ -14,7 +14,7 @@ export function App() {
   }, [loadInitialSettings]);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
+    <div className="min-h-screen bg-[#050505] text-[#EDEDED] flex flex-col font-sans selection:bg-cyan-500/20 selection:text-cyan-200 relative z-10">
       <Navbar />
 
       <main className="flex-1">

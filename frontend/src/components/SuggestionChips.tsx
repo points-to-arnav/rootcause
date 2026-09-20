@@ -10,16 +10,16 @@ export const SuggestionChips: React.FC<SuggestionChipsProps> = ({ suggestions, o
   if (!suggestions || suggestions.length === 0) return null;
 
   return (
-    <div className="flex flex-wrap items-center gap-2 mt-3 pt-2">
-      <div className="flex items-center gap-1 text-[11px] font-medium text-slate-500 mr-1">
-        <Sparkles className="w-3 h-3 text-indigo-400" />
-        <span>Suggested:</span>
+    <div className="flex flex-wrap items-center gap-1.5 mt-3 pt-2">
+      <div className="flex items-center gap-1 text-[10px] font-mono text-[#71717A] mr-1">
+        <Sparkles className="w-3 h-3 text-cyan-400" />
+        <span>SUGGESTED INVESTIGATION:</span>
       </div>
       {suggestions.map((s, idx) => (
         <button
           key={idx}
           onClick={() => onSelect(s)}
-          className="px-3 py-1.5 rounded-full text-xs bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/60 hover:bg-indigo-950/30 transition-all text-left"
+          className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-[#0D0D0D] border border-[#1E1E1E] text-[#A1A1AA] hover:text-white hover:border-[#333333] hover:bg-[#141414] transition-all text-left cursor-pointer"
         >
           {s}
         </button>

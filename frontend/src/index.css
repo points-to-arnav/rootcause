@@ -2,44 +2,159 @@
 
 @layer base {
   :root {
-    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Geist', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #0d0f17;
-    color: #e2e8f0;
+    background-color: #050505;
+    color: #EDEDED;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     overflow-x: hidden;
+    position: relative;
   }
 
-  /* Custom sleek dark scrollbars */
+  /* Atmospheric Ambient Radial Gradients */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    height: 60vh;
+    background: radial-gradient(ellipse at top left, rgba(76, 5, 25, 0.18) 0%, rgba(76, 5, 25, 0.04) 45%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(80px);
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 65vw;
+    height: 65vh;
+    background: radial-gradient(ellipse at bottom right, rgba(8, 47, 73, 0.22) 0%, rgba(8, 47, 73, 0.05) 50%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(90px);
+  }
+
+  /* Custom high-tech minimal scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   }
   ::-webkit-scrollbar-track {
-    background: #0f172a;
+    background: #080808;
   }
   ::-webkit-scrollbar-thumb {
-    background: #334155;
-    border-radius: 3px;
+    background: #222222;
+    border-radius: 2px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #475569;
+    background: #333333;
   }
 }
 
-.glass-panel {
-  background: rgba(17, 24, 39, 0.75);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Bento-Box Design Tokens (Strict 16px Radius, 1px Border) */
+.bento-card {
+  background-color: #0A0A0A;
+  border-radius: 16px;
+  border: 1px solid #1E1E1E;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.glass-card {
-  background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+.bento-card:hover {
+  border-color: #2E2E2E;
+}
+
+.bento-card-elevated {
+  background-color: #0C0C0C;
+  border-radius: 16px;
+  border: 1px solid #2A2A2A;
+}
+
+/* Glassmorphic Floating Command & Search Bar */
+.glass-search-bar {
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid #242424;
+  border-radius: 16px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-search-bar:focus-within {
+  border-color: #06B6D4;
+  box-shadow: 0 0 0 1px #06B6D4, 0 0 24px rgba(6, 182, 212, 0.16);
+}
+
+/* Tactical Technical Badges */
+.badge-anomaly {
+  background: rgba(76, 5, 25, 0.55);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  color: #FDA4AF;
+  font-family: var(--font-mono);
+}
+
+.badge-nominal {
+  background: rgba(8, 47, 73, 0.55);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  color: #67E8F9;
+  font-family: var(--font-mono);
+}
+
+.badge-growth {
+  background: rgba(6, 78, 59, 0.4);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #6EE7B7;
+  font-family: var(--font-mono);
+}
+
+/* Tactical Primary Action Button (Solid fill #EDEDED, hover white glow) */
+.btn-framer-primary {
+  background-color: #EDEDED;
+  color: #050505;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.btn-framer-primary:hover {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.25);
+}
+
+/* Tactical Secondary Action Button */
+.btn-framer-secondary {
+  background-color: #0D0D0D;
+  border: 1px solid #242424;
+  color: #D4D4D8;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.btn-framer-secondary:hover {
+  background-color: #161616;
+  border-color: #383838;
+  color: #FFFFFF;
+}
+
+/* Custom dashed drag-drop zone */
+.dropzone-dashed {
+  background: #080808;
+  border: 1px dashed #303030;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.dropzone-dashed:hover, .dropzone-dashed.drag-active {
+  border-color: #06B6D4;
+  background: rgba(8, 47, 73, 0.12);
 }

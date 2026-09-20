@@ -37,7 +37,7 @@ interface AppState {
 export const useAppStore = create<AppState>((set, get) => ({
   datasetId: sessionStorage.getItem('rootcause_dataset_id') || null,
   sessionId: sessionStorage.getItem('rootcause_session_id') || null,
-  currentTab: 'upload',
+  currentTab: 'dashboard',
   semantic: null,
   qualityIssues: [],
   messages: [],

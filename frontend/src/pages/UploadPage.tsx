@@ -2,15 +2,14 @@ import React, { useRef, useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import {
   UploadCloud,
-  FileSpreadsheet,
   Database,
   ArrowRight,
   AlertTriangle,
-  CheckCircle2,
   Table as TableIcon,
   Sparkles,
   Link2,
-  Loader2
+  Loader2,
+  Terminal
 } from 'lucide-react';
 
 export const UploadPage: React.FC = () => {
@@ -59,16 +58,16 @@ export const UploadPage: React.FC = () => {
   );
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-8 space-y-8">
+    <div className="max-w-6xl mx-auto px-6 py-8 space-y-8 font-sans">
       {/* Hero Banner / Upload Zone */}
       {!semantic ? (
         <div className="space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-3">
-            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-              Turn Business Data into <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">Instant Answers</span>
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white font-mono uppercase">
+              DATASET INTAKE // <span className="text-cyan-400">SCHEMA INFERENCE</span>
             </h1>
-            <p className="text-sm text-slate-400">
-              Upload multi-sheet Excel or CSV files. RootCause automatically infers schemas, detects relationships, profiles data quality, and builds an AI analyst sandbox with zero manual setup.
+            <p className="text-xs sm:text-sm text-[#888888] font-mono leading-relaxed">
+              Upload multi-sheet Excel or CSV files. RootCause automatically infers schemas, detects joins, profiles data quality, and compiles an in-memory DuckDB sandbox.
             </p>
           </div>
 
@@ -77,35 +76,33 @@ export const UploadPage: React.FC = () => {
             onDragLeave={handleDrag}
             onDragOver={handleDrag}
             onDrop={handleDrop}
-            className={`border-2 border-dashed rounded-3xl p-10 text-center transition-all ${
-              dragActive
-                ? 'border-indigo-500 bg-indigo-950/20'
-                : 'border-slate-800 bg-slate-900/40 hover:border-slate-700'
+            className={`dropzone-dashed p-10 text-center transition-all ${
+              dragActive ? 'drag-active' : ''
             }`}
           >
             <input
               ref={fileInputRef}
               type="file"
               multiple
-              accept=".xlsx,.xls,.csv"
+              accept=".xlsx,.xls,.csv,.parquet"
               onChange={handleFileChange}
               className="hidden"
             />
 
-            <div className="flex flex-col items-center justify-center space-y-4">
-              <div className="w-16 h-16 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shadow-xl shadow-indigo-500/10">
+            <div className="flex flex-col items-center justify-center space-y-4 font-mono">
+              <div className="w-14 h-14 rounded-2xl bg-[#111111] border border-[#222222] flex items-center justify-center text-cyan-400 shadow-inner">
                 {isLoading ? (
-                  <Loader2 className="w-8 h-8 animate-spin" />
+                  <Loader2 className="w-7 h-7 animate-spin" />
                 ) : (
-                  <UploadCloud className="w-8 h-8" />
+                  <UploadCloud className="w-7 h-7" />
                 )}
               </div>
 
               <div className="space-y-1">
-                <p className="text-base font-medium text-slate-200">
-                  {isLoading ? 'Ingesting, Profiling & Detecting Schema...' : 'Drag & drop Excel or CSV files here'}
+                <p className="text-sm font-semibold text-white">
+                  {isLoading ? 'Ingesting, Profiling & Detecting Schema...' : 'Drag & drop Excel, CSV, or Parquet files'}
                 </p>
-                <p className="text-xs text-slate-500">Supports .xlsx (all sheets), .csv, .tsv</p>
+                <p className="text-xs text-[#71717A]">Supported: .xlsx (multi-sheet), .csv, .parquet</p>
               </div>
 
               <div className="flex items-center gap-3 pt-2">
@@ -113,21 +110,21 @@ export const UploadPage: React.FC = () => {
                   type="button"
                   disabled={isLoading}
                   onClick={() => fileInputRef.current?.click()}
-                  className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white rounded-xl text-xs font-semibold shadow-lg shadow-indigo-500/25 transition"
+                  className="btn-framer-primary px-4 py-2 text-xs font-mono cursor-pointer"
                 >
                   Browse Files
                 </button>
 
-                <span className="text-xs text-slate-500">or</span>
+                <span className="text-xs text-[#52525B]">or</span>
 
                 <button
                   type="button"
                   disabled={isLoading}
                   onClick={loadSample}
-                  className="flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 text-slate-200 rounded-xl text-xs font-semibold border border-slate-700 transition"
+                  className="btn-framer-secondary flex items-center gap-2 px-4 py-2 text-xs font-mono cursor-pointer"
                 >
-                  <Sparkles className="w-4 h-4 text-violet-400" />
-                  <span>Load Retail Demo Dataset</span>
+                  <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>Load Sample Retail Dataset</span>
                 </button>
               </div>
             </div>
@@ -135,24 +132,24 @@ export const UploadPage: React.FC = () => {
         </div>
       ) : (
         /* Ingested Overview */
-        <div className="space-y-6">
-          <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div className="space-y-6 font-mono">
+          <div className="flex items-center justify-between pb-4 border-b border-[#1E1E1E]">
             <div>
-              <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                <Database className="w-5 h-5 text-indigo-400" />
-                <span>Dataset Overview: {semantic.dataset_id}</span>
+              <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2 tracking-tight">
+                <Database className="w-4 h-4 text-cyan-400" />
+                <span>DATASET INGESTED: {semantic.dataset_id}</span>
               </h2>
-              <p className="text-xs text-slate-400 mt-0.5">
+              <p className="text-xs text-[#888888] mt-0.5">
                 {semantic.tables.length} tables • Anchor Date: {semantic.time?.anchor_date || 'N/A'} • {semantic.relationships.length} joins detected
               </p>
             </div>
 
             <button
-              onClick={() => setTab('analyst')}
-              className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-semibold shadow-lg shadow-indigo-500/25 transition"
+              onClick={() => setTab('dashboard')}
+              className="btn-framer-primary flex items-center gap-2 px-4 py-2 text-xs cursor-pointer"
             >
-              <span>Ask AI Analyst</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Launch Bento Dashboard</span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#050505]" />
             </button>
           </div>
 
@@ -160,54 +157,54 @@ export const UploadPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
             {/* Table Selector Sidebar */}
             <div className="space-y-2">
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">
-                Ingested Tables
+              <span className="text-[11px] font-semibold text-[#888888] uppercase tracking-wider block mb-2">
+                INGESTED TABLES
               </span>
               {semantic.tables.map((tbl) => (
                 <button
                   key={tbl.name}
                   onClick={() => setSelectedTable(tbl.name)}
-                  className={`w-full p-3 rounded-xl border text-left flex items-center justify-between transition ${
+                  className={`w-full p-3 rounded-xl border text-left flex items-center justify-between transition cursor-pointer ${
                     (selectedTable || semantic.tables[0]?.name) === tbl.name
-                      ? 'bg-indigo-950/40 border-indigo-500/80 text-white shadow-sm'
-                      : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700'
+                      ? 'bg-[#141414] border-cyan-500/60 text-white'
+                      : 'bg-[#0A0A0A] border-[#1E1E1E] text-[#888888] hover:border-[#2E2E2E]'
                   }`}
                 >
                   <div className="flex items-center gap-2.5 truncate">
-                    <TableIcon className="w-4 h-4 text-indigo-400 shrink-0" />
+                    <TableIcon className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                     <span className="font-semibold text-xs truncate">{tbl.name}</span>
                   </div>
                   <div className="flex items-center gap-1.5 shrink-0">
                     <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold ${
-                      tbl.role === 'fact' ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20' : 'bg-slate-800 text-slate-400'
+                      tbl.role === 'fact' ? 'badge-anomaly' : 'bg-[#141414] text-[#888888] border border-[#262626]'
                     }`}>
                       {tbl.role}
                     </span>
-                    <span className="text-[11px] text-slate-500">{tbl.row_count.toLocaleString()} rows</span>
+                    <span className="text-[10px] text-[#71717A]">{tbl.row_count.toLocaleString()}</span>
                   </div>
                 </button>
               ))}
 
               {/* Data Quality Summary Card */}
-              <div className="mt-4 p-4 bg-slate-900/80 border border-slate-800 rounded-2xl space-y-3">
+              <div className="mt-4 p-4 bento-card space-y-3">
                 <div className="flex items-center justify-between text-xs font-semibold">
-                  <span className="text-slate-300 flex items-center gap-1.5">
-                    <AlertTriangle className="w-4 h-4 text-amber-400" /> Data Quality
+                  <span className="text-white flex items-center gap-1.5">
+                    <AlertTriangle className="w-3.5 h-3.5 text-amber-400" /> DATA QUALITY
                   </span>
-                  <span className="text-slate-500">{qualityIssues.length} issues</span>
+                  <span className="text-[#888888]">{qualityIssues.length} issues</span>
                 </div>
                 <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                  <div className="p-2 bg-rose-500/10 border border-rose-500/20 rounded-lg">
-                    <span className="block font-bold text-rose-400">{semantic.quality_summary?.high ?? 0}</span>
-                    <span className="text-[10px] text-slate-400">High</span>
+                  <div className="p-2 bg-[#1C080A] border border-[#4C0519] rounded-lg">
+                    <span className="block font-bold text-[#FDA4AF]">{semantic.quality_summary?.high ?? 0}</span>
+                    <span className="text-[10px] text-[#888888]">High</span>
                   </div>
-                  <div className="p-2 bg-amber-500/10 border border-amber-500/20 rounded-lg">
-                    <span className="block font-bold text-amber-400">{semantic.quality_summary?.medium ?? 0}</span>
-                    <span className="text-[10px] text-slate-400">Med</span>
+                  <div className="p-2 bg-amber-950/30 border border-amber-500/30 rounded-lg">
+                    <span className="block font-bold text-amber-300">{semantic.quality_summary?.medium ?? 0}</span>
+                    <span className="text-[10px] text-[#888888]">Med</span>
                   </div>
-                  <div className="p-2 bg-slate-800/60 border border-slate-700/40 rounded-lg">
-                    <span className="block font-bold text-slate-300">{semantic.quality_summary?.low ?? 0}</span>
-                    <span className="text-[10px] text-slate-400">Low</span>
+                  <div className="p-2 bg-[#141414] border border-[#222222] rounded-lg">
+                    <span className="block font-bold text-[#CCCCCC]">{semantic.quality_summary?.low ?? 0}</span>
+                    <span className="text-[10px] text-[#888888]">Low</span>
                   </div>
                 </div>
               </div>
@@ -216,51 +213,51 @@ export const UploadPage: React.FC = () => {
             {/* Column & Details View */}
             <div className="lg:col-span-3 space-y-6">
               {activeTable && (
-                <div className="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
-                  <div className="px-5 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
+                <div className="bento-card overflow-hidden">
+                  <div className="px-5 py-3 border-b border-[#1E1E1E] flex items-center justify-between bg-[#080808]">
                     <div className="flex items-center gap-2">
-                      <span className="font-semibold text-sm text-white">{activeTable.name}</span>
-                      <span className="text-xs text-slate-400">({activeTable.row_count.toLocaleString()} rows)</span>
+                      <span className="font-semibold text-xs text-white uppercase">{activeTable.name}</span>
+                      <span className="text-[11px] text-[#71717A]">({activeTable.row_count.toLocaleString()} rows)</span>
                     </div>
-                    <span className="text-xs text-slate-500">
+                    <span className="text-[11px] text-[#71717A]">
                       {Object.keys(activeTable.columns).length} columns detected
                     </span>
                   </div>
 
                   <div className="overflow-x-auto max-h-[380px]">
-                    <table className="w-full text-left text-xs">
-                      <thead className="bg-slate-950 text-slate-400 sticky top-0 border-b border-slate-800">
+                    <table className="w-full text-left text-xs border-collapse">
+                      <thead className="bg-[#050505] text-[#888888] sticky top-0 border-b border-[#1E1E1E]">
                         <tr>
-                          <th className="px-4 py-2.5 font-semibold">Column</th>
-                          <th className="px-4 py-2.5 font-semibold">Type</th>
-                          <th className="px-4 py-2.5 font-semibold">Role</th>
-                          <th className="px-4 py-2.5 font-semibold">Null %</th>
-                          <th className="px-4 py-2.5 font-semibold">Sample Values</th>
+                          <th className="px-4 py-2 font-medium">Column</th>
+                          <th className="px-4 py-2 font-medium">Type</th>
+                          <th className="px-4 py-2 font-medium">Role</th>
+                          <th className="px-4 py-2 font-medium">Null %</th>
+                          <th className="px-4 py-2 font-medium">Sample Values</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-slate-800/60">
+                      <tbody className="divide-y divide-[#141414] bg-[#0A0A0A]">
                         {Object.values(activeTable.columns).map((col) => (
-                          <tr key={col.name} className="hover:bg-slate-800/30">
-                            <td className="px-4 py-2.5 font-mono text-slate-200 font-medium">
+                          <tr key={col.name} className="hover:bg-[#121212]">
+                            <td className="px-4 py-2.5 font-mono text-white font-medium">
                               {col.name}
                             </td>
-                            <td className="px-4 py-2.5 text-slate-400 font-mono text-[11px]">
+                            <td className="px-4 py-2.5 text-[#888888] font-mono text-[11px]">
                               {col.dtype}
                             </td>
                             <td className="px-4 py-2.5">
                               <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${
                                 col.role === 'measure'
-                                  ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
+                                  ? 'badge-growth'
                                   : col.role === 'time'
-                                  ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
+                                  ? 'badge-nominal'
                                   : col.role === 'id'
-                                  ? 'bg-purple-500/10 text-purple-400 border border-purple-500/20'
-                                  : 'bg-slate-800 text-slate-300'
+                                  ? 'badge-anomaly'
+                                  : 'bg-[#141414] text-[#888888] border border-[#262626]'
                               }`}>
                                 {col.role}
                               </span>
                             </td>
-                            <td className="px-4 py-2.5 text-slate-400 font-mono">
+                            <td className="px-4 py-2.5 text-[#888888] font-mono">
                               {col.null_pct > 0 ? (
                                 <span className="text-amber-400 font-medium">
                                   {Math.round(col.null_pct * 100)}%
@@ -269,7 +266,7 @@ export const UploadPage: React.FC = () => {
                                 '0%'
                               )}
                             </td>
-                            <td className="px-4 py-2.5 text-slate-400 text-[11px] truncate max-w-xs font-mono">
+                            <td className="px-4 py-2.5 text-[#71717A] text-[11px] truncate max-w-xs font-mono">
                               {col.samples && col.samples.length > 0
                                 ? col.samples.join(', ')
                                 : '—'}
@@ -283,29 +280,29 @@ export const UploadPage: React.FC = () => {
               )}
 
               {/* Inferred Relationships & Joins */}
-              <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl">
-                <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
-                  <Link2 className="w-3.5 h-3.5 text-indigo-400" /> Inferred Join Graph
+              <div className="bento-card p-5">
+                <h3 className="text-xs font-semibold text-[#888888] uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                  <Link2 className="w-3.5 h-3.5 text-cyan-400" /> INFERRED JOIN GRAPH
                 </h3>
 
                 {semantic.relationships.length === 0 ? (
-                  <p className="text-xs text-slate-500">No multi-table relationships detected.</p>
+                  <p className="text-xs text-[#71717A]">No multi-table relationships detected.</p>
                 ) : (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {semantic.relationships.map((rel, idx) => (
                       <div
                         key={idx}
-                        className="p-3 bg-slate-950/60 border border-slate-800 rounded-xl flex items-center justify-between text-xs"
+                        className="p-3 bg-[#080808] border border-[#1E1E1E] rounded-xl flex items-center justify-between text-xs"
                       >
                         <div className="space-y-0.5">
-                          <div className="flex items-center gap-1.5 font-mono text-slate-200">
-                            <span className="text-indigo-400 font-semibold">{rel.from}</span>
-                            <ArrowRight className="w-3 h-3 text-slate-500" />
-                            <span className="text-indigo-400 font-semibold">{rel.to}</span>
+                          <div className="flex items-center gap-1.5 font-mono text-white">
+                            <span className="text-cyan-400 font-semibold">{rel.from}</span>
+                            <ArrowRight className="w-3 h-3 text-[#52525B]" />
+                            <span className="text-cyan-400 font-semibold">{rel.to}</span>
                           </div>
-                          <span className="text-[11px] text-slate-500 capitalize">{rel.type.replace(/_/g, ' ')}</span>
+                          <span className="text-[10px] text-[#71717A] capitalize">{rel.type.replace(/_/g, ' ')}</span>
                         </div>
-                        <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
+                        <span className="px-2 py-0.5 rounded text-[10px] font-semibold badge-growth font-mono">
                           {Math.round(rel.confidence * 100)}% match
                         </span>
                       </div>

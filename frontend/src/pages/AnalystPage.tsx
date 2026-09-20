@@ -1,16 +1,34 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { AnswerCard } from '../components/AnswerCard';
-import { Send, Bot, User, Loader2, Sparkles, AlertCircle } from 'lucide-react';
+import { Send, Bot, User, Sparkles, Terminal, Activity, Database } from 'lucide-react';
 
 export const AnalystPage: React.FC = () => {
-  const { messages, isLoading, sendMessage, datasetId, setTab } = useAppStore();
+  const { messages, isLoading, sendMessage, datasetId, loadSample, setTab } = useAppStore();
   const [input, setInput] = useState('');
   const chatBottomRef = useRef<HTMLDivElement>(null);
+  const [step, setStep] = useState(0);
 
   useEffect(() => {
     chatBottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isLoading]);
+
+  useEffect(() => {
+    let t1: any, t2: any, t3: any;
+    if (isLoading) {
+      setStep(1);
+      t1 = setTimeout(() => setStep(2), 500);
+      t2 = setTimeout(() => setStep(3), 1200);
+      t3 = setTimeout(() => setStep(4), 2000);
+    } else {
+      setStep(0);
+    }
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+    };
+  }, [isLoading]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,28 +45,36 @@ export const AnalystPage: React.FC = () => {
 
   if (!datasetId) {
     return (
-      <div className="max-w-md mx-auto my-24 p-8 bg-slate-900 border border-slate-800 rounded-3xl text-center space-y-4">
-        <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mx-auto">
-          <AlertCircle className="w-6 h-6" />
+      <div className="max-w-md mx-auto my-24 p-8 bento-card text-center space-y-4">
+        <div className="w-12 h-12 rounded-xl bg-[#111111] border border-[#222222] flex items-center justify-center text-cyan-400 mx-auto">
+          <Terminal className="w-6 h-6" />
         </div>
-        <h3 className="text-lg font-bold text-white">No Dataset Active</h3>
-        <p className="text-xs text-slate-400">
-          Upload an Excel or CSV file or load the retail demo dataset to begin your analysis.
+        <h3 className="text-base font-semibold text-white font-mono">NO ACTIVE FORENSICS SESSION</h3>
+        <p className="text-xs text-[#888888] font-mono">
+          Ingest a .parquet, .duckdb, or .csv dataset to initiate SQL telemetry and driver attribution.
         </p>
-        <button
-          onClick={() => setTab('upload')}
-          className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-semibold shadow-lg shadow-indigo-500/25 transition"
-        >
-          Go to Data Upload
-        </button>
+        <div className="flex flex-col gap-2 pt-2">
+          <button
+            onClick={() => loadSample()}
+            className="btn-framer-primary px-4 py-2 text-xs font-mono"
+          >
+            Load Sample Forensic Dataset
+          </button>
+          <button
+            onClick={() => setTab('upload')}
+            className="btn-framer-secondary px-4 py-2 text-xs font-mono"
+          >
+            Go to Ingest Zone
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6 flex flex-col h-[calc(100vh-4rem)]">
+    <div className="max-w-5xl mx-auto px-4 py-6 flex flex-col h-[calc(100vh-3.5rem)]">
       {/* Messages Thread */}
-      <div className="flex-1 overflow-y-auto space-y-6 pr-2">
+      <div className="flex-1 overflow-y-auto space-y-5 pr-2">
         {messages.map((msg) => (
           <div
             key={msg.id}
@@ -57,15 +83,15 @@ export const AnalystPage: React.FC = () => {
             }`}
           >
             {msg.sender === 'analyst' && (
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shrink-0 mt-1 shadow-md shadow-indigo-500/10">
-                <Bot className="w-4 h-4" />
+              <div className="w-8 h-8 rounded-lg bg-[#111111] border border-[#262626] flex items-center justify-center text-cyan-400 shrink-0 mt-1">
+                <Terminal className="w-4 h-4" />
               </div>
             )}
 
             <div
               className={`max-w-3xl ${
                 msg.sender === 'user'
-                  ? 'bg-indigo-600 text-white px-4 py-2.5 rounded-2xl rounded-tr-sm text-sm shadow-md'
+                  ? 'bg-[#141414] border border-[#262626] text-white px-4 py-3 rounded-2xl rounded-tr-sm text-sm font-mono'
                   : 'w-full'
               }`}
             >
@@ -77,28 +103,43 @@ export const AnalystPage: React.FC = () => {
                   onSelectSuggestion={handleSelectSuggestion}
                 />
               ) : (
-                <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl text-sm text-slate-300">
+                <div className="p-4 bento-card text-sm text-[#CCCCCC] font-mono">
                   {msg.text}
                 </div>
               )}
             </div>
 
             {msg.sender === 'user' && (
-              <div className="w-8 h-8 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 shrink-0 mt-1">
+              <div className="w-8 h-8 rounded-lg bg-[#141414] border border-[#262626] flex items-center justify-center text-[#A1A1AA] shrink-0 mt-1">
                 <User className="w-4 h-4" />
               </div>
             )}
           </div>
         ))}
 
+        {/* PROGRESSIVE TELEMETRY LOADING STEPPER */}
         {isLoading && (
-          <div className="flex items-start gap-3.5">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shrink-0 shadow-md">
-              <Bot className="w-4 h-4" />
+          <div className="bento-card p-4 border-cyan-500/30 bg-[#082F49]/10">
+            <div className="flex items-center justify-between mb-3 text-xs font-mono">
+              <span className="text-cyan-400 flex items-center gap-2">
+                <Activity className="w-3.5 h-3.5 animate-pulse" />
+                EXECUTING PARALLEL FORENSIC PLAN...
+              </span>
+              <span className="text-[#888888]">DuckDB ~12ms</span>
             </div>
-            <div className="p-4 bg-slate-900/80 border border-slate-800 rounded-2xl flex items-center gap-3 text-xs text-slate-300">
-              <Loader2 className="w-4 h-4 text-indigo-400 animate-spin" />
-              <span>Analyzing question & executing DuckDB query...</span>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 text-[11px] font-mono">
+              <div className={`p-2 rounded border ${step >= 1 ? 'border-cyan-500/50 bg-cyan-950/30 text-cyan-200' : 'border-[#1E1E1E] text-[#52525B]'}`}>
+                1. Schema Grounding
+              </div>
+              <div className={`p-2 rounded border ${step >= 2 ? 'border-cyan-500/50 bg-cyan-950/30 text-cyan-200' : 'border-[#1E1E1E] text-[#52525B]'}`}>
+                2. DuckDB Vector Scan
+              </div>
+              <div className={`p-2 rounded border ${step >= 3 ? 'border-cyan-500/50 bg-cyan-950/30 text-cyan-200' : 'border-[#1E1E1E] text-[#52525B]'}`}>
+                3. Variance Attribution
+              </div>
+              <div className={`p-2 rounded border ${step >= 4 ? 'border-emerald-500/50 bg-emerald-950/30 text-emerald-200' : 'border-[#1E1E1E] text-[#52525B]'}`}>
+                4. Narrative Complete
+              </div>
             </div>
           </div>
         )}
@@ -107,22 +148,23 @@ export const AnalystPage: React.FC = () => {
       </div>
 
       {/* Input Bar */}
-      <div className="pt-4 border-t border-slate-800/80 mt-2">
-        <form onSubmit={handleSubmit} className="relative flex items-center">
+      <div className="pt-3 border-t border-[#1A1A1A] mt-2">
+        <form onSubmit={handleSubmit} className="glass-search-bar p-1.5 flex items-center gap-2">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             disabled={isLoading}
-            placeholder="Ask a question (e.g. 'Show monthly revenue for 2026', 'Why did revenue fall last month?')..."
-            className="w-full bg-slate-900/90 border border-slate-800 focus:border-indigo-500/80 rounded-2xl pl-5 pr-14 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none shadow-xl transition"
+            placeholder="Ask forensic question (e.g., 'What caused revenue to drop last month?', 'Show monthly sales')..."
+            className="w-full bg-transparent px-3 py-2 text-sm text-[#EDEDED] placeholder-[#52525B] font-mono focus:outline-none"
           />
           <button
             type="submit"
             disabled={!input.trim() || isLoading}
-            className="absolute right-2 p-2.5 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 disabled:hover:bg-indigo-600 text-white rounded-xl transition shadow-md shadow-indigo-500/20"
+            className="btn-framer-primary px-3.5 py-2 text-xs font-mono flex items-center gap-1.5 shrink-0 disabled:opacity-40 cursor-pointer"
           >
-            {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+            <span>Query</span>
+            <Send className="w-3 h-3" />
           </button>
         </form>
       </div>
