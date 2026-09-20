@@ -237,7 +237,7 @@ def generate_retail_data():
         df_inventory.to_excel(writer, sheet_name="Inventory", index=False)
         df_returns.to_excel(writer, sheet_name="Returns", index=False)
 
-    print(f"✅ Generated {output_path}")
+    print(f"[OK] Generated {output_path}")
     print(f"   - Sales: {len(df_sales)} rows")
     print(f"   - Customers: {len(df_customers)} rows")
     print(f"   - Products: {len(df_products)} rows")

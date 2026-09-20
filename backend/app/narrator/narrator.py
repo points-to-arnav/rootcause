@@ -145,7 +145,8 @@ def narrate_result(
             system_prompt=system_prompt,
             user_prompt=user_prompt,
             temperature=0.2,
-            max_tokens=300
+            max_tokens=600,
+            stage="narrator",
         ).strip()
 
         if not raw_text:

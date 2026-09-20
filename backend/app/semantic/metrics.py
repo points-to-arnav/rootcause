@@ -89,6 +89,10 @@ def register_metrics(tables: Dict[str, TableMeta], fact_table: str) -> List[Metr
             label="Average Order Value",
             table=fact_table,
             expr=f'SUM("{fact_table}"."{found_rev}") / NULLIF(COUNT(DISTINCT "{fact_table}"."{order_id_col}"), 0)',
+            expr_conditional=(
+                f'SUM("{fact_table}"."{found_rev}") FILTER (WHERE {{cond}}) / '
+                f'NULLIF(COUNT(DISTINCT "{fact_table}"."{order_id_col}") FILTER (WHERE {{cond}}), 0)'
+            ),
             additive=False,  # Ratio metric!
             format="currency",
             time_behavior="flow",
@@ -126,6 +130,11 @@ def register_metrics(tables: Dict[str, TableMeta], fact_table: str) -> List[Metr
             label="Return Rate",
             table=fact_table,
             expr=f'COUNT(DISTINCT CASE WHEN ret."order_id" IS NOT NULL THEN "{fact_table}"."{order_id_col}" END) * 100.0 / NULLIF(COUNT(DISTINCT "{fact_table}"."{order_id_col}"), 0)',
+            expr_conditional=(
+                f'COUNT(DISTINCT CASE WHEN ret."order_id" IS NOT NULL '
+                f'THEN "{fact_table}"."{order_id_col}" END) FILTER (WHERE {{cond}}) * 100.0 / '
+                f'NULLIF(COUNT(DISTINCT "{fact_table}"."{order_id_col}") FILTER (WHERE {{cond}}), 0)'
+            ),
             additive=False,
             format="percent",
             time_behavior="flow",

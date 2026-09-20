@@ -3,6 +3,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import duckdb
 from app.config import settings
 from app.planner.plan_schema import Plan, Filter
+from app.planner.compiler import period_expr
 from app.semantic.model import SemanticLayer
 from app.semantic.join_graph import JoinGraph
 
@@ -54,8 +55,10 @@ def run_why_analysis(
 
     # 1. Compute Overall Totals (M(T), M(B), Delta)
     metric_expr = metric_obj.expr
-    cur_agg = f"{metric_expr} FILTER (WHERE \"{t_tbl}\".\"{t_col}\" >= '{t_start}' AND \"{t_tbl}\".\"{t_col}\" < '{t_end}')"
-    prev_agg = f"{metric_expr} FILTER (WHERE \"{t_tbl}\".\"{t_col}\" >= '{b_start}' AND \"{t_tbl}\".\"{t_col}\" < '{b_end}')"
+    cur_cond = f"\"{t_tbl}\".\"{t_col}\" >= '{t_start}' AND \"{t_tbl}\".\"{t_col}\" < '{t_end}'"
+    prev_cond = f"\"{t_tbl}\".\"{t_col}\" >= '{b_start}' AND \"{t_tbl}\".\"{t_col}\" < '{b_end}'"
+    cur_agg = period_expr(metric_obj, metric_expr, cur_cond)
+    prev_agg = period_expr(metric_obj, metric_expr, prev_cond)
 
     totals_sql = f'''
         SELECT 

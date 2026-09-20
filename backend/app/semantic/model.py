@@ -40,6 +40,12 @@ class Metric(BaseModel):
     label: str
     table: str
     expr: str
+    # Period-restricted form of `expr`, with a `{cond}` placeholder for the time
+    # predicate. Required for any metric whose expr is not a single aggregate call:
+    # DuckDB only accepts FILTER directly after one aggregate, so
+    # `SUM(a) / COUNT(b) FILTER (WHERE ...)` is a syntax error. Ratio metrics must
+    # therefore push the condition into each aggregate instead.
+    expr_conditional: Optional[str] = None
     additive: bool = True
     format: Literal["currency", "count", "percent", "number"] = "number"
     time_behavior: Literal["flow", "snapshot"] = "flow"
