@@ -218,7 +218,8 @@ def run_ask_pipeline(
         result=result,
         period_label=cur_label,
         baseline_label=baseline_label,
-        dq_warnings=dq_warnings
+        dq_warnings=dq_warnings,
+        why_result=why_result
     )
 
     suggestions = generate_suggestions_by_intent(plan)

@@ -1,11 +1,13 @@
 import os
 import pytest
+from pathlib import Path
 from app.api.routes_datasets import process_and_save_dataset
 from app.semantic.store import load_semantic_layer
 from app.config import settings
 
 def test_ingestion_and_semantic_pipeline():
-    sample_file = "/home/sahajdeep/Desktop/rootcause/sample_data/retail_demo.xlsx"
+    root_dir = Path(__file__).resolve().parent.parent.parent
+    sample_file = str(root_dir / "sample_data" / "retail_demo.xlsx")
     if not os.path.exists(sample_file):
         pytest.skip("retail_demo.xlsx not generated yet")
 

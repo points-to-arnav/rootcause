@@ -112,6 +112,13 @@ def complete_chat(
             )
             elapsed = time.time() - start_t
             content = completion.choices[0].message.content or ""
+            if not content.strip():
+                # Check reasoning_content if model put text there
+                reasoning = getattr(completion.choices[0].message, "reasoning_content", None)
+                if reasoning and reasoning.strip():
+                    content = reasoning
+                else:
+                    raise ValueError(f"Provider {provider} ({model}) returned empty content.")
             log_llm_call(provider, model, user_prompt, content, elapsed)
             return content
         except Exception as e:

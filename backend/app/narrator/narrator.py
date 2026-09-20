@@ -50,16 +50,35 @@ def generate_templated_narrative(
     plan: Plan,
     result: Dict[str, Any],
     period_label: str,
-    baseline_label: Optional[str] = None
+    baseline_label: Optional[str] = None,
+    why_result: Optional[Dict[str, Any]] = None
 ) -> str:
     """Deterministic fallback narrative."""
     rows = result.get("rows", [])
     cols = result.get("columns", [])
-    if not rows:
+    if not rows and not why_result:
         return f"No records found for the period {period_label}."
 
     metric_name = plan.metric if isinstance(plan.metric, str) else "Metric"
     metric_title = metric_name.replace("_", " ").title()
+
+    # Why decomposition
+    if plan.intent == "why" and why_result:
+        d_val = why_result.get("delta", 0.0)
+        dp_val = why_result.get("delta_pct", 0.0)
+        direction_word = "fell" if d_val < 0 else ("rose" if d_val > 0 else "remained flat")
+        comp_str = f" compared to {baseline_label or 'the previous period'}" if baseline_label else ""
+        top_driver_str = ""
+        if why_result.get("dimensions"):
+            top_dim = why_result["dimensions"][0]
+            if top_dim.get("segments"):
+                top_seg = top_dim["segments"][0]
+                s_name = top_seg["value"]
+                s_delta = top_seg["delta"]
+                s_contrib = round(top_seg["contribution"] * 100, 1)
+                s_dir = "drop" if s_delta < 0 else "increase"
+                top_driver_str = f" The primary driver was {s_name}, contributing a {s_delta:,.2f} {s_dir} ({s_contrib}% of the total change)."
+        return f"{metric_title} for {period_label} {direction_word} by {abs(d_val):,.2f} ({dp_val}%){comp_str}.{top_driver_str}"
 
     if plan.intent == "kpi" and len(rows) == 1:
         if "delta" in cols:
@@ -71,6 +90,16 @@ def generate_templated_narrative(
             return f"{metric_title} for {period_label} was {cur:,.2f}, which {dir_word} by {abs(delta):,.2f} ({dp}%) compared to {baseline_label or 'the previous period'}."
         else:
             return f"Total {metric_title.lower()} for {period_label} was {rows[0][0]:,.2f}."
+
+    if plan.intent == "trend" and len(cols) == 2 and rows:
+        vals = [r[1] for r in rows if isinstance(r[1], (int, float))]
+        if vals:
+            tot = sum(vals)
+            max_idx = vals.index(max(vals))
+            min_idx = vals.index(min(vals))
+            peak_label = rows[max_idx][0]
+            low_label = rows[min_idx][0]
+            return f"Total {metric_title.lower()} across {period_label} was {tot:,.2f} over {len(rows)} periods, peaking in {peak_label} ({max(vals):,.2f}) and reaching its lowest in {low_label} ({min(vals):,.2f})."
 
     if len(cols) >= 2 and rows:
         top_item = rows[0][0]
@@ -88,7 +117,8 @@ def narrate_result(
     result: Dict[str, Any],
     period_label: str,
     baseline_label: Optional[str] = None,
-    dq_warnings: Optional[List[Dict[str, Any]]] = None
+    dq_warnings: Optional[List[Dict[str, Any]]] = None,
+    why_result: Optional[Dict[str, Any]] = None
 ) -> str:
     """
     Generates a natural language explanation and verifies its numbers against DuckDB outputs.
@@ -106,6 +136,7 @@ def narrate_result(
 {result.get('rows', [])[:20]}
 </result_rows>
 <derived_stats>{derived}</derived_stats>
+<why_analysis>{why_result if why_result else 'none'}</why_analysis>
 <data_quality_notes>{[w.get('impact') for w in (dq_warnings or [])]}</data_quality_notes>
 """
 
@@ -117,12 +148,15 @@ def narrate_result(
             max_tokens=300
         ).strip()
 
+        if not raw_text:
+            return generate_templated_narrative(plan, result, period_label, baseline_label, why_result)
+
         # Number verification
-        is_valid, offending = verify_narrative(raw_text, result, derived)
+        is_valid, offending = verify_narrative(raw_text, result, derived, why_result)
         if is_valid:
             return raw_text
         else:
             # Fallback to templated summary if hallucination detected
-            return generate_templated_narrative(plan, result, period_label, baseline_label)
+            return generate_templated_narrative(plan, result, period_label, baseline_label, why_result)
     except Exception:
-        return generate_templated_narrative(plan, result, period_label, baseline_label)
+        return generate_templated_narrative(plan, result, period_label, baseline_label, why_result)

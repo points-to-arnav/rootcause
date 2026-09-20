@@ -3,11 +3,12 @@ from typing import Literal
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
-ENV_FILE = BACKEND_DIR / ".env"
+ROOT_DIR = BACKEND_DIR.parent
+ENV_FILES = [str(BACKEND_DIR / ".env"), str(ROOT_DIR / ".env")]
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=ENV_FILE if ENV_FILE.exists() else None,
+        env_file=ENV_FILES,
         env_file_encoding="utf-8",
         extra="ignore"
     )

@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import shutil
 import uuid
 from typing import List
@@ -134,8 +135,20 @@ async def upload_datasets(files: List[UploadFile] = File(...)):
 @router.post("/sample")
 def load_sample_dataset():
     """Loads bundled retail_demo.xlsx for instant demo loading."""
-    sample_path = "sample_data/retail_demo.xlsx"
-    if not os.path.exists(sample_path):
+    project_root = Path(__file__).resolve().parent.parent.parent.parent
+    candidate_paths = [
+        project_root / "sample_data" / "retail_demo.xlsx",
+        Path("sample_data/retail_demo.xlsx"),
+        Path("../sample_data/retail_demo.xlsx")
+    ]
+    sample_path = None
+    for p in candidate_paths:
+        if p.exists():
+            sample_path = str(p.resolve())
+            break
+
+    if not sample_path:
+        sample_path = str((project_root / "sample_data" / "retail_demo.xlsx").resolve())
         from sample_data.generate_retail import generate_retail_data
         generate_retail_data()
 

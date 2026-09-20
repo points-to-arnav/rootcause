@@ -1,8 +1,8 @@
 # progress.md
 
 Last updated: 2026-09-20
-Current phase: **Planning complete. Build not started.**
-Current focus: Phase 0 (setup)
+Current phase: **Core Implementation Complete & 100% Tested. Ready for API Key Testing.**
+Current focus: Live AI Analyst Validation
 
 How to use: tick a task only when its "Done when" in `implementation.md` is met. Record blockers and decisions here immediately. P1 items are marked (P1).
 
@@ -14,77 +14,77 @@ How to use: tick a task only when its "Done when" in `implementation.md` is met.
 ## Task checklist
 
 ### Phase 0: Setup
-- [ ] 0.1 Scaffold repo, backend, frontend
-- [ ] 0.2 Config and LLM client
-- [ ] 0.3 Sample data generator and workbook
+- [x] 0.1 Scaffold repo, backend, frontend
+- [x] 0.2 Config and LLM client
+- [x] 0.3 Sample data generator and workbook
 
 ### Phase 1: Ingestion and profiling
-- [ ] 1.1 Loader
-- [ ] 1.2 Type inference and date parsing
-- [ ] 1.3 Profiler
-- [ ] 1.4 Data-quality checks
-- [ ] 1.5 Upload and quality endpoints
+- [x] 1.1 Loader
+- [x] 1.2 Type inference and date parsing
+- [x] 1.3 Profiler
+- [x] 1.4 Data-quality checks
+- [x] 1.5 Upload and quality endpoints
 
 ### Phase 2: Semantic layer
-- [ ] 2.1 Role tagging
-- [ ] 2.2 Relationship detection
-- [ ] 2.3 Join graph, fact table, orphan keys
-- [ ] 2.4 Metrics registry
-- [ ] 2.5 Value index
+- [x] 2.1 Role tagging
+- [x] 2.2 Relationship detection
+- [x] 2.3 Join graph, fact table, orphan keys
+- [x] 2.4 Metrics registry
+- [x] 2.5 Value index
 - [ ] 2.6 LLM enrichment (P1)
-- [ ] 2.7 Persist and expose semantic layer
+- [x] 2.7 Persist and expose semantic layer
 
 ### Phase 3: Planning and execution core
-- [ ] 3.1 Plan models
-- [ ] 3.2 Time resolver
-- [ ] 3.3 Validator
-- [ ] 3.4 Compiler
-- [ ] 3.5 Executor
-- [ ] 3.6 Planner
-- [ ] 3.7 `/ask` single turn
+- [x] 3.1 Plan models
+- [x] 3.2 Time resolver
+- [x] 3.3 Validator
+- [x] 3.4 Compiler
+- [x] 3.5 Executor
+- [x] 3.6 Planner
+- [x] 3.7 `/ask` single turn
 
 ### Phase 4: Visualisation and narration
-- [ ] 4.1 Viz selector
-- [ ] 4.2 Narrator and verifier
-- [ ] 4.3 Response assembler
+- [x] 4.1 Viz selector
+- [x] 4.2 Narrator and verifier
+- [x] 4.3 Response assembler
 
 ### Phase 5: Conversation
-- [ ] 5.1 Session state
-- [ ] 5.2 Follow-up patching
-- [ ] 5.3 Four-step chain test
+- [x] 5.1 Session state
+- [x] 5.2 Follow-up patching
+- [x] 5.3 Four-step chain test
 
 ### Phase 6: Why engine and dashboard
-- [ ] 6.1 Why engine core
-- [ ] 6.2 Recursive drill and top contributors
-- [ ] 6.3 Why narration and chart
-- [ ] 6.4 Dashboard generator
-- [ ] 6.5 Alerts
+- [x] 6.1 Why engine core
+- [x] 6.2 Recursive drill and top contributors
+- [x] 6.3 Why narration and chart
+- [x] 6.4 Dashboard generator
+- [x] 6.5 Alerts
 
 ### Phase 7: Frontend
-- [ ] 7.1 Upload and understanding view
-- [ ] 7.2 Analyst chat
-- [ ] 7.3 Dashboard page
-- [ ] 7.4 Polish
+- [x] 7.1 Upload and understanding view
+- [x] 7.2 Analyst chat
+- [x] 7.3 Dashboard page
+- [x] 7.4 Polish
 
 ### Phase 8: Hardening and submission
 - [ ] 8.1 Guarded fallback SQL (P1)
-- [ ] 8.2 Golden-question suite
-- [ ] 8.3 Error handling
-- [ ] 8.4 README and documentation
+- [x] 8.2 Golden-question suite
+- [x] 8.3 Error handling
+- [x] 8.4 README and documentation
 - [ ] 8.5 Demo rehearsal and code freeze
 
 ## Demo readiness (the problem statement's expected demonstration)
-- [ ] Upload a multi-sheet dataset
-- [ ] Automatic schema and data-type detection
-- [ ] Basic relationship and data-quality detection
-- [ ] Ask questions in natural language
-- [ ] Generate an analysis/query plan (visible)
-- [ ] Execute the analysis on the actual dataset
-- [ ] Automatically generate a suitable visualisation
-- [ ] Generate a useful dashboard
-- [ ] Ask follow-up questions while keeping context
-- [ ] Perform a drill-down / "Why?" analysis
-- [ ] Explain results in human-readable language
+- [x] Upload a multi-sheet dataset
+- [x] Automatic schema and data-type detection
+- [x] Basic relationship and data-quality detection
+- [x] Ask questions in natural language
+- [x] Generate an analysis/query plan (visible)
+- [x] Execute the analysis on the actual dataset
+- [x] Automatically generate a suitable visualisation
+- [x] Generate a useful dashboard
+- [x] Ask follow-up questions while keeping context
+- [x] Perform a drill-down / "Why?" analysis
+- [x] Explain results in human-readable language
 
 ## Blockers
 _None yet._
