@@ -1,0 +1,37 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.coverage
+htmlcov/
+
+# DuckDB / Ingested data artifacts & runtime databases
+**/data/
+*.duckdb
+*.duckdb.wal
+*.jsonl
+
+# Node & Frontend Build
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Environment configs with secrets (Never commit secrets)
+.env
+backend/.env
+.env.local
+*.env
+!.env.example
+!backend/.env.example
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+*.swp

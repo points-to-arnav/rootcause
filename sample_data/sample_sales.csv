@@ -1,0 +1,3370 @@
+transaction_id,transaction_date,city,product_category,units_sold,revenue,customer_satisfaction
+TXN-50000,2026-01-01,New York,Electronics,3,730.1,3
+TXN-50001,2026-01-01,Singapore,Electronics,5,1157.6,4
+TXN-50002,2026-01-01,New York,Electronics,1,241.4,5
+TXN-50003,2026-01-01,New York,Home & Kitchen,5,407.85,5
+TXN-50004,2026-01-01,Tokyo,Home & Kitchen,2,175.91,4
+TXN-50005,2026-01-01,San Francisco,Electronics,4,1002.08,3
+TXN-50006,2026-01-01,London,Fashion,1,64.95,3
+TXN-50007,2026-01-01,London,Groceries,5,171.39,3
+TXN-50008,2026-01-01,Berlin,Books,1,23.84,4
+TXN-50009,2026-01-01,Berlin,Electronics,3,861.62,5
+TXN-50010,2026-01-01,Berlin,Groceries,2,77.8,3
+TXN-50011,2026-01-01,London,Fashion,1,80.96,3
+TXN-50012,2026-01-01,London,Books,4,87.26,4
+TXN-50013,2026-01-01,London,Fashion,3,202.2,4
+TXN-50014,2026-01-01,Berlin,Electronics,2,530.12,3
+TXN-50015,2026-01-01,Tokyo,Fashion,4,274.68,5
+TXN-50016,2026-01-01,San Francisco,Home & Kitchen,3,293.98,3
+TXN-50017,2026-01-01,New York,Fashion,3,214.27,3
+TXN-50018,2026-01-02,Singapore,Home & Kitchen,3,245.77,4
+TXN-50019,2026-01-02,Singapore,Books,4,75.43,3
+TXN-50020,2026-01-02,Singapore,Fashion,5,371.59,5
+TXN-50021,2026-01-02,Tokyo,Home & Kitchen,5,433.42,3
+TXN-50022,2026-01-02,Berlin,Fashion,4,259.64,3
+TXN-50023,2026-01-02,San Francisco,Electronics,2,568.81,4
+TXN-50024,2026-01-02,New York,Home & Kitchen,4,344.93,4
+TXN-50025,2026-01-02,London,Home & Kitchen,5,492.25,3
+TXN-50026,2026-01-02,Singapore,Electronics,5,1406.58,5
+TXN-50027,2026-01-02,New York,Groceries,3,108.2,4
+TXN-50028,2026-01-02,Singapore,Electronics,3,893.67,3
+TXN-50029,2026-01-03,Singapore,Electronics,3,864.38,5
+TXN-50030,2026-01-03,San Francisco,Home & Kitchen,2,172.07,3
+TXN-50031,2026-01-03,Berlin,Home & Kitchen,1,91.77,4
+TXN-50032,2026-01-03,New York,Electronics,3,872.71,4
+TXN-50033,2026-01-03,New York,Fashion,2,162.88,3
+TXN-50034,2026-01-03,Singapore,Electronics,4,1144.81,5
+TXN-50035,2026-01-03,San Francisco,Fashion,4,331.54,3
+TXN-50036,2026-01-03,Berlin,Groceries,5,179.71,3
+TXN-50037,2026-01-03,Singapore,Home & Kitchen,2,189.36,4
+TXN-50038,2026-01-03,Tokyo,Groceries,5,181.2,3
+TXN-50039,2026-01-03,New York,Fashion,3,190.33,5
+TXN-50040,2026-01-03,Berlin,Fashion,2,126.3,5
+TXN-50041,2026-01-03,San Francisco,Electronics,1,292.91,4
+TXN-50042,2026-01-03,Berlin,Electronics,2,491.77,4
+TXN-50043,2026-01-03,Berlin,Fashion,2,156.38,5
+TXN-50044,2026-01-03,Tokyo,Home & Kitchen,2,193.02,4
+TXN-50045,2026-01-04,New York,Electronics,4,1006.29,4
+TXN-50046,2026-01-04,Singapore,Books,1,22.04,5
+TXN-50047,2026-01-04,New York,Electronics,4,1118.46,3
+TXN-50048,2026-01-04,San Francisco,Fashion,2,148.52,3
+TXN-50049,2026-01-04,San Francisco,Books,3,62.33,3
+TXN-50050,2026-01-04,Berlin,Books,1,18.3,5
+TXN-50051,2026-01-04,New York,Electronics,2,474.95,4
+TXN-50052,2026-01-04,San Francisco,Books,4,93.66,3
+TXN-50053,2026-01-04,New York,Books,4,78.36,4
+TXN-50054,2026-01-04,Tokyo,Groceries,5,192.25,4
+TXN-50055,2026-01-04,San Francisco,Fashion,3,202.72,3
+TXN-50056,2026-01-05,New York,Home & Kitchen,3,233.87,5
+TXN-50057,2026-01-05,Berlin,Books,5,94.72,5
+TXN-50058,2026-01-05,San Francisco,Electronics,1,269.63,5
+TXN-50059,2026-01-05,Tokyo,Fashion,1,82.77,5
+TXN-50060,2026-01-05,Berlin,Fashion,5,319.17,3
+TXN-50061,2026-01-05,Singapore,Books,5,106.96,4
+TXN-50062,2026-01-05,San Francisco,Groceries,3,102.02,4
+TXN-50063,2026-01-05,Singapore,Fashion,3,217.81,3
+TXN-50064,2026-01-05,Tokyo,Electronics,5,1499.42,3
+TXN-50065,2026-01-05,Berlin,Electronics,2,525.88,3
+TXN-50066,2026-01-05,New York,Groceries,2,70.76,3
+TXN-50067,2026-01-05,Berlin,Books,3,65.01,5
+TXN-50068,2026-01-05,New York,Home & Kitchen,5,420.67,5
+TXN-50069,2026-01-05,San Francisco,Electronics,3,700.97,3
+TXN-50070,2026-01-05,San Francisco,Home & Kitchen,3,251.05,3
+TXN-50071,2026-01-05,San Francisco,Groceries,3,110.42,4
+TXN-50072,2026-01-05,New York,Electronics,4,1148.8,3
+TXN-50073,2026-01-06,San Francisco,Groceries,3,99.59,4
+TXN-50074,2026-01-06,Singapore,Home & Kitchen,4,363.21,3
+TXN-50075,2026-01-06,Singapore,Electronics,2,531.84,4
+TXN-50076,2026-01-06,Berlin,Home & Kitchen,2,174.92,3
+TXN-50077,2026-01-06,London,Groceries,1,40.94,3
+TXN-50078,2026-01-06,Singapore,Fashion,1,70.43,5
+TXN-50079,2026-01-06,Berlin,Books,2,47.11,3
+TXN-50080,2026-01-06,San Francisco,Fashion,4,254.08,5
+TXN-50081,2026-01-07,Singapore,Books,2,39.2,5
+TXN-50082,2026-01-07,Tokyo,Electronics,1,289.39,3
+TXN-50083,2026-01-07,Tokyo,Fashion,3,208.23,3
+TXN-50084,2026-01-07,New York,Fashion,2,142.74,4
+TXN-50085,2026-01-07,London,Electronics,3,819.33,4
+TXN-50086,2026-01-07,London,Home & Kitchen,1,79.44,4
+TXN-50087,2026-01-07,Berlin,Fashion,3,191.41,5
+TXN-50088,2026-01-07,London,Books,3,61.86,5
+TXN-50089,2026-01-07,Tokyo,Electronics,5,1196.28,3
+TXN-50090,2026-01-07,New York,Books,5,117.77,5
+TXN-50091,2026-01-07,London,Fashion,4,257.88,5
+TXN-50092,2026-01-07,Berlin,Groceries,3,115.4,3
+TXN-50093,2026-01-07,Berlin,Groceries,3,115.51,4
+TXN-50094,2026-01-08,Berlin,Groceries,2,67.03,5
+TXN-50095,2026-01-08,Singapore,Books,2,43.39,4
+TXN-50096,2026-01-08,Berlin,Books,1,19.82,3
+TXN-50097,2026-01-08,Berlin,Books,5,109.64,4
+TXN-50098,2026-01-08,Tokyo,Books,2,42.13,5
+TXN-50099,2026-01-08,Singapore,Fashion,1,68.96,5
+TXN-50100,2026-01-08,London,Home & Kitchen,1,97.37,3
+TXN-50101,2026-01-08,San Francisco,Groceries,2,66.09,3
+TXN-50102,2026-01-08,Tokyo,Fashion,5,404.22,3
+TXN-50103,2026-01-08,Tokyo,Books,5,95.83,5
+TXN-50104,2026-01-08,Tokyo,Books,4,77.86,5
+TXN-50105,2026-01-08,New York,Electronics,4,965.65,5
+TXN-50106,2026-01-08,Tokyo,Home & Kitchen,1,90.71,3
+TXN-50107,2026-01-08,San Francisco,Books,4,88.02,5
+TXN-50108,2026-01-09,Tokyo,Groceries,5,200.29,5
+TXN-50109,2026-01-09,Berlin,Books,4,93.53,5
+TXN-50110,2026-01-09,Tokyo,Books,3,67.53,5
+TXN-50111,2026-01-09,Berlin,Groceries,4,152.32,4
+TXN-50112,2026-01-09,New York,Books,3,58.22,4
+TXN-50113,2026-01-09,Berlin,Groceries,1,32.95,3
+TXN-50114,2026-01-09,Singapore,Books,2,44.48,3
+TXN-50115,2026-01-09,Tokyo,Books,3,63.77,4
+TXN-50116,2026-01-09,San Francisco,Electronics,4,1016.84,5
+TXN-50117,2026-01-09,Berlin,Electronics,4,1043.09,4
+TXN-50118,2026-01-09,Tokyo,Groceries,4,148.61,5
+TXN-50119,2026-01-09,Berlin,Home & Kitchen,2,177.9,4
+TXN-50120,2026-01-09,Tokyo,Books,1,20.33,5
+TXN-50121,2026-01-09,Singapore,Books,2,46.09,3
+TXN-50122,2026-01-09,Berlin,Home & Kitchen,1,99.63,5
+TXN-50123,2026-01-09,Singapore,Home & Kitchen,1,78.64,4
+TXN-50124,2026-01-09,Tokyo,Fashion,2,128.11,4
+TXN-50125,2026-01-10,Tokyo,Fashion,3,210.26,4
+TXN-50126,2026-01-10,Tokyo,Groceries,3,120.8,4
+TXN-50127,2026-01-10,Singapore,Electronics,5,1144.53,4
+TXN-50128,2026-01-10,Singapore,Fashion,1,79.41,5
+TXN-50129,2026-01-10,New York,Electronics,2,479.9,3
+TXN-50130,2026-01-10,San Francisco,Home & Kitchen,2,159.44,5
+TXN-50131,2026-01-10,Berlin,Electronics,2,519.76,4
+TXN-50132,2026-01-10,San Francisco,Groceries,5,189.38,5
+TXN-50133,2026-01-10,San Francisco,Electronics,3,699.32,3
+TXN-50134,2026-01-10,Berlin,Groceries,4,142.66,5
+TXN-50135,2026-01-10,New York,Fashion,5,387.51,5
+TXN-50136,2026-01-10,New York,Fashion,3,242.57,5
+TXN-50137,2026-01-10,Berlin,Electronics,1,251.04,4
+TXN-50138,2026-01-11,New York,Groceries,5,191.5,3
+TXN-50139,2026-01-11,Tokyo,Books,1,20.6,4
+TXN-50140,2026-01-11,Singapore,Books,2,41.23,5
+TXN-50141,2026-01-11,Singapore,Home & Kitchen,3,276.62,5
+TXN-50142,2026-01-11,Tokyo,Books,4,91.82,5
+TXN-50143,2026-01-11,London,Groceries,2,80.45,3
+TXN-50144,2026-01-11,Tokyo,Groceries,2,78.76,5
+TXN-50145,2026-01-11,Singapore,Home & Kitchen,4,340.31,4
+TXN-50146,2026-01-11,San Francisco,Groceries,4,134.91,4
+TXN-50147,2026-01-11,London,Groceries,5,194.31,4
+TXN-50148,2026-01-11,New York,Home & Kitchen,5,503.38,3
+TXN-50149,2026-01-11,Singapore,Fashion,4,293.04,3
+TXN-50150,2026-01-11,Singapore,Books,4,82.76,3
+TXN-50151,2026-01-11,London,Electronics,2,510.66,3
+TXN-50152,2026-01-11,Singapore,Groceries,5,176.87,5
+TXN-50153,2026-01-11,London,Home & Kitchen,4,407.66,5
+TXN-50154,2026-01-11,London,Groceries,4,137.38,4
+TXN-50155,2026-01-11,New York,Fashion,2,139.25,5
+TXN-50156,2026-01-12,San Francisco,Fashion,2,157.02,4
+TXN-50157,2026-01-12,Berlin,Home & Kitchen,5,418.58,3
+TXN-50158,2026-01-12,London,Fashion,2,141.16,4
+TXN-50159,2026-01-12,Singapore,Electronics,5,1172.47,3
+TXN-50160,2026-01-12,Berlin,Electronics,3,831.92,3
+TXN-50161,2026-01-12,New York,Books,1,21.44,4
+TXN-50162,2026-01-12,Tokyo,Books,3,57.32,3
+TXN-50163,2026-01-12,Tokyo,Groceries,1,40.13,4
+TXN-50164,2026-01-12,New York,Books,5,108.88,3
+TXN-50165,2026-01-12,San Francisco,Fashion,5,414.66,3
+TXN-50166,2026-01-12,New York,Fashion,5,395.27,5
+TXN-50167,2026-01-12,Berlin,Home & Kitchen,2,192.56,4
+TXN-50168,2026-01-12,Tokyo,Books,3,69.48,4
+TXN-50169,2026-01-12,Berlin,Groceries,5,160.66,5
+TXN-50170,2026-01-12,San Francisco,Electronics,2,489.7,3
+TXN-50171,2026-01-12,San Francisco,Fashion,2,149.18,3
+TXN-50172,2026-01-13,Tokyo,Books,5,104.1,3
+TXN-50173,2026-01-13,London,Fashion,3,233.29,4
+TXN-50174,2026-01-13,Singapore,Electronics,2,588.59,5
+TXN-50175,2026-01-13,Singapore,Home & Kitchen,2,174.68,5
+TXN-50176,2026-01-13,Singapore,Fashion,2,164.15,3
+TXN-50177,2026-01-13,New York,Electronics,2,568.89,5
+TXN-50178,2026-01-13,London,Home & Kitchen,4,318.68,5
+TXN-50179,2026-01-13,Singapore,Groceries,4,165.59,5
+TXN-50180,2026-01-14,Tokyo,Books,1,21.59,4
+TXN-50181,2026-01-14,Berlin,Groceries,3,95.31,3
+TXN-50182,2026-01-14,Berlin,Home & Kitchen,1,101.99,5
+TXN-50183,2026-01-14,Berlin,Groceries,1,39.51,3
+TXN-50184,2026-01-14,Berlin,Books,4,93.99,3
+TXN-50185,2026-01-14,Tokyo,Home & Kitchen,4,404.84,4
+TXN-50186,2026-01-14,Tokyo,Groceries,3,104.61,3
+TXN-50187,2026-01-14,London,Fashion,4,310.27,4
+TXN-50188,2026-01-14,Berlin,Books,1,20.73,4
+TXN-50189,2026-01-14,London,Groceries,1,41.69,4
+TXN-50190,2026-01-14,New York,Home & Kitchen,5,441.4,3
+TXN-50191,2026-01-14,Berlin,Fashion,3,228.23,4
+TXN-50192,2026-01-14,New York,Books,2,39.2,3
+TXN-50193,2026-01-14,Tokyo,Groceries,4,131.1,5
+TXN-50194,2026-01-14,San Francisco,Home & Kitchen,2,168.85,3
+TXN-50195,2026-01-14,Tokyo,Home & Kitchen,1,82.23,3
+TXN-50196,2026-01-15,Singapore,Electronics,2,524.76,5
+TXN-50197,2026-01-15,Berlin,Groceries,3,107.59,4
+TXN-50198,2026-01-15,San Francisco,Books,4,85.23,4
+TXN-50199,2026-01-15,Berlin,Fashion,5,393.36,3
+TXN-50200,2026-01-15,London,Electronics,4,1001.96,5
+TXN-50201,2026-01-15,New York,Groceries,3,117.37,5
+TXN-50202,2026-01-15,Singapore,Home & Kitchen,4,394.26,4
+TXN-50203,2026-01-15,Tokyo,Home & Kitchen,3,254.93,5
+TXN-50204,2026-01-15,Tokyo,Books,3,69.65,5
+TXN-50205,2026-01-15,Berlin,Fashion,4,271.62,4
+TXN-50206,2026-01-15,London,Electronics,4,1111.57,4
+TXN-50207,2026-01-15,Singapore,Books,2,41.94,3
+TXN-50208,2026-01-15,Berlin,Fashion,5,349.86,3
+TXN-50209,2026-01-15,New York,Books,5,117.31,3
+TXN-50210,2026-01-15,Tokyo,Fashion,2,129.14,4
+TXN-50211,2026-01-16,Singapore,Home & Kitchen,4,372.28,4
+TXN-50212,2026-01-16,Tokyo,Home & Kitchen,3,277.45,4
+TXN-50213,2026-01-16,New York,Home & Kitchen,5,391.22,5
+TXN-50214,2026-01-16,San Francisco,Groceries,1,36.06,3
+TXN-50215,2026-01-16,Tokyo,Electronics,2,554.1,3
+TXN-50216,2026-01-16,London,Electronics,1,247.0,4
+TXN-50217,2026-01-16,San Francisco,Books,2,42.37,5
+TXN-50218,2026-01-16,San Francisco,Fashion,2,129.32,4
+TXN-50219,2026-01-16,Singapore,Home & Kitchen,2,178.38,5
+TXN-50220,2026-01-16,San Francisco,Fashion,4,305.58,4
+TXN-50221,2026-01-16,Singapore,Groceries,1,40.94,4
+TXN-50222,2026-01-16,Singapore,Groceries,5,165.79,4
+TXN-50223,2026-01-16,Berlin,Groceries,3,114.63,4
+TXN-50224,2026-01-17,Tokyo,Groceries,3,100.78,4
+TXN-50225,2026-01-17,New York,Books,2,40.58,4
+TXN-50226,2026-01-17,London,Home & Kitchen,3,231.18,5
+TXN-50227,2026-01-17,London,Books,1,21.4,5
+TXN-50228,2026-01-17,Berlin,Electronics,4,1149.85,4
+TXN-50229,2026-01-17,Berlin,Fashion,3,202.8,3
+TXN-50230,2026-01-17,London,Home & Kitchen,2,185.04,5
+TXN-50231,2026-01-17,London,Electronics,4,910.01,4
+TXN-50232,2026-01-17,New York,Fashion,3,209.58,4
+TXN-50233,2026-01-17,San Francisco,Fashion,2,159.03,4
+TXN-50234,2026-01-17,Berlin,Home & Kitchen,3,293.03,4
+TXN-50235,2026-01-17,London,Books,3,68.48,4
+TXN-50236,2026-01-17,San Francisco,Electronics,2,579.02,5
+TXN-50237,2026-01-17,Berlin,Books,3,55.63,4
+TXN-50238,2026-01-17,London,Electronics,5,1171.35,4
+TXN-50239,2026-01-17,Berlin,Groceries,4,160.54,4
+TXN-50240,2026-01-17,Singapore,Electronics,2,520.72,5
+TXN-50241,2026-01-17,London,Home & Kitchen,5,410.72,3
+TXN-50242,2026-01-17,Singapore,Books,3,65.69,3
+TXN-50243,2026-01-18,New York,Electronics,3,899.08,3
+TXN-50244,2026-01-18,San Francisco,Electronics,5,1175.87,4
+TXN-50245,2026-01-18,Singapore,Groceries,5,179.5,5
+TXN-50246,2026-01-18,Tokyo,Fashion,1,80.51,5
+TXN-50247,2026-01-18,London,Books,1,22.14,3
+TXN-50248,2026-01-18,Tokyo,Books,2,46.27,3
+TXN-50249,2026-01-18,Berlin,Groceries,3,96.41,4
+TXN-50250,2026-01-18,New York,Fashion,4,259.7,3
+TXN-50251,2026-01-18,New York,Home & Kitchen,1,96.56,3
+TXN-50252,2026-01-18,Berlin,Fashion,2,128.88,5
+TXN-50253,2026-01-19,San Francisco,Home & Kitchen,2,169.76,3
+TXN-50254,2026-01-19,New York,Home & Kitchen,3,295.17,3
+TXN-50255,2026-01-19,Berlin,Fashion,3,239.31,3
+TXN-50256,2026-01-19,San Francisco,Electronics,1,251.87,3
+TXN-50257,2026-01-19,London,Home & Kitchen,1,80.94,3
+TXN-50258,2026-01-19,Singapore,Fashion,4,296.19,5
+TXN-50259,2026-01-19,Tokyo,Electronics,4,1133.41,5
+TXN-50260,2026-01-19,New York,Home & Kitchen,4,357.39,5
+TXN-50261,2026-01-19,Singapore,Electronics,5,1238.11,5
+TXN-50262,2026-01-19,New York,Electronics,4,1154.19,4
+TXN-50263,2026-01-19,Tokyo,Electronics,4,922.05,3
+TXN-50264,2026-01-20,San Francisco,Home & Kitchen,1,79.72,5
+TXN-50265,2026-01-20,Berlin,Home & Kitchen,3,258.64,5
+TXN-50266,2026-01-20,London,Home & Kitchen,4,357.57,4
+TXN-50267,2026-01-20,Singapore,Electronics,1,288.96,5
+TXN-50268,2026-01-20,Singapore,Home & Kitchen,2,174.93,3
+TXN-50269,2026-01-20,London,Books,4,81.57,5
+TXN-50270,2026-01-20,London,Electronics,4,993.76,4
+TXN-50271,2026-01-20,San Francisco,Groceries,4,128.82,3
+TXN-50272,2026-01-20,Tokyo,Electronics,1,280.84,4
+TXN-50273,2026-01-20,Berlin,Fashion,1,75.32,5
+TXN-50274,2026-01-20,London,Home & Kitchen,1,86.98,5
+TXN-50275,2026-01-20,Singapore,Books,1,23.81,5
+TXN-50276,2026-01-20,London,Groceries,1,37.57,3
+TXN-50277,2026-01-21,San Francisco,Books,1,20.1,5
+TXN-50278,2026-01-21,New York,Groceries,3,112.58,4
+TXN-50279,2026-01-21,Berlin,Home & Kitchen,5,468.56,5
+TXN-50280,2026-01-21,Berlin,Electronics,3,681.51,4
+TXN-50281,2026-01-21,London,Groceries,3,94.69,3
+TXN-50282,2026-01-21,Singapore,Home & Kitchen,4,313.1,5
+TXN-50283,2026-01-21,New York,Electronics,5,1205.67,4
+TXN-50284,2026-01-21,London,Books,2,40.44,5
+TXN-50285,2026-01-21,Berlin,Groceries,5,161.96,3
+TXN-50286,2026-01-21,San Francisco,Fashion,5,320.23,3
+TXN-50287,2026-01-22,Singapore,Books,4,83.66,4
+TXN-50288,2026-01-22,London,Books,2,45.06,3
+TXN-50289,2026-01-22,Tokyo,Groceries,1,34.47,5
+TXN-50290,2026-01-22,Tokyo,Home & Kitchen,5,467.56,3
+TXN-50291,2026-01-22,Tokyo,Fashion,5,320.75,3
+TXN-50292,2026-01-22,San Francisco,Groceries,2,79.05,4
+TXN-50293,2026-01-22,New York,Groceries,1,36.72,4
+TXN-50294,2026-01-22,San Francisco,Fashion,4,296.74,3
+TXN-50295,2026-01-22,Berlin,Home & Kitchen,3,235.01,5
+TXN-50296,2026-01-22,Tokyo,Electronics,1,259.48,3
+TXN-50297,2026-01-22,Berlin,Groceries,4,150.08,5
+TXN-50298,2026-01-22,London,Books,1,20.43,4
+TXN-50299,2026-01-23,Tokyo,Home & Kitchen,3,236.24,3
+TXN-50300,2026-01-23,Tokyo,Fashion,5,357.05,3
+TXN-50301,2026-01-23,London,Books,3,57.99,3
+TXN-50302,2026-01-23,Berlin,Electronics,1,264.8,3
+TXN-50303,2026-01-23,London,Groceries,2,67.96,3
+TXN-50304,2026-01-23,San Francisco,Groceries,2,75.65,5
+TXN-50305,2026-01-23,San Francisco,Electronics,4,1039.19,5
+TXN-50306,2026-01-23,Tokyo,Home & Kitchen,5,464.48,5
+TXN-50307,2026-01-23,Singapore,Groceries,3,99.26,3
+TXN-50308,2026-01-23,Tokyo,Books,3,68.33,5
+TXN-50309,2026-01-24,Berlin,Groceries,1,34.76,4
+TXN-50310,2026-01-24,New York,Electronics,3,862.13,3
+TXN-50311,2026-01-24,Berlin,Electronics,5,1315.15,4
+TXN-50312,2026-01-24,Berlin,Home & Kitchen,1,87.97,5
+TXN-50313,2026-01-24,London,Fashion,5,364.94,3
+TXN-50314,2026-01-24,Tokyo,Electronics,1,285.82,4
+TXN-50315,2026-01-24,Berlin,Electronics,2,455.87,5
+TXN-50316,2026-01-24,Tokyo,Books,5,105.68,3
+TXN-50317,2026-01-25,London,Groceries,4,143.17,4
+TXN-50318,2026-01-25,New York,Home & Kitchen,3,234.54,3
+TXN-50319,2026-01-25,Singapore,Home & Kitchen,4,334.98,5
+TXN-50320,2026-01-25,San Francisco,Home & Kitchen,3,235.73,5
+TXN-50321,2026-01-25,London,Fashion,3,249.96,5
+TXN-50322,2026-01-25,San Francisco,Books,5,111.27,3
+TXN-50323,2026-01-25,Berlin,Groceries,4,153.03,4
+TXN-50324,2026-01-25,Singapore,Fashion,5,324.81,5
+TXN-50325,2026-01-25,Berlin,Books,3,54.33,4
+TXN-50326,2026-01-25,San Francisco,Fashion,3,248.7,4
+TXN-50327,2026-01-25,San Francisco,Fashion,2,132.51,4
+TXN-50328,2026-01-25,Berlin,Electronics,5,1438.17,5
+TXN-50329,2026-01-25,Singapore,Electronics,3,872.19,5
+TXN-50330,2026-01-26,Tokyo,Home & Kitchen,2,161.27,5
+TXN-50331,2026-01-26,San Francisco,Home & Kitchen,4,310.46,4
+TXN-50332,2026-01-26,Tokyo,Fashion,5,344.92,5
+TXN-50333,2026-01-26,San Francisco,Books,5,97.18,4
+TXN-50334,2026-01-26,London,Fashion,5,418.37,4
+TXN-50335,2026-01-26,Tokyo,Groceries,5,185.19,3
+TXN-50336,2026-01-26,Berlin,Fashion,2,162.67,3
+TXN-50337,2026-01-26,London,Books,5,118.03,5
+TXN-50338,2026-01-26,New York,Home & Kitchen,3,235.92,3
+TXN-50339,2026-01-26,Tokyo,Groceries,5,165.24,4
+TXN-50340,2026-01-27,Tokyo,Fashion,3,247.62,4
+TXN-50341,2026-01-27,Tokyo,Electronics,5,1265.24,4
+TXN-50342,2026-01-27,London,Electronics,2,454.23,3
+TXN-50343,2026-01-27,San Francisco,Groceries,2,63.8,4
+TXN-50344,2026-01-27,Singapore,Fashion,4,289.68,3
+TXN-50345,2026-01-27,New York,Electronics,3,723.52,3
+TXN-50346,2026-01-27,Singapore,Home & Kitchen,5,449.79,3
+TXN-50347,2026-01-27,San Francisco,Groceries,3,98.34,3
+TXN-50348,2026-01-27,Singapore,Books,5,103.71,3
+TXN-50349,2026-01-28,Berlin,Home & Kitchen,1,92.61,5
+TXN-50350,2026-01-28,Singapore,Fashion,2,138.23,3
+TXN-50351,2026-01-28,London,Home & Kitchen,2,182.1,3
+TXN-50352,2026-01-28,Berlin,Electronics,3,690.23,5
+TXN-50353,2026-01-28,Berlin,Home & Kitchen,5,453.15,4
+TXN-50354,2026-01-28,New York,Books,4,95.54,4
+TXN-50355,2026-01-28,London,Electronics,1,250.86,5
+TXN-50356,2026-01-28,Berlin,Electronics,3,705.02,4
+TXN-50357,2026-01-28,London,Home & Kitchen,2,195.35,5
+TXN-50358,2026-01-28,Singapore,Books,4,87.16,3
+TXN-50359,2026-01-28,Singapore,Electronics,4,911.1,3
+TXN-50360,2026-01-28,San Francisco,Electronics,1,248.67,4
+TXN-50361,2026-01-28,Tokyo,Home & Kitchen,5,442.86,3
+TXN-50362,2026-01-28,London,Fashion,3,243.31,3
+TXN-50363,2026-01-28,London,Groceries,1,39.89,4
+TXN-50364,2026-01-29,Tokyo,Books,3,71.53,4
+TXN-50365,2026-01-29,London,Books,5,98.0,3
+TXN-50366,2026-01-29,New York,Books,4,86.46,3
+TXN-50367,2026-01-29,London,Home & Kitchen,3,237.35,4
+TXN-50368,2026-01-29,London,Groceries,4,151.31,4
+TXN-50369,2026-01-29,Singapore,Fashion,4,281.53,3
+TXN-50370,2026-01-29,Berlin,Groceries,4,137.53,3
+TXN-50371,2026-01-29,Singapore,Electronics,4,1008.99,5
+TXN-50372,2026-01-29,New York,Fashion,2,161.64,5
+TXN-50373,2026-01-29,New York,Books,2,36.81,5
+TXN-50374,2026-01-29,London,Groceries,4,165.88,3
+TXN-50375,2026-01-29,San Francisco,Home & Kitchen,4,402.78,4
+TXN-50376,2026-01-29,New York,Books,5,94.13,4
+TXN-50377,2026-01-29,London,Books,3,58.49,3
+TXN-50378,2026-01-30,Tokyo,Fashion,5,355.63,5
+TXN-50379,2026-01-30,London,Electronics,3,833.41,3
+TXN-50380,2026-01-30,London,Home & Kitchen,4,326.42,3
+TXN-50381,2026-01-30,Tokyo,Electronics,2,584.8,4
+TXN-50382,2026-01-30,Singapore,Electronics,3,825.26,5
+TXN-50383,2026-01-30,Berlin,Electronics,5,1233.89,4
+TXN-50384,2026-01-30,Singapore,Fashion,2,159.34,5
+TXN-50385,2026-01-30,New York,Fashion,2,159.27,3
+TXN-50386,2026-01-31,New York,Books,3,63.97,4
+TXN-50387,2026-01-31,Berlin,Books,2,43.34,3
+TXN-50388,2026-01-31,London,Electronics,4,1199.88,5
+TXN-50389,2026-01-31,Berlin,Books,4,90.46,5
+TXN-50390,2026-01-31,San Francisco,Electronics,3,819.53,4
+TXN-50391,2026-01-31,Singapore,Books,5,100.34,5
+TXN-50392,2026-01-31,San Francisco,Home & Kitchen,2,175.06,3
+TXN-50393,2026-01-31,Berlin,Electronics,2,495.62,3
+TXN-50394,2026-01-31,Singapore,Groceries,2,70.27,5
+TXN-50395,2026-01-31,New York,Groceries,3,100.68,5
+TXN-50396,2026-01-31,San Francisco,Groceries,3,113.85,3
+TXN-50397,2026-01-31,Singapore,Home & Kitchen,2,183.18,5
+TXN-50398,2026-01-31,San Francisco,Fashion,5,390.67,5
+TXN-50399,2026-01-31,Berlin,Groceries,1,40.16,3
+TXN-50400,2026-01-31,New York,Electronics,5,1224.25,3
+TXN-50401,2026-01-31,Tokyo,Home & Kitchen,5,463.97,4
+TXN-50402,2026-01-31,London,Home & Kitchen,3,266.45,5
+TXN-50403,2026-01-31,London,Books,4,73.75,3
+TXN-50404,2026-01-31,Tokyo,Fashion,4,292.68,3
+TXN-50405,2026-01-31,Berlin,Groceries,2,69.56,5
+TXN-50406,2026-02-01,Tokyo,Groceries,2,78.97,5
+TXN-50407,2026-02-01,New York,Home & Kitchen,3,247.99,3
+TXN-50408,2026-02-01,Tokyo,Groceries,2,65.96,3
+TXN-50409,2026-02-01,Tokyo,Groceries,5,179.45,3
+TXN-50410,2026-02-01,Berlin,Groceries,3,100.48,3
+TXN-50411,2026-02-01,Berlin,Books,4,83.97,4
+TXN-50412,2026-02-01,New York,Books,1,23.67,5
+TXN-50413,2026-02-01,San Francisco,Books,2,43.0,3
+TXN-50414,2026-02-01,London,Electronics,4,1079.26,5
+TXN-50415,2026-02-01,London,Books,5,90.25,3
+TXN-50416,2026-02-01,San Francisco,Books,3,67.1,4
+TXN-50417,2026-02-01,New York,Groceries,4,128.15,5
+TXN-50418,2026-02-01,London,Fashion,5,345.3,4
+TXN-50419,2026-02-02,Berlin,Books,3,68.86,5
+TXN-50420,2026-02-02,New York,Home & Kitchen,2,202.73,4
+TXN-50421,2026-02-02,London,Groceries,5,206.79,3
+TXN-50422,2026-02-02,Berlin,Fashion,5,357.15,3
+TXN-50423,2026-02-02,New York,Electronics,2,557.04,4
+TXN-50424,2026-02-02,Tokyo,Home & Kitchen,2,183.92,5
+TXN-50425,2026-02-02,London,Fashion,5,348.45,4
+TXN-50426,2026-02-02,Singapore,Home & Kitchen,3,274.92,5
+TXN-50427,2026-02-02,Berlin,Home & Kitchen,4,378.29,4
+TXN-50428,2026-02-02,New York,Books,3,59.96,3
+TXN-50429,2026-02-02,Berlin,Books,3,68.34,5
+TXN-50430,2026-02-02,Berlin,Electronics,4,979.66,5
+TXN-50431,2026-02-02,Berlin,Home & Kitchen,2,189.79,5
+TXN-50432,2026-02-02,San Francisco,Books,5,108.87,5
+TXN-50433,2026-02-02,San Francisco,Books,2,36.38,5
+TXN-50434,2026-02-02,San Francisco,Electronics,1,258.08,4
+TXN-50435,2026-02-03,Singapore,Books,2,40.92,5
+TXN-50436,2026-02-03,Singapore,Books,1,22.23,5
+TXN-50437,2026-02-03,Berlin,Fashion,3,251.88,4
+TXN-50438,2026-02-03,Tokyo,Home & Kitchen,3,302.69,4
+TXN-50439,2026-02-03,London,Home & Kitchen,5,427.67,5
+TXN-50440,2026-02-03,Berlin,Groceries,4,134.08,3
+TXN-50441,2026-02-03,Berlin,Groceries,3,101.58,4
+TXN-50442,2026-02-03,Singapore,Groceries,2,77.5,4
+TXN-50443,2026-02-03,Tokyo,Groceries,3,112.16,5
+TXN-50444,2026-02-03,London,Groceries,1,37.52,5
+TXN-50445,2026-02-04,London,Books,2,39.49,4
+TXN-50446,2026-02-04,London,Electronics,4,1096.79,5
+TXN-50447,2026-02-04,San Francisco,Books,2,45.94,4
+TXN-50448,2026-02-04,Singapore,Home & Kitchen,3,240.0,5
+TXN-50449,2026-02-04,San Francisco,Home & Kitchen,2,155.59,5
+TXN-50450,2026-02-04,Singapore,Fashion,2,128.2,4
+TXN-50451,2026-02-04,Singapore,Groceries,4,130.22,3
+TXN-50452,2026-02-04,Berlin,Electronics,2,511.04,4
+TXN-50453,2026-02-04,Singapore,Books,2,45.07,4
+TXN-50454,2026-02-04,London,Groceries,1,41.03,3
+TXN-50455,2026-02-04,San Francisco,Home & Kitchen,5,476.68,3
+TXN-50456,2026-02-04,Tokyo,Fashion,2,165.22,3
+TXN-50457,2026-02-04,Tokyo,Books,2,47.24,4
+TXN-50458,2026-02-04,New York,Electronics,3,802.79,3
+TXN-50459,2026-02-05,Tokyo,Groceries,5,185.03,3
+TXN-50460,2026-02-05,Tokyo,Home & Kitchen,3,244.25,3
+TXN-50461,2026-02-05,San Francisco,Groceries,4,153.23,5
+TXN-50462,2026-02-05,New York,Fashion,3,238.82,5
+TXN-50463,2026-02-05,San Francisco,Fashion,5,404.9,4
+TXN-50464,2026-02-05,Berlin,Books,3,55.56,5
+TXN-50465,2026-02-05,San Francisco,Electronics,2,521.62,3
+TXN-50466,2026-02-05,London,Electronics,4,970.66,4
+TXN-50467,2026-02-05,London,Groceries,5,195.45,3
+TXN-50468,2026-02-05,Singapore,Groceries,3,116.32,3
+TXN-50469,2026-02-05,Tokyo,Electronics,3,710.94,5
+TXN-50470,2026-02-05,Singapore,Home & Kitchen,3,282.31,5
+TXN-50471,2026-02-05,London,Groceries,5,169.09,3
+TXN-50472,2026-02-06,Tokyo,Fashion,5,354.23,5
+TXN-50473,2026-02-06,Tokyo,Home & Kitchen,5,484.75,3
+TXN-50474,2026-02-06,Singapore,Fashion,5,406.68,3
+TXN-50475,2026-02-06,Tokyo,Home & Kitchen,5,472.23,3
+TXN-50476,2026-02-06,New York,Home & Kitchen,1,97.63,5
+TXN-50477,2026-02-06,Berlin,Fashion,5,330.73,4
+TXN-50478,2026-02-06,Tokyo,Home & Kitchen,1,93.85,5
+TXN-50479,2026-02-06,Tokyo,Home & Kitchen,1,99.42,4
+TXN-50480,2026-02-06,Tokyo,Electronics,2,526.99,4
+TXN-50481,2026-02-06,New York,Home & Kitchen,5,441.45,4
+TXN-50482,2026-02-06,Tokyo,Electronics,3,858.7,5
+TXN-50483,2026-02-06,Berlin,Fashion,1,63.95,4
+TXN-50484,2026-02-06,Berlin,Electronics,1,295.09,3
+TXN-50485,2026-02-06,New York,Books,3,61.36,3
+TXN-50486,2026-02-06,London,Books,4,82.76,4
+TXN-50487,2026-02-07,Singapore,Electronics,5,1174.87,4
+TXN-50488,2026-02-07,San Francisco,Electronics,5,1272.4,3
+TXN-50489,2026-02-07,New York,Fashion,1,83.55,4
+TXN-50490,2026-02-07,Tokyo,Home & Kitchen,5,430.86,3
+TXN-50491,2026-02-07,Tokyo,Fashion,3,198.77,3
+TXN-50492,2026-02-07,New York,Electronics,4,1084.48,3
+TXN-50493,2026-02-07,San Francisco,Fashion,1,65.12,3
+TXN-50494,2026-02-07,Berlin,Books,1,19.47,3
+TXN-50495,2026-02-07,Tokyo,Books,2,42.48,3
+TXN-50496,2026-02-07,Berlin,Fashion,3,203.75,5
+TXN-50497,2026-02-07,London,Home & Kitchen,5,458.73,5
+TXN-50498,2026-02-07,San Francisco,Groceries,3,122.1,5
+TXN-50499,2026-02-07,San Francisco,Home & Kitchen,4,336.65,3
+TXN-50500,2026-02-07,Berlin,Home & Kitchen,2,184.93,4
+TXN-50501,2026-02-08,New York,Books,3,70.95,5
+TXN-50502,2026-02-08,Berlin,Books,3,66.53,4
+TXN-50503,2026-02-08,London,Fashion,4,267.45,5
+TXN-50504,2026-02-08,San Francisco,Books,2,39.61,5
+TXN-50505,2026-02-08,Tokyo,Fashion,1,74.81,4
+TXN-50506,2026-02-08,Berlin,Home & Kitchen,2,172.81,4
+TXN-50507,2026-02-08,London,Fashion,1,82.37,4
+TXN-50508,2026-02-08,Berlin,Electronics,2,457.73,4
+TXN-50509,2026-02-08,Berlin,Home & Kitchen,1,98.78,3
+TXN-50510,2026-02-08,Singapore,Home & Kitchen,5,410.17,3
+TXN-50511,2026-02-08,London,Groceries,1,33.72,3
+TXN-50512,2026-02-08,Singapore,Electronics,4,1174.33,5
+TXN-50513,2026-02-08,Singapore,Home & Kitchen,2,173.23,3
+TXN-50514,2026-02-08,London,Home & Kitchen,3,258.62,5
+TXN-50515,2026-02-08,London,Groceries,3,105.83,4
+TXN-50516,2026-02-08,New York,Books,4,90.28,4
+TXN-50517,2026-02-09,London,Groceries,4,127.92,3
+TXN-50518,2026-02-09,New York,Fashion,3,223.86,5
+TXN-50519,2026-02-09,Singapore,Home & Kitchen,4,336.11,3
+TXN-50520,2026-02-09,San Francisco,Groceries,4,149.93,3
+TXN-50521,2026-02-09,Berlin,Books,3,58.63,4
+TXN-50522,2026-02-09,Tokyo,Books,2,44.79,4
+TXN-50523,2026-02-09,San Francisco,Fashion,5,366.27,5
+TXN-50524,2026-02-09,Berlin,Electronics,1,287.93,3
+TXN-50525,2026-02-09,New York,Electronics,4,941.25,5
+TXN-50526,2026-02-09,New York,Fashion,2,126.38,5
+TXN-50527,2026-02-09,London,Books,1,21.71,5
+TXN-50528,2026-02-10,Singapore,Books,4,72.38,5
+TXN-50529,2026-02-10,Tokyo,Home & Kitchen,1,76.93,5
+TXN-50530,2026-02-10,Berlin,Groceries,3,95.04,5
+TXN-50531,2026-02-10,San Francisco,Books,1,23.51,5
+TXN-50532,2026-02-10,San Francisco,Fashion,2,152.03,4
+TXN-50533,2026-02-10,London,Groceries,4,129.32,4
+TXN-50534,2026-02-10,Berlin,Books,2,47.88,3
+TXN-50535,2026-02-10,Singapore,Groceries,1,38.36,5
+TXN-50536,2026-02-10,New York,Electronics,4,1013.78,5
+TXN-50537,2026-02-10,New York,Books,1,22.22,3
+TXN-50538,2026-02-10,Tokyo,Books,3,64.19,3
+TXN-50539,2026-02-10,New York,Home & Kitchen,2,163.78,5
+TXN-50540,2026-02-10,Tokyo,Home & Kitchen,3,233.06,3
+TXN-50541,2026-02-10,Berlin,Groceries,5,192.05,3
+TXN-50542,2026-02-10,New York,Groceries,2,75.33,5
+TXN-50543,2026-02-10,New York,Books,3,56.92,3
+TXN-50544,2026-02-10,Tokyo,Home & Kitchen,5,424.8,5
+TXN-50545,2026-02-11,Berlin,Electronics,3,687.08,4
+TXN-50546,2026-02-11,New York,Fashion,3,227.13,5
+TXN-50547,2026-02-11,Tokyo,Home & Kitchen,3,231.77,4
+TXN-50548,2026-02-11,Tokyo,Books,2,40.27,4
+TXN-50549,2026-02-11,San Francisco,Books,5,109.82,3
+TXN-50550,2026-02-11,London,Home & Kitchen,2,189.37,3
+TXN-50551,2026-02-11,San Francisco,Groceries,4,155.89,5
+TXN-50552,2026-02-11,Singapore,Fashion,4,278.6,3
+TXN-50553,2026-02-11,New York,Electronics,3,775.07,4
+TXN-50554,2026-02-11,San Francisco,Electronics,1,239.05,4
+TXN-50555,2026-02-12,Berlin,Home & Kitchen,4,316.54,3
+TXN-50556,2026-02-12,Berlin,Groceries,1,37.77,4
+TXN-50557,2026-02-12,New York,Books,3,61.45,3
+TXN-50558,2026-02-12,San Francisco,Home & Kitchen,5,448.94,5
+TXN-50559,2026-02-12,San Francisco,Books,2,39.23,4
+TXN-50560,2026-02-12,San Francisco,Books,1,19.0,4
+TXN-50561,2026-02-12,London,Books,4,90.78,4
+TXN-50562,2026-02-12,San Francisco,Groceries,4,150.94,3
+TXN-50563,2026-02-12,New York,Books,2,39.66,4
+TXN-50564,2026-02-12,Berlin,Groceries,4,159.77,4
+TXN-50565,2026-02-12,London,Books,4,91.57,5
+TXN-50566,2026-02-12,San Francisco,Home & Kitchen,3,254.03,5
+TXN-50567,2026-02-12,Tokyo,Fashion,3,200.19,4
+TXN-50568,2026-02-12,London,Groceries,4,166.65,3
+TXN-50569,2026-02-12,Tokyo,Groceries,3,120.22,4
+TXN-50570,2026-02-12,New York,Groceries,5,167.99,5
+TXN-50571,2026-02-13,New York,Home & Kitchen,4,402.18,3
+TXN-50572,2026-02-13,London,Books,1,22.91,4
+TXN-50573,2026-02-13,San Francisco,Books,3,58.36,5
+TXN-50574,2026-02-13,Singapore,Fashion,4,318.28,3
+TXN-50575,2026-02-13,Berlin,Books,4,85.97,5
+TXN-50576,2026-02-13,Singapore,Home & Kitchen,4,361.45,4
+TXN-50577,2026-02-13,Berlin,Home & Kitchen,1,79.29,3
+TXN-50578,2026-02-13,San Francisco,Groceries,5,159.83,5
+TXN-50579,2026-02-13,London,Books,4,74.54,3
+TXN-50580,2026-02-13,San Francisco,Groceries,5,196.71,5
+TXN-50581,2026-02-14,San Francisco,Home & Kitchen,4,344.16,4
+TXN-50582,2026-02-14,Singapore,Home & Kitchen,5,401.72,3
+TXN-50583,2026-02-14,New York,Books,3,61.49,3
+TXN-50584,2026-02-14,Singapore,Electronics,2,502.25,4
+TXN-50585,2026-02-14,San Francisco,Books,5,104.49,4
+TXN-50586,2026-02-14,Tokyo,Electronics,4,995.67,4
+TXN-50587,2026-02-14,Singapore,Electronics,1,226.69,4
+TXN-50588,2026-02-14,Singapore,Electronics,2,589.49,5
+TXN-50589,2026-02-14,Berlin,Fashion,2,149.18,4
+TXN-50590,2026-02-14,Tokyo,Home & Kitchen,4,329.65,4
+TXN-50591,2026-02-14,San Francisco,Fashion,4,285.23,5
+TXN-50592,2026-02-14,San Francisco,Home & Kitchen,4,366.4,4
+TXN-50593,2026-02-14,Singapore,Electronics,2,480.87,5
+TXN-50594,2026-02-14,Berlin,Electronics,1,284.96,5
+TXN-50595,2026-02-14,London,Fashion,3,201.42,3
+TXN-50596,2026-02-14,Singapore,Groceries,4,148.16,5
+TXN-50597,2026-02-14,Berlin,Groceries,4,151.67,5
+TXN-50598,2026-02-15,London,Groceries,4,151.93,5
+TXN-50599,2026-02-15,Berlin,Groceries,5,161.95,3
+TXN-50600,2026-02-15,New York,Groceries,2,69.41,3
+TXN-50601,2026-02-15,Singapore,Groceries,2,73.73,4
+TXN-50602,2026-02-15,San Francisco,Home & Kitchen,5,431.42,3
+TXN-50603,2026-02-15,Singapore,Books,5,110.8,5
+TXN-50604,2026-02-15,Berlin,Fashion,2,146.56,3
+TXN-50605,2026-02-15,London,Fashion,4,304.03,4
+TXN-50606,2026-02-15,Tokyo,Electronics,2,479.27,4
+TXN-50607,2026-02-16,Singapore,Home & Kitchen,4,347.73,4
+TXN-50608,2026-02-16,Singapore,Books,4,83.73,3
+TXN-50609,2026-02-16,New York,Home & Kitchen,2,167.9,4
+TXN-50610,2026-02-16,Berlin,Fashion,3,199.6,4
+TXN-50611,2026-02-16,Singapore,Home & Kitchen,4,362.07,3
+TXN-50612,2026-02-16,New York,Home & Kitchen,3,288.8,4
+TXN-50613,2026-02-16,New York,Home & Kitchen,4,361.73,4
+TXN-50614,2026-02-16,Singapore,Electronics,2,494.66,3
+TXN-50615,2026-02-16,London,Books,3,69.52,3
+TXN-50616,2026-02-16,New York,Books,2,38.52,5
+TXN-50617,2026-02-16,Singapore,Home & Kitchen,3,295.37,5
+TXN-50618,2026-02-16,San Francisco,Books,5,94.18,3
+TXN-50619,2026-02-16,New York,Fashion,5,351.84,4
+TXN-50620,2026-02-16,Berlin,Home & Kitchen,2,169.51,5
+TXN-50621,2026-02-16,London,Groceries,5,171.54,5
+TXN-50622,2026-02-16,San Francisco,Electronics,4,1175.63,4
+TXN-50623,2026-02-17,Singapore,Fashion,2,136.49,5
+TXN-50624,2026-02-17,San Francisco,Groceries,4,146.56,5
+TXN-50625,2026-02-17,Singapore,Groceries,4,141.76,3
+TXN-50626,2026-02-17,Tokyo,Electronics,5,1406.18,5
+TXN-50627,2026-02-17,Tokyo,Groceries,4,139.75,3
+TXN-50628,2026-02-17,Singapore,Electronics,4,1090.45,5
+TXN-50629,2026-02-17,New York,Groceries,5,178.38,4
+TXN-50630,2026-02-17,Tokyo,Fashion,3,209.34,4
+TXN-50631,2026-02-17,Berlin,Groceries,5,164.36,4
+TXN-50632,2026-02-17,Singapore,Groceries,1,31.98,5
+TXN-50633,2026-02-17,New York,Books,1,23.58,3
+TXN-50634,2026-02-17,Tokyo,Books,1,23.95,4
+TXN-50635,2026-02-17,Singapore,Fashion,2,163.05,4
+TXN-50636,2026-02-17,London,Fashion,1,76.75,4
+TXN-50637,2026-02-17,London,Electronics,2,457.77,5
+TXN-50638,2026-02-17,Singapore,Groceries,2,72.01,3
+TXN-50639,2026-02-17,New York,Electronics,2,521.52,3
+TXN-50640,2026-02-17,San Francisco,Home & Kitchen,5,469.2,3
+TXN-50641,2026-02-18,New York,Groceries,4,155.15,4
+TXN-50642,2026-02-18,San Francisco,Electronics,4,926.8,3
+TXN-50643,2026-02-18,London,Electronics,3,873.22,3
+TXN-50644,2026-02-18,San Francisco,Books,2,36.82,5
+TXN-50645,2026-02-18,Berlin,Electronics,2,516.01,5
+TXN-50646,2026-02-18,Singapore,Fashion,2,164.64,5
+TXN-50647,2026-02-18,San Francisco,Books,1,23.38,3
+TXN-50648,2026-02-18,Berlin,Electronics,4,1005.46,4
+TXN-50649,2026-02-19,San Francisco,Fashion,3,229.61,3
+TXN-50650,2026-02-19,Berlin,Home & Kitchen,5,474.45,4
+TXN-50651,2026-02-19,Singapore,Electronics,3,721.23,5
+TXN-50652,2026-02-19,San Francisco,Home & Kitchen,4,336.15,3
+TXN-50653,2026-02-19,Tokyo,Fashion,4,261.47,4
+TXN-50654,2026-02-19,New York,Home & Kitchen,5,495.81,3
+TXN-50655,2026-02-19,London,Groceries,2,71.12,5
+TXN-50656,2026-02-19,London,Books,5,110.49,4
+TXN-50657,2026-02-19,New York,Electronics,5,1150.32,4
+TXN-50658,2026-02-19,New York,Fashion,1,82.92,4
+TXN-50659,2026-02-19,London,Home & Kitchen,5,480.31,4
+TXN-50660,2026-02-19,New York,Books,5,106.13,3
+TXN-50661,2026-02-19,New York,Groceries,3,96.99,3
+TXN-50662,2026-02-20,Berlin,Fashion,3,213.62,5
+TXN-50663,2026-02-20,London,Electronics,4,1118.99,3
+TXN-50664,2026-02-20,San Francisco,Electronics,1,294.35,3
+TXN-50665,2026-02-20,Berlin,Books,5,91.65,5
+TXN-50666,2026-02-20,New York,Fashion,1,77.87,5
+TXN-50667,2026-02-20,San Francisco,Electronics,4,1185.9,5
+TXN-50668,2026-02-20,Singapore,Home & Kitchen,3,242.27,3
+TXN-50669,2026-02-20,Singapore,Groceries,1,39.6,3
+TXN-50670,2026-02-20,Tokyo,Groceries,3,111.0,4
+TXN-50671,2026-02-20,Singapore,Home & Kitchen,1,89.15,5
+TXN-50672,2026-02-20,New York,Groceries,4,162.09,3
+TXN-50673,2026-02-20,San Francisco,Groceries,3,118.86,5
+TXN-50674,2026-02-20,San Francisco,Electronics,5,1125.96,3
+TXN-50675,2026-02-20,New York,Fashion,4,282.57,3
+TXN-50676,2026-02-20,New York,Fashion,5,399.33,5
+TXN-50677,2026-02-20,San Francisco,Books,3,58.47,5
+TXN-50678,2026-02-20,London,Groceries,1,37.5,3
+TXN-50679,2026-02-20,Singapore,Home & Kitchen,1,81.07,5
+TXN-50680,2026-02-20,Tokyo,Electronics,1,290.77,4
+TXN-50681,2026-02-20,London,Groceries,1,37.31,3
+TXN-50682,2026-02-21,London,Fashion,5,397.37,5
+TXN-50683,2026-02-21,San Francisco,Home & Kitchen,4,343.56,4
+TXN-50684,2026-02-21,Singapore,Fashion,5,394.85,3
+TXN-50685,2026-02-21,New York,Fashion,4,254.01,5
+TXN-50686,2026-02-21,Singapore,Groceries,1,41.49,3
+TXN-50687,2026-02-21,Singapore,Books,3,55.87,5
+TXN-50688,2026-02-21,Tokyo,Fashion,4,332.74,3
+TXN-50689,2026-02-21,New York,Groceries,1,41.17,5
+TXN-50690,2026-02-21,Singapore,Books,3,62.25,5
+TXN-50691,2026-02-21,Berlin,Electronics,1,262.91,5
+TXN-50692,2026-02-21,New York,Books,5,107.03,4
+TXN-50693,2026-02-21,San Francisco,Fashion,3,205.44,4
+TXN-50694,2026-02-21,Singapore,Books,3,59.73,4
+TXN-50695,2026-02-22,San Francisco,Electronics,2,566.99,5
+TXN-50696,2026-02-22,San Francisco,Electronics,1,237.33,4
+TXN-50697,2026-02-22,Tokyo,Groceries,1,37.13,3
+TXN-50698,2026-02-22,London,Books,4,78.36,3
+TXN-50699,2026-02-22,San Francisco,Electronics,3,860.94,5
+TXN-50700,2026-02-22,New York,Home & Kitchen,2,195.63,4
+TXN-50701,2026-02-22,New York,Fashion,2,166.67,4
+TXN-50702,2026-02-22,New York,Home & Kitchen,3,249.4,3
+TXN-50703,2026-02-22,Tokyo,Electronics,4,1066.79,5
+TXN-50704,2026-02-22,New York,Fashion,4,260.56,3
+TXN-50705,2026-02-22,New York,Electronics,1,287.28,3
+TXN-50706,2026-02-23,Tokyo,Fashion,3,232.24,5
+TXN-50707,2026-02-23,Berlin,Electronics,5,1222.06,3
+TXN-50708,2026-02-23,New York,Electronics,2,585.37,4
+TXN-50709,2026-02-23,New York,Fashion,3,196.72,4
+TXN-50710,2026-02-23,San Francisco,Electronics,5,1287.43,5
+TXN-50711,2026-02-23,Tokyo,Books,1,20.3,4
+TXN-50712,2026-02-23,London,Fashion,2,164.15,4
+TXN-50713,2026-02-23,Tokyo,Groceries,2,63.73,5
+TXN-50714,2026-02-23,San Francisco,Home & Kitchen,3,267.67,5
+TXN-50715,2026-02-23,New York,Books,1,19.68,3
+TXN-50716,2026-02-24,Singapore,Fashion,5,341.16,5
+TXN-50717,2026-02-24,Tokyo,Electronics,3,782.93,4
+TXN-50718,2026-02-24,Berlin,Groceries,5,174.38,4
+TXN-50719,2026-02-24,New York,Fashion,3,226.62,3
+TXN-50720,2026-02-24,New York,Groceries,4,148.24,5
+TXN-50721,2026-02-24,San Francisco,Fashion,1,68.2,3
+TXN-50722,2026-02-24,Berlin,Groceries,1,39.52,3
+TXN-50723,2026-02-24,Tokyo,Home & Kitchen,3,301.04,3
+TXN-50724,2026-02-24,San Francisco,Fashion,5,348.39,5
+TXN-50725,2026-02-24,Berlin,Groceries,1,38.89,4
+TXN-50726,2026-02-24,Berlin,Home & Kitchen,2,181.72,3
+TXN-50727,2026-02-24,Berlin,Books,3,57.16,3
+TXN-50728,2026-02-24,New York,Electronics,2,540.25,3
+TXN-50729,2026-02-24,Tokyo,Home & Kitchen,1,84.96,5
+TXN-50730,2026-02-25,London,Fashion,2,164.59,4
+TXN-50731,2026-02-25,New York,Electronics,2,537.99,3
+TXN-50732,2026-02-25,Berlin,Electronics,3,891.13,4
+TXN-50733,2026-02-25,Berlin,Books,1,20.02,4
+TXN-50734,2026-02-25,San Francisco,Fashion,4,318.51,4
+TXN-50735,2026-02-25,San Francisco,Groceries,5,193.91,5
+TXN-50736,2026-02-25,San Francisco,Groceries,5,200.26,4
+TXN-50737,2026-02-25,Singapore,Groceries,3,98.51,5
+TXN-50738,2026-02-25,Singapore,Electronics,5,1271.85,5
+TXN-50739,2026-02-25,San Francisco,Electronics,5,1244.33,5
+TXN-50740,2026-02-25,Singapore,Fashion,5,325.93,4
+TXN-50741,2026-02-26,Singapore,Groceries,1,34.0,4
+TXN-50742,2026-02-26,Singapore,Fashion,1,80.25,5
+TXN-50743,2026-02-26,Tokyo,Groceries,1,34.28,3
+TXN-50744,2026-02-26,London,Electronics,3,852.08,5
+TXN-50745,2026-02-26,New York,Electronics,4,1031.47,4
+TXN-50746,2026-02-26,Tokyo,Fashion,4,326.07,4
+TXN-50747,2026-02-26,Tokyo,Home & Kitchen,1,97.63,5
+TXN-50748,2026-02-26,San Francisco,Fashion,4,258.19,3
+TXN-50749,2026-02-26,New York,Groceries,3,102.73,3
+TXN-50750,2026-02-26,London,Electronics,2,583.19,3
+TXN-50751,2026-02-27,Berlin,Electronics,1,250.35,5
+TXN-50752,2026-02-27,Singapore,Books,1,20.59,5
+TXN-50753,2026-02-27,Berlin,Fashion,4,265.2,3
+TXN-50754,2026-02-27,San Francisco,Groceries,2,71.59,5
+TXN-50755,2026-02-27,London,Home & Kitchen,3,252.25,3
+TXN-50756,2026-02-27,Tokyo,Electronics,5,1331.12,4
+TXN-50757,2026-02-27,New York,Fashion,3,189.24,3
+TXN-50758,2026-02-27,Singapore,Groceries,5,182.72,3
+TXN-50759,2026-02-27,San Francisco,Electronics,2,545.73,3
+TXN-50760,2026-02-27,New York,Books,3,68.13,4
+TXN-50761,2026-02-27,Singapore,Books,3,55.64,5
+TXN-50762,2026-02-27,San Francisco,Books,3,69.94,4
+TXN-50763,2026-02-27,Tokyo,Fashion,1,68.53,4
+TXN-50764,2026-02-27,San Francisco,Groceries,3,112.27,3
+TXN-50765,2026-02-27,New York,Electronics,3,856.84,4
+TXN-50766,2026-02-27,San Francisco,Home & Kitchen,5,390.28,4
+TXN-50767,2026-02-27,Tokyo,Home & Kitchen,5,470.1,4
+TXN-50768,2026-02-27,San Francisco,Home & Kitchen,4,336.48,4
+TXN-50769,2026-02-27,Berlin,Electronics,5,1462.67,5
+TXN-50770,2026-02-28,San Francisco,Home & Kitchen,1,100.71,4
+TXN-50771,2026-02-28,San Francisco,Fashion,2,159.96,3
+TXN-50772,2026-02-28,Tokyo,Electronics,1,299.12,4
+TXN-50773,2026-02-28,Singapore,Fashion,2,161.03,4
+TXN-50774,2026-02-28,Singapore,Groceries,1,32.41,5
+TXN-50775,2026-02-28,Berlin,Books,3,69.42,5
+TXN-50776,2026-02-28,New York,Books,5,107.63,4
+TXN-50777,2026-02-28,Tokyo,Electronics,2,472.23,5
+TXN-50778,2026-02-28,New York,Home & Kitchen,1,90.85,3
+TXN-50779,2026-02-28,Berlin,Groceries,3,122.15,4
+TXN-50780,2026-02-28,Singapore,Books,4,85.73,4
+TXN-50781,2026-02-28,San Francisco,Electronics,3,765.67,5
+TXN-50782,2026-02-28,Singapore,Home & Kitchen,4,309.96,4
+TXN-50783,2026-02-28,New York,Fashion,4,329.35,4
+TXN-50784,2026-02-28,London,Electronics,3,744.96,4
+TXN-50785,2026-02-28,San Francisco,Electronics,2,495.07,5
+TXN-50786,2026-02-28,London,Books,3,67.12,5
+TXN-50787,2026-02-28,San Francisco,Electronics,4,963.42,4
+TXN-50788,2026-03-01,Berlin,Books,3,68.78,5
+TXN-50789,2026-03-01,New York,Fashion,3,233.7,4
+TXN-50790,2026-03-01,Berlin,Fashion,5,318.04,3
+TXN-50791,2026-03-01,New York,Fashion,2,127.39,3
+TXN-50792,2026-03-01,Singapore,Groceries,2,68.75,4
+TXN-50793,2026-03-01,Tokyo,Home & Kitchen,1,93.87,3
+TXN-50794,2026-03-01,Tokyo,Groceries,5,180.92,4
+TXN-50795,2026-03-01,Berlin,Home & Kitchen,3,255.84,4
+TXN-50796,2026-03-01,London,Electronics,1,253.99,3
+TXN-50797,2026-03-01,San Francisco,Home & Kitchen,2,186.02,5
+TXN-50798,2026-03-01,London,Fashion,4,295.12,5
+TXN-50799,2026-03-01,Tokyo,Electronics,2,547.11,5
+TXN-50800,2026-03-01,San Francisco,Electronics,3,811.88,4
+TXN-50801,2026-03-01,Tokyo,Groceries,4,161.77,4
+TXN-50802,2026-03-01,San Francisco,Groceries,4,138.69,5
+TXN-50803,2026-03-01,Tokyo,Home & Kitchen,5,395.54,5
+TXN-50804,2026-03-01,Berlin,Groceries,5,189.48,4
+TXN-50805,2026-03-01,Tokyo,Electronics,1,250.22,4
+TXN-50806,2026-03-01,London,Groceries,3,115.17,5
+TXN-50807,2026-03-02,San Francisco,Fashion,5,395.37,3
+TXN-50808,2026-03-02,Tokyo,Home & Kitchen,3,281.58,5
+TXN-50809,2026-03-02,Singapore,Electronics,4,1199.24,4
+TXN-50810,2026-03-02,Tokyo,Books,4,89.68,5
+TXN-50811,2026-03-02,San Francisco,Home & Kitchen,3,285.08,3
+TXN-50812,2026-03-02,Singapore,Home & Kitchen,4,398.47,5
+TXN-50813,2026-03-02,Berlin,Groceries,3,121.13,5
+TXN-50814,2026-03-02,San Francisco,Home & Kitchen,3,236.97,3
+TXN-50815,2026-03-02,Singapore,Groceries,5,197.55,3
+TXN-50816,2026-03-02,Singapore,Groceries,1,33.83,3
+TXN-50817,2026-03-02,Tokyo,Groceries,3,106.21,5
+TXN-50818,2026-03-02,Tokyo,Groceries,1,36.44,5
+TXN-50819,2026-03-03,Berlin,Home & Kitchen,1,88.54,3
+TXN-50820,2026-03-03,New York,Home & Kitchen,4,360.04,4
+TXN-50821,2026-03-03,San Francisco,Electronics,2,598.85,4
+TXN-50822,2026-03-03,Berlin,Books,4,75.44,5
+TXN-50823,2026-03-03,New York,Fashion,4,279.94,3
+TXN-50824,2026-03-03,Singapore,Groceries,1,31.55,4
+TXN-50825,2026-03-03,San Francisco,Fashion,5,395.27,4
+TXN-50826,2026-03-03,San Francisco,Electronics,5,1287.64,4
+TXN-50827,2026-03-03,Tokyo,Books,4,81.2,3
+TXN-50828,2026-03-03,San Francisco,Home & Kitchen,3,302.18,4
+TXN-50829,2026-03-03,San Francisco,Home & Kitchen,1,93.76,5
+TXN-50830,2026-03-03,San Francisco,Fashion,3,208.66,3
+TXN-50831,2026-03-03,Berlin,Books,5,99.18,3
+TXN-50832,2026-03-03,London,Electronics,3,777.58,5
+TXN-50833,2026-03-03,Berlin,Home & Kitchen,3,262.68,5
+TXN-50834,2026-03-03,London,Fashion,4,282.18,3
+TXN-50835,2026-03-03,Tokyo,Fashion,1,67.8,5
+TXN-50836,2026-03-04,Singapore,Fashion,1,75.38,3
+TXN-50837,2026-03-04,London,Electronics,1,253.14,5
+TXN-50838,2026-03-04,Berlin,Groceries,5,160.05,3
+TXN-50839,2026-03-04,Singapore,Electronics,1,228.62,3
+TXN-50840,2026-03-04,Tokyo,Books,4,74.97,4
+TXN-50841,2026-03-04,Singapore,Books,2,38.47,5
+TXN-50842,2026-03-04,London,Electronics,4,1098.5,5
+TXN-50843,2026-03-04,London,Home & Kitchen,5,459.72,3
+TXN-50844,2026-03-04,New York,Books,5,111.56,3
+TXN-50845,2026-03-04,New York,Groceries,1,36.73,5
+TXN-50846,2026-03-05,Berlin,Groceries,2,70.52,4
+TXN-50847,2026-03-05,San Francisco,Groceries,1,37.26,3
+TXN-50848,2026-03-05,London,Books,2,36.03,5
+TXN-50849,2026-03-05,New York,Electronics,5,1375.88,3
+TXN-50850,2026-03-05,Berlin,Electronics,1,279.27,3
+TXN-50851,2026-03-05,Singapore,Groceries,2,72.59,4
+TXN-50852,2026-03-05,Tokyo,Groceries,1,32.55,3
+TXN-50853,2026-03-05,London,Electronics,3,855.36,4
+TXN-50854,2026-03-05,Singapore,Books,1,18.57,3
+TXN-50855,2026-03-05,San Francisco,Electronics,2,499.3,4
+TXN-50856,2026-03-05,London,Home & Kitchen,1,86.0,4
+TXN-50857,2026-03-06,Tokyo,Electronics,4,1188.69,4
+TXN-50858,2026-03-06,Singapore,Books,4,91.2,5
+TXN-50859,2026-03-06,New York,Fashion,2,155.24,3
+TXN-50860,2026-03-06,New York,Fashion,4,328.54,4
+TXN-50861,2026-03-06,Singapore,Home & Kitchen,4,324.49,4
+TXN-50862,2026-03-06,Berlin,Groceries,1,40.56,5
+TXN-50863,2026-03-06,Tokyo,Fashion,4,261.49,4
+TXN-50864,2026-03-06,New York,Books,1,19.57,4
+TXN-50865,2026-03-06,Singapore,Electronics,5,1412.82,5
+TXN-50866,2026-03-06,San Francisco,Home & Kitchen,3,269.21,5
+TXN-50867,2026-03-07,New York,Home & Kitchen,4,373.49,3
+TXN-50868,2026-03-07,London,Books,4,75.57,5
+TXN-50869,2026-03-07,New York,Home & Kitchen,1,92.91,3
+TXN-50870,2026-03-07,Tokyo,Home & Kitchen,4,394.68,3
+TXN-50871,2026-03-07,London,Books,2,39.97,4
+TXN-50872,2026-03-07,Berlin,Electronics,2,532.57,4
+TXN-50873,2026-03-07,San Francisco,Books,1,20.75,5
+TXN-50874,2026-03-07,New York,Books,4,82.73,3
+TXN-50875,2026-03-07,Singapore,Books,1,18.62,4
+TXN-50876,2026-03-07,Berlin,Electronics,5,1125.06,3
+TXN-50877,2026-03-07,Berlin,Home & Kitchen,3,297.59,5
+TXN-50878,2026-03-07,Singapore,Fashion,4,331.83,4
+TXN-50879,2026-03-07,San Francisco,Electronics,4,999.59,5
+TXN-50880,2026-03-07,Tokyo,Home & Kitchen,3,284.27,3
+TXN-50881,2026-03-07,Singapore,Electronics,2,450.33,4
+TXN-50882,2026-03-07,Berlin,Groceries,5,177.13,3
+TXN-50883,2026-03-07,San Francisco,Electronics,4,942.13,5
+TXN-50884,2026-03-07,New York,Books,3,65.0,3
+TXN-50885,2026-03-07,Tokyo,Electronics,2,518.56,3
+TXN-50886,2026-03-08,New York,Groceries,4,127.95,5
+TXN-50887,2026-03-08,New York,Home & Kitchen,4,352.65,5
+TXN-50888,2026-03-08,San Francisco,Home & Kitchen,4,306.44,5
+TXN-50889,2026-03-08,Berlin,Electronics,4,1151.64,4
+TXN-50890,2026-03-08,San Francisco,Home & Kitchen,5,404.64,3
+TXN-50891,2026-03-08,Tokyo,Electronics,5,1352.31,4
+TXN-50892,2026-03-08,Tokyo,Home & Kitchen,4,405.91,5
+TXN-50893,2026-03-08,London,Fashion,4,332.94,4
+TXN-50894,2026-03-08,San Francisco,Books,2,40.95,5
+TXN-50895,2026-03-08,London,Home & Kitchen,5,492.24,5
+TXN-50896,2026-03-08,Singapore,Home & Kitchen,2,163.25,5
+TXN-50897,2026-03-08,Singapore,Groceries,3,123.52,3
+TXN-50898,2026-03-08,Berlin,Fashion,5,387.9,4
+TXN-50899,2026-03-08,London,Electronics,5,1305.14,5
+TXN-50900,2026-03-08,Singapore,Books,5,98.58,4
+TXN-50901,2026-03-08,Berlin,Electronics,1,226.9,3
+TXN-50902,2026-03-08,Singapore,Electronics,1,239.99,3
+TXN-50903,2026-03-08,Singapore,Groceries,3,99.11,3
+TXN-50904,2026-03-08,San Francisco,Groceries,5,159.2,4
+TXN-50905,2026-03-09,Singapore,Home & Kitchen,5,492.77,5
+TXN-50906,2026-03-09,Tokyo,Home & Kitchen,2,179.06,5
+TXN-50907,2026-03-09,Singapore,Groceries,1,41.23,4
+TXN-50908,2026-03-09,Singapore,Books,3,71.38,3
+TXN-50909,2026-03-09,Singapore,Electronics,3,720.69,4
+TXN-50910,2026-03-09,Singapore,Fashion,3,236.57,5
+TXN-50911,2026-03-09,San Francisco,Home & Kitchen,2,168.0,3
+TXN-50912,2026-03-09,San Francisco,Electronics,2,560.26,3
+TXN-50913,2026-03-09,New York,Books,4,78.7,4
+TXN-50914,2026-03-10,Berlin,Fashion,3,189.36,4
+TXN-50915,2026-03-10,New York,Fashion,2,165.0,5
+TXN-50916,2026-03-10,Singapore,Electronics,5,1441.18,4
+TXN-50917,2026-03-10,Berlin,Books,5,100.74,5
+TXN-50918,2026-03-10,Berlin,Groceries,2,83.1,5
+TXN-50919,2026-03-10,Berlin,Electronics,2,512.39,5
+TXN-50920,2026-03-10,New York,Books,3,57.98,3
+TXN-50921,2026-03-10,London,Groceries,3,103.75,5
+TXN-50922,2026-03-10,Tokyo,Home & Kitchen,5,487.52,5
+TXN-50923,2026-03-10,New York,Electronics,3,775.28,5
+TXN-50924,2026-03-11,San Francisco,Home & Kitchen,1,93.91,4
+TXN-50925,2026-03-11,New York,Books,4,78.16,5
+TXN-50926,2026-03-11,New York,Groceries,5,200.66,4
+TXN-50927,2026-03-11,Berlin,Home & Kitchen,4,355.65,4
+TXN-50928,2026-03-11,London,Fashion,5,323.65,3
+TXN-50929,2026-03-11,Berlin,Fashion,5,315.77,3
+TXN-50930,2026-03-11,Singapore,Fashion,2,162.33,4
+TXN-50931,2026-03-11,San Francisco,Electronics,5,1435.78,5
+TXN-50932,2026-03-11,Singapore,Books,1,22.48,3
+TXN-50933,2026-03-11,Tokyo,Electronics,3,683.52,3
+TXN-50934,2026-03-11,San Francisco,Electronics,3,800.57,5
+TXN-50935,2026-03-11,London,Fashion,4,284.59,5
+TXN-50936,2026-03-11,Tokyo,Books,3,54.3,5
+TXN-50937,2026-03-11,Berlin,Electronics,1,273.11,5
+TXN-50938,2026-03-11,Singapore,Electronics,5,1142.07,3
+TXN-50939,2026-03-11,Berlin,Groceries,1,34.54,5
+TXN-50940,2026-03-11,Berlin,Groceries,1,34.46,4
+TXN-50941,2026-03-12,Singapore,Books,1,20.84,5
+TXN-50942,2026-03-12,San Francisco,Fashion,4,318.93,5
+TXN-50943,2026-03-12,Singapore,Groceries,2,69.26,5
+TXN-50944,2026-03-12,New York,Groceries,5,203.43,3
+TXN-50945,2026-03-12,New York,Electronics,1,267.95,4
+TXN-50946,2026-03-12,Berlin,Home & Kitchen,1,84.27,5
+TXN-50947,2026-03-12,San Francisco,Groceries,4,164.04,5
+TXN-50948,2026-03-12,San Francisco,Fashion,2,135.27,4
+TXN-50949,2026-03-12,New York,Fashion,2,154.18,5
+TXN-50950,2026-03-12,Berlin,Electronics,4,1093.4,3
+TXN-50951,2026-03-12,Singapore,Groceries,1,34.13,3
+TXN-50952,2026-03-12,Tokyo,Home & Kitchen,3,256.82,5
+TXN-50953,2026-03-12,New York,Fashion,3,228.03,3
+TXN-50954,2026-03-12,Tokyo,Groceries,4,139.79,5
+TXN-50955,2026-03-13,San Francisco,Home & Kitchen,5,454.77,4
+TXN-50956,2026-03-13,San Francisco,Books,1,19.88,3
+TXN-50957,2026-03-13,London,Books,3,56.42,5
+TXN-50958,2026-03-13,Tokyo,Groceries,4,144.71,4
+TXN-50959,2026-03-13,Berlin,Books,1,19.05,5
+TXN-50960,2026-03-13,London,Electronics,2,583.69,3
+TXN-50961,2026-03-13,Singapore,Groceries,1,39.14,3
+TXN-50962,2026-03-13,Singapore,Home & Kitchen,1,97.22,5
+TXN-50963,2026-03-13,Berlin,Books,2,46.88,5
+TXN-50964,2026-03-13,Berlin,Groceries,5,182.29,3
+TXN-50965,2026-03-13,Tokyo,Groceries,2,81.72,5
+TXN-50966,2026-03-13,San Francisco,Groceries,4,147.05,3
+TXN-50967,2026-03-14,Berlin,Groceries,1,38.46,5
+TXN-50968,2026-03-14,Berlin,Fashion,2,144.74,3
+TXN-50969,2026-03-14,Berlin,Home & Kitchen,2,190.53,4
+TXN-50970,2026-03-14,New York,Groceries,2,78.99,3
+TXN-50971,2026-03-14,London,Electronics,3,727.65,5
+TXN-50972,2026-03-14,Berlin,Fashion,3,213.45,4
+TXN-50973,2026-03-14,New York,Electronics,3,698.23,5
+TXN-50974,2026-03-14,Singapore,Groceries,3,112.73,5
+TXN-50975,2026-03-14,Tokyo,Fashion,4,282.68,5
+TXN-50976,2026-03-14,Berlin,Electronics,3,759.67,3
+TXN-50977,2026-03-14,Tokyo,Home & Kitchen,3,292.02,4
+TXN-50978,2026-03-14,Tokyo,Books,5,90.2,3
+TXN-50979,2026-03-14,San Francisco,Books,2,36.93,5
+TXN-50980,2026-03-14,San Francisco,Groceries,2,66.93,4
+TXN-50981,2026-03-15,Singapore,Electronics,2,512.19,4
+TXN-50982,2026-03-15,Tokyo,Electronics,4,1043.71,5
+TXN-50983,2026-03-15,Singapore,Fashion,4,253.89,3
+TXN-50984,2026-03-15,Berlin,Fashion,5,331.92,5
+TXN-50985,2026-03-15,New York,Home & Kitchen,5,401.23,3
+TXN-50986,2026-03-15,San Francisco,Groceries,5,207.81,5
+TXN-50987,2026-03-15,Singapore,Home & Kitchen,1,98.9,5
+TXN-50988,2026-03-15,New York,Groceries,2,72.43,4
+TXN-50989,2026-03-15,San Francisco,Books,2,45.96,5
+TXN-50990,2026-03-15,Berlin,Fashion,2,152.17,5
+TXN-50991,2026-03-15,San Francisco,Groceries,3,123.55,5
+TXN-50992,2026-03-15,New York,Home & Kitchen,2,172.29,3
+TXN-50993,2026-03-15,New York,Electronics,2,528.41,5
+TXN-50994,2026-03-15,San Francisco,Books,5,92.89,4
+TXN-50995,2026-03-15,Berlin,Home & Kitchen,1,98.88,5
+TXN-50996,2026-03-15,New York,Home & Kitchen,1,88.8,3
+TXN-50997,2026-03-15,Berlin,Home & Kitchen,1,99.37,5
+TXN-50998,2026-03-16,Berlin,Books,4,80.89,3
+TXN-50999,2026-03-16,Tokyo,Home & Kitchen,2,200.86,4
+TXN-51000,2026-03-16,London,Books,5,114.14,5
+TXN-51001,2026-03-16,New York,Home & Kitchen,4,319.66,4
+TXN-51002,2026-03-16,New York,Fashion,3,226.69,5
+TXN-51003,2026-03-16,London,Books,2,36.07,5
+TXN-51004,2026-03-16,Berlin,Electronics,5,1169.19,3
+TXN-51005,2026-03-16,Singapore,Books,2,44.25,4
+TXN-51006,2026-03-16,London,Books,1,18.93,5
+TXN-51007,2026-03-16,London,Home & Kitchen,3,294.91,4
+TXN-51008,2026-03-16,London,Home & Kitchen,5,417.63,5
+TXN-51009,2026-03-16,San Francisco,Books,4,85.25,5
+TXN-51010,2026-03-16,San Francisco,Books,3,64.06,4
+TXN-51011,2026-03-16,London,Groceries,5,175.58,5
+TXN-51012,2026-03-16,Singapore,Books,2,46.26,5
+TXN-51013,2026-03-16,Singapore,Electronics,2,516.99,5
+TXN-51014,2026-03-16,New York,Fashion,2,147.35,4
+TXN-51015,2026-03-16,Berlin,Home & Kitchen,1,80.6,5
+TXN-51016,2026-03-17,San Francisco,Electronics,4,1177.76,4
+TXN-51017,2026-03-17,New York,Electronics,3,724.9,3
+TXN-51018,2026-03-17,New York,Home & Kitchen,4,400.93,4
+TXN-51019,2026-03-17,Singapore,Home & Kitchen,5,419.02,5
+TXN-51020,2026-03-17,San Francisco,Electronics,4,1031.69,3
+TXN-51021,2026-03-17,London,Home & Kitchen,2,154.71,5
+TXN-51022,2026-03-17,Berlin,Home & Kitchen,2,184.37,5
+TXN-51023,2026-03-17,London,Electronics,2,548.25,3
+TXN-51024,2026-03-18,Tokyo,Groceries,3,115.59,4
+TXN-51025,2026-03-18,San Francisco,Home & Kitchen,5,384.46,5
+TXN-51026,2026-03-18,New York,Electronics,5,1231.69,5
+TXN-51027,2026-03-18,London,Home & Kitchen,3,303.19,4
+TXN-51028,2026-03-18,Berlin,Fashion,2,145.1,4
+TXN-51029,2026-03-18,New York,Home & Kitchen,3,242.89,5
+TXN-51030,2026-03-18,Berlin,Electronics,1,262.74,4
+TXN-51031,2026-03-18,Berlin,Electronics,3,872.13,5
+TXN-51032,2026-03-18,Singapore,Groceries,4,166.57,5
+TXN-51033,2026-03-19,London,Fashion,4,309.25,5
+TXN-51034,2026-03-19,Tokyo,Electronics,1,244.34,4
+TXN-51035,2026-03-19,Singapore,Fashion,2,159.61,4
+TXN-51036,2026-03-19,Berlin,Groceries,5,158.01,4
+TXN-51037,2026-03-19,London,Fashion,1,71.38,5
+TXN-51038,2026-03-19,New York,Groceries,5,206.4,4
+TXN-51039,2026-03-19,London,Groceries,2,81.78,4
+TXN-51040,2026-03-19,Singapore,Fashion,2,146.96,3
+TXN-51041,2026-03-19,Singapore,Fashion,2,162.66,3
+TXN-51042,2026-03-19,San Francisco,Fashion,2,161.13,4
+TXN-51043,2026-03-19,New York,Fashion,1,82.32,5
+TXN-51044,2026-03-19,Berlin,Books,1,22.59,5
+TXN-51045,2026-03-19,Tokyo,Electronics,3,814.65,4
+TXN-51046,2026-03-19,London,Home & Kitchen,4,324.65,5
+TXN-51047,2026-03-19,Tokyo,Groceries,2,78.75,3
+TXN-51048,2026-03-20,Tokyo,Home & Kitchen,4,401.84,3
+TXN-51049,2026-03-20,London,Home & Kitchen,4,393.76,3
+TXN-51050,2026-03-20,New York,Books,5,103.8,5
+TXN-51051,2026-03-20,New York,Electronics,2,506.91,3
+TXN-51052,2026-03-20,London,Groceries,5,202.75,3
+TXN-51053,2026-03-20,London,Home & Kitchen,2,166.74,5
+TXN-51054,2026-03-20,London,Groceries,2,73.47,3
+TXN-51055,2026-03-20,Singapore,Books,3,60.57,4
+TXN-51056,2026-03-21,San Francisco,Books,5,93.93,5
+TXN-51057,2026-03-21,New York,Fashion,3,239.66,5
+TXN-51058,2026-03-21,Tokyo,Books,2,37.75,5
+TXN-51059,2026-03-21,Tokyo,Fashion,1,66.71,4
+TXN-51060,2026-03-21,Singapore,Fashion,5,371.07,4
+TXN-51061,2026-03-21,London,Books,3,64.12,5
+TXN-51062,2026-03-21,Tokyo,Electronics,1,276.79,3
+TXN-51063,2026-03-21,London,Fashion,4,322.47,3
+TXN-51064,2026-03-21,Singapore,Books,3,58.68,4
+TXN-51065,2026-03-21,Berlin,Home & Kitchen,3,255.83,4
+TXN-51066,2026-03-21,London,Electronics,5,1199.61,5
+TXN-51067,2026-03-21,San Francisco,Home & Kitchen,3,256.67,5
+TXN-51068,2026-03-22,Singapore,Books,4,93.35,4
+TXN-51069,2026-03-22,London,Home & Kitchen,4,370.43,3
+TXN-51070,2026-03-22,Singapore,Fashion,3,215.57,5
+TXN-51071,2026-03-22,Tokyo,Home & Kitchen,1,78.52,4
+TXN-51072,2026-03-22,London,Fashion,3,230.14,5
+TXN-51073,2026-03-22,Berlin,Groceries,4,137.39,4
+TXN-51074,2026-03-22,Singapore,Groceries,5,184.85,4
+TXN-51075,2026-03-22,San Francisco,Books,2,46.25,3
+TXN-51076,2026-03-22,Singapore,Fashion,3,248.25,5
+TXN-51077,2026-03-22,San Francisco,Electronics,2,509.56,3
+TXN-51078,2026-03-22,Tokyo,Electronics,5,1145.18,4
+TXN-51079,2026-03-22,New York,Home & Kitchen,1,83.19,3
+TXN-51080,2026-03-22,Singapore,Electronics,4,992.81,3
+TXN-51081,2026-03-22,Tokyo,Groceries,2,65.76,3
+TXN-51082,2026-03-22,New York,Electronics,3,868.58,4
+TXN-51083,2026-03-22,Tokyo,Books,5,118.05,5
+TXN-51084,2026-03-23,Singapore,Fashion,5,333.59,5
+TXN-51085,2026-03-23,Singapore,Books,5,103.05,5
+TXN-51086,2026-03-23,London,Home & Kitchen,3,266.35,3
+TXN-51087,2026-03-23,Tokyo,Electronics,3,757.3,4
+TXN-51088,2026-03-23,London,Fashion,1,63.0,3
+TXN-51089,2026-03-23,London,Groceries,4,148.47,5
+TXN-51090,2026-03-23,Tokyo,Books,3,54.16,4
+TXN-51091,2026-03-23,Berlin,Groceries,2,79.73,5
+TXN-51092,2026-03-23,San Francisco,Groceries,4,163.05,4
+TXN-51093,2026-03-23,San Francisco,Books,2,44.58,5
+TXN-51094,2026-03-23,Tokyo,Books,2,39.16,4
+TXN-51095,2026-03-23,Berlin,Fashion,5,399.8,5
+TXN-51096,2026-03-23,London,Groceries,5,199.96,4
+TXN-51097,2026-03-23,New York,Fashion,2,131.74,3
+TXN-51098,2026-03-23,Berlin,Books,4,78.53,5
+TXN-51099,2026-03-24,London,Fashion,1,66.2,5
+TXN-51100,2026-03-24,San Francisco,Electronics,1,246.16,3
+TXN-51101,2026-03-24,Singapore,Books,1,19.4,3
+TXN-51102,2026-03-24,Tokyo,Electronics,2,501.29,4
+TXN-51103,2026-03-24,London,Books,4,88.73,3
+TXN-51104,2026-03-24,New York,Groceries,2,64.18,4
+TXN-51105,2026-03-24,Berlin,Electronics,4,954.48,4
+TXN-51106,2026-03-24,New York,Books,1,23.85,5
+TXN-51107,2026-03-24,Tokyo,Fashion,4,272.76,3
+TXN-51108,2026-03-24,Tokyo,Fashion,1,73.94,3
+TXN-51109,2026-03-24,Tokyo,Books,3,70.85,3
+TXN-51110,2026-03-24,Singapore,Electronics,5,1320.35,4
+TXN-51111,2026-03-24,Singapore,Books,3,57.58,3
+TXN-51112,2026-03-24,New York,Fashion,2,152.58,4
+TXN-51113,2026-03-24,San Francisco,Electronics,3,806.56,4
+TXN-51114,2026-03-25,New York,Fashion,1,75.2,5
+TXN-51115,2026-03-25,Singapore,Books,5,94.65,3
+TXN-51116,2026-03-25,San Francisco,Fashion,4,259.68,5
+TXN-51117,2026-03-25,Singapore,Groceries,1,32.13,5
+TXN-51118,2026-03-25,Singapore,Fashion,5,398.1,3
+TXN-51119,2026-03-25,San Francisco,Books,3,71.67,5
+TXN-51120,2026-03-25,Tokyo,Groceries,2,63.45,4
+TXN-51121,2026-03-25,Singapore,Groceries,2,68.26,3
+TXN-51122,2026-03-25,Singapore,Books,4,85.42,5
+TXN-51123,2026-03-25,San Francisco,Books,5,95.6,4
+TXN-51124,2026-03-25,Singapore,Groceries,4,137.56,5
+TXN-51125,2026-03-25,San Francisco,Home & Kitchen,1,90.04,4
+TXN-51126,2026-03-25,London,Groceries,5,176.77,3
+TXN-51127,2026-03-25,Tokyo,Home & Kitchen,2,198.03,5
+TXN-51128,2026-03-25,Berlin,Groceries,2,69.73,3
+TXN-51129,2026-03-25,Tokyo,Home & Kitchen,2,179.73,4
+TXN-51130,2026-03-25,San Francisco,Home & Kitchen,5,418.6,4
+TXN-51131,2026-03-25,New York,Groceries,1,36.99,3
+TXN-51132,2026-03-25,San Francisco,Electronics,2,581.02,3
+TXN-51133,2026-03-25,Tokyo,Electronics,2,464.81,5
+TXN-51134,2026-03-26,Singapore,Books,4,84.62,5
+TXN-51135,2026-03-26,London,Home & Kitchen,1,85.84,5
+TXN-51136,2026-03-26,New York,Electronics,2,548.36,3
+TXN-51137,2026-03-26,Singapore,Books,1,20.17,5
+TXN-51138,2026-03-26,London,Books,1,22.94,4
+TXN-51139,2026-03-26,New York,Home & Kitchen,1,97.78,3
+TXN-51140,2026-03-26,Berlin,Fashion,1,65.13,3
+TXN-51141,2026-03-26,Tokyo,Home & Kitchen,2,162.85,5
+TXN-51142,2026-03-26,Berlin,Fashion,2,149.45,5
+TXN-51143,2026-03-26,Singapore,Books,1,22.6,5
+TXN-51144,2026-03-26,Singapore,Groceries,4,155.51,4
+TXN-51145,2026-03-26,San Francisco,Electronics,2,532.49,5
+TXN-51146,2026-03-26,Singapore,Groceries,2,74.21,5
+TXN-51147,2026-03-26,London,Books,3,63.9,4
+TXN-51148,2026-03-26,Tokyo,Groceries,4,160.7,4
+TXN-51149,2026-03-26,San Francisco,Home & Kitchen,5,452.07,4
+TXN-51150,2026-03-26,Singapore,Home & Kitchen,3,257.04,4
+TXN-51151,2026-03-26,Tokyo,Books,1,22.36,4
+TXN-51152,2026-03-27,Berlin,Electronics,2,599.01,4
+TXN-51153,2026-03-27,London,Electronics,2,482.22,4
+TXN-51154,2026-03-27,Singapore,Electronics,3,881.8,5
+TXN-51155,2026-03-27,Berlin,Home & Kitchen,5,402.23,3
+TXN-51156,2026-03-27,London,Books,2,37.66,4
+TXN-51157,2026-03-27,San Francisco,Home & Kitchen,2,166.07,4
+TXN-51158,2026-03-27,Berlin,Electronics,4,1070.72,3
+TXN-51159,2026-03-27,Singapore,Electronics,3,853.4,3
+TXN-51160,2026-03-27,Singapore,Books,5,114.59,3
+TXN-51161,2026-03-27,Singapore,Home & Kitchen,3,232.36,5
+TXN-51162,2026-03-27,New York,Books,1,23.53,4
+TXN-51163,2026-03-27,Tokyo,Groceries,4,165.07,3
+TXN-51164,2026-03-27,Singapore,Fashion,5,412.51,5
+TXN-51165,2026-03-27,New York,Books,3,63.44,4
+TXN-51166,2026-03-27,Berlin,Home & Kitchen,2,169.67,5
+TXN-51167,2026-03-27,San Francisco,Fashion,1,77.15,4
+TXN-51168,2026-03-27,Berlin,Books,5,105.14,3
+TXN-51169,2026-03-28,Tokyo,Groceries,2,65.78,3
+TXN-51170,2026-03-28,Berlin,Books,1,21.29,4
+TXN-51171,2026-03-28,Tokyo,Electronics,5,1287.93,5
+TXN-51172,2026-03-28,San Francisco,Fashion,4,298.98,4
+TXN-51173,2026-03-28,Singapore,Books,5,95.88,5
+TXN-51174,2026-03-28,San Francisco,Home & Kitchen,2,156.65,4
+TXN-51175,2026-03-28,Singapore,Groceries,5,162.2,5
+TXN-51176,2026-03-28,Tokyo,Books,3,60.27,4
+TXN-51177,2026-03-28,Berlin,Groceries,1,39.58,3
+TXN-51178,2026-03-28,Berlin,Groceries,4,152.17,4
+TXN-51179,2026-03-28,San Francisco,Electronics,2,552.8,3
+TXN-51180,2026-03-28,New York,Electronics,1,243.23,5
+TXN-51181,2026-03-28,London,Fashion,1,70.21,3
+TXN-51182,2026-03-28,Tokyo,Groceries,4,126.96,3
+TXN-51183,2026-03-29,San Francisco,Home & Kitchen,2,180.87,4
+TXN-51184,2026-03-29,Tokyo,Home & Kitchen,5,475.57,3
+TXN-51185,2026-03-29,Tokyo,Electronics,5,1464.77,5
+TXN-51186,2026-03-29,London,Electronics,2,459.02,3
+TXN-51187,2026-03-29,London,Home & Kitchen,1,88.36,3
+TXN-51188,2026-03-29,Tokyo,Electronics,3,824.17,5
+TXN-51189,2026-03-29,New York,Groceries,1,34.57,5
+TXN-51190,2026-03-29,San Francisco,Books,4,84.2,5
+TXN-51191,2026-03-29,London,Electronics,4,1160.03,5
+TXN-51192,2026-03-29,San Francisco,Electronics,2,525.1,4
+TXN-51193,2026-03-29,Singapore,Home & Kitchen,1,77.51,5
+TXN-51194,2026-03-29,London,Groceries,4,142.52,3
+TXN-51195,2026-03-29,London,Electronics,3,754.96,4
+TXN-51196,2026-03-29,Berlin,Fashion,3,240.15,5
+TXN-51197,2026-03-29,Tokyo,Groceries,1,41.41,4
+TXN-51198,2026-03-29,San Francisco,Fashion,3,245.52,5
+TXN-51199,2026-03-29,New York,Fashion,4,295.74,5
+TXN-51200,2026-03-29,Singapore,Home & Kitchen,2,174.28,5
+TXN-51201,2026-03-29,Tokyo,Fashion,3,246.31,4
+TXN-51202,2026-03-30,San Francisco,Home & Kitchen,2,186.28,5
+TXN-51203,2026-03-30,Singapore,Home & Kitchen,2,196.99,4
+TXN-51204,2026-03-30,San Francisco,Home & Kitchen,4,407.56,3
+TXN-51205,2026-03-30,San Francisco,Home & Kitchen,3,234.69,5
+TXN-51206,2026-03-30,San Francisco,Electronics,3,863.89,3
+TXN-51207,2026-03-30,London,Electronics,4,1188.36,4
+TXN-51208,2026-03-30,Singapore,Books,3,56.74,3
+TXN-51209,2026-03-30,San Francisco,Electronics,2,453.93,5
+TXN-51210,2026-03-30,London,Home & Kitchen,5,454.8,3
+TXN-51211,2026-03-30,San Francisco,Home & Kitchen,2,188.06,4
+TXN-51212,2026-03-30,Singapore,Electronics,4,940.23,5
+TXN-51213,2026-03-30,Singapore,Books,3,57.31,4
+TXN-51214,2026-03-30,Tokyo,Books,2,37.97,3
+TXN-51215,2026-03-30,Tokyo,Electronics,1,294.41,4
+TXN-51216,2026-03-30,Singapore,Fashion,2,157.83,3
+TXN-51217,2026-03-31,Berlin,Books,4,88.51,4
+TXN-51218,2026-03-31,Tokyo,Fashion,4,317.2,5
+TXN-51219,2026-03-31,Singapore,Books,3,61.09,5
+TXN-51220,2026-03-31,Berlin,Home & Kitchen,5,449.47,5
+TXN-51221,2026-03-31,Berlin,Electronics,1,258.87,3
+TXN-51222,2026-03-31,Berlin,Fashion,5,356.54,5
+TXN-51223,2026-03-31,Berlin,Electronics,4,1054.84,5
+TXN-51224,2026-03-31,San Francisco,Electronics,3,773.9,4
+TXN-51225,2026-03-31,Tokyo,Groceries,2,71.87,5
+TXN-51226,2026-03-31,Singapore,Electronics,5,1463.88,4
+TXN-51227,2026-04-01,New York,Books,5,93.4,5
+TXN-51228,2026-04-01,San Francisco,Home & Kitchen,4,348.18,4
+TXN-51229,2026-04-01,San Francisco,Electronics,4,1077.09,5
+TXN-51230,2026-04-01,Tokyo,Fashion,1,68.25,5
+TXN-51231,2026-04-01,Singapore,Fashion,1,64.92,5
+TXN-51232,2026-04-01,Singapore,Books,3,55.54,5
+TXN-51233,2026-04-01,Singapore,Books,5,108.36,3
+TXN-51234,2026-04-01,Berlin,Books,4,73.05,3
+TXN-51235,2026-04-01,Berlin,Groceries,2,66.4,3
+TXN-51236,2026-04-01,Singapore,Fashion,1,71.81,4
+TXN-51237,2026-04-01,London,Books,2,37.41,3
+TXN-51238,2026-04-01,New York,Fashion,5,395.37,3
+TXN-51239,2026-04-01,Tokyo,Books,4,85.04,3
+TXN-51240,2026-04-01,Tokyo,Home & Kitchen,2,164.06,5
+TXN-51241,2026-04-01,Tokyo,Books,4,82.61,5
+TXN-51242,2026-04-01,New York,Home & Kitchen,2,197.99,4
+TXN-51243,2026-04-01,Singapore,Home & Kitchen,5,487.07,3
+TXN-51244,2026-04-01,San Francisco,Electronics,2,458.26,4
+TXN-51245,2026-04-02,New York,Fashion,5,402.99,4
+TXN-51246,2026-04-02,New York,Groceries,1,32.64,3
+TXN-51247,2026-04-02,Singapore,Fashion,3,227.5,5
+TXN-51248,2026-04-02,Berlin,Home & Kitchen,5,405.12,4
+TXN-51249,2026-04-02,London,Home & Kitchen,1,78.87,4
+TXN-51250,2026-04-02,London,Groceries,4,160.45,4
+TXN-51251,2026-04-02,New York,Home & Kitchen,3,265.52,3
+TXN-51252,2026-04-02,London,Groceries,5,179.22,3
+TXN-51253,2026-04-03,Berlin,Fashion,1,65.3,5
+TXN-51254,2026-04-03,New York,Home & Kitchen,4,379.86,5
+TXN-51255,2026-04-03,Tokyo,Groceries,5,202.01,4
+TXN-51256,2026-04-03,Berlin,Home & Kitchen,5,427.62,3
+TXN-51257,2026-04-03,Berlin,Home & Kitchen,4,359.01,5
+TXN-51258,2026-04-03,Tokyo,Books,2,46.6,3
+TXN-51259,2026-04-03,San Francisco,Groceries,1,32.74,4
+TXN-51260,2026-04-03,Singapore,Electronics,2,569.93,4
+TXN-51261,2026-04-03,New York,Books,3,60.29,5
+TXN-51262,2026-04-03,New York,Fashion,2,154.98,4
+TXN-51263,2026-04-03,London,Electronics,3,789.01,4
+TXN-51264,2026-04-03,New York,Electronics,3,751.81,5
+TXN-51265,2026-04-03,Berlin,Home & Kitchen,1,97.72,3
+TXN-51266,2026-04-03,London,Groceries,4,164.48,3
+TXN-51267,2026-04-03,Tokyo,Fashion,2,152.34,5
+TXN-51268,2026-04-03,Tokyo,Groceries,4,164.97,3
+TXN-51269,2026-04-03,London,Home & Kitchen,5,474.93,4
+TXN-51270,2026-04-03,Berlin,Home & Kitchen,1,81.81,5
+TXN-51271,2026-04-03,London,Groceries,1,41.68,4
+TXN-51272,2026-04-04,Tokyo,Groceries,5,201.73,5
+TXN-51273,2026-04-04,Tokyo,Home & Kitchen,2,183.35,4
+TXN-51274,2026-04-04,Singapore,Groceries,1,34.35,3
+TXN-51275,2026-04-04,San Francisco,Books,3,62.13,4
+TXN-51276,2026-04-04,Berlin,Fashion,3,200.03,4
+TXN-51277,2026-04-04,San Francisco,Electronics,1,258.28,3
+TXN-51278,2026-04-04,Berlin,Books,2,38.28,4
+TXN-51279,2026-04-04,London,Home & Kitchen,3,240.46,3
+TXN-51280,2026-04-05,San Francisco,Fashion,1,72.65,5
+TXN-51281,2026-04-05,New York,Home & Kitchen,1,84.43,3
+TXN-51282,2026-04-05,New York,Home & Kitchen,3,265.22,3
+TXN-51283,2026-04-05,Berlin,Electronics,3,680.06,4
+TXN-51284,2026-04-05,London,Fashion,2,134.09,4
+TXN-51285,2026-04-05,London,Home & Kitchen,4,374.45,4
+TXN-51286,2026-04-05,San Francisco,Fashion,3,196.21,5
+TXN-51287,2026-04-05,Berlin,Home & Kitchen,1,81.77,4
+TXN-51288,2026-04-05,London,Home & Kitchen,3,240.33,5
+TXN-51289,2026-04-05,Berlin,Groceries,2,66.6,4
+TXN-51290,2026-04-05,London,Home & Kitchen,5,439.07,3
+TXN-51291,2026-04-05,Tokyo,Electronics,1,232.94,3
+TXN-51292,2026-04-05,Tokyo,Electronics,4,953.69,5
+TXN-51293,2026-04-05,Singapore,Home & Kitchen,4,368.86,4
+TXN-51294,2026-04-05,San Francisco,Groceries,5,161.62,4
+TXN-51295,2026-04-05,San Francisco,Home & Kitchen,1,97.23,5
+TXN-51296,2026-04-06,Tokyo,Electronics,3,829.01,5
+TXN-51297,2026-04-06,Tokyo,Books,2,47.37,3
+TXN-51298,2026-04-06,London,Home & Kitchen,3,259.49,5
+TXN-51299,2026-04-06,London,Groceries,4,146.48,3
+TXN-51300,2026-04-06,New York,Books,3,62.62,3
+TXN-51301,2026-04-06,London,Groceries,5,187.67,5
+TXN-51302,2026-04-06,Tokyo,Electronics,1,249.44,5
+TXN-51303,2026-04-06,London,Electronics,5,1297.87,5
+TXN-51304,2026-04-06,San Francisco,Books,5,97.31,3
+TXN-51305,2026-04-06,Tokyo,Books,1,20.04,5
+TXN-51306,2026-04-06,Tokyo,Home & Kitchen,4,363.86,4
+TXN-51307,2026-04-06,Singapore,Home & Kitchen,2,161.83,5
+TXN-51308,2026-04-06,Singapore,Electronics,5,1438.78,3
+TXN-51309,2026-04-06,Berlin,Home & Kitchen,4,339.19,3
+TXN-51310,2026-04-06,San Francisco,Books,3,71.21,3
+TXN-51311,2026-04-07,Singapore,Electronics,5,1414.25,4
+TXN-51312,2026-04-07,Tokyo,Groceries,1,32.45,3
+TXN-51313,2026-04-07,Singapore,Home & Kitchen,1,95.81,5
+TXN-51314,2026-04-07,Tokyo,Fashion,5,345.61,5
+TXN-51315,2026-04-07,Tokyo,Home & Kitchen,2,163.49,4
+TXN-51316,2026-04-07,Berlin,Groceries,3,123.43,4
+TXN-51317,2026-04-07,New York,Groceries,5,157.93,5
+TXN-51318,2026-04-07,San Francisco,Books,3,55.12,5
+TXN-51319,2026-04-07,New York,Electronics,5,1432.78,4
+TXN-51320,2026-04-07,London,Electronics,1,242.64,5
+TXN-51321,2026-04-07,Tokyo,Home & Kitchen,3,283.95,4
+TXN-51322,2026-04-07,Tokyo,Books,5,96.34,3
+TXN-51323,2026-04-07,San Francisco,Books,2,42.67,4
+TXN-51324,2026-04-07,San Francisco,Books,3,71.95,5
+TXN-51325,2026-04-07,San Francisco,Fashion,1,64.51,3
+TXN-51326,2026-04-07,Singapore,Fashion,4,307.27,3
+TXN-51327,2026-04-07,San Francisco,Electronics,4,1158.05,5
+TXN-51328,2026-04-08,Berlin,Books,2,41.45,4
+TXN-51329,2026-04-08,Tokyo,Home & Kitchen,4,342.24,3
+TXN-51330,2026-04-08,Berlin,Books,1,21.47,5
+TXN-51331,2026-04-08,Singapore,Fashion,5,343.27,5
+TXN-51332,2026-04-08,London,Home & Kitchen,1,101.44,5
+TXN-51333,2026-04-08,Singapore,Books,3,56.04,4
+TXN-51334,2026-04-08,San Francisco,Electronics,5,1493.84,4
+TXN-51335,2026-04-08,Berlin,Books,1,21.14,5
+TXN-51336,2026-04-08,San Francisco,Electronics,4,1089.2,5
+TXN-51337,2026-04-08,Singapore,Electronics,5,1424.29,4
+TXN-51338,2026-04-08,New York,Home & Kitchen,3,270.43,3
+TXN-51339,2026-04-08,Tokyo,Books,5,117.18,5
+TXN-51340,2026-04-08,Tokyo,Groceries,3,124.76,4
+TXN-51341,2026-04-08,San Francisco,Groceries,1,38.8,5
+TXN-51342,2026-04-08,Singapore,Groceries,5,171.17,5
+TXN-51343,2026-04-08,Berlin,Books,2,42.87,5
+TXN-51344,2026-04-08,Singapore,Groceries,5,158.93,4
+TXN-51345,2026-04-09,Berlin,Fashion,1,80.88,4
+TXN-51346,2026-04-09,San Francisco,Groceries,5,172.25,4
+TXN-51347,2026-04-09,Singapore,Electronics,1,270.29,5
+TXN-51348,2026-04-09,Singapore,Fashion,4,283.06,3
+TXN-51349,2026-04-09,Singapore,Groceries,2,73.18,5
+TXN-51350,2026-04-09,London,Electronics,1,297.55,5
+TXN-51351,2026-04-09,Tokyo,Fashion,4,316.71,3
+TXN-51352,2026-04-09,Singapore,Books,2,38.53,5
+TXN-51353,2026-04-09,New York,Groceries,3,118.3,3
+TXN-51354,2026-04-10,Tokyo,Fashion,4,292.0,4
+TXN-51355,2026-04-10,San Francisco,Home & Kitchen,4,375.72,4
+TXN-51356,2026-04-10,London,Books,2,42.37,4
+TXN-51357,2026-04-10,London,Electronics,4,1014.6,4
+TXN-51358,2026-04-10,Singapore,Home & Kitchen,1,78.98,5
+TXN-51359,2026-04-10,Tokyo,Groceries,5,205.7,4
+TXN-51360,2026-04-10,London,Groceries,3,119.77,4
+TXN-51361,2026-04-10,Tokyo,Home & Kitchen,4,384.86,5
+TXN-51362,2026-04-11,San Francisco,Home & Kitchen,5,425.52,5
+TXN-51363,2026-04-11,London,Fashion,5,316.11,3
+TXN-51364,2026-04-11,New York,Electronics,4,929.31,3
+TXN-51365,2026-04-11,London,Books,2,44.7,4
+TXN-51366,2026-04-11,New York,Fashion,1,76.01,3
+TXN-51367,2026-04-11,Singapore,Home & Kitchen,2,201.47,5
+TXN-51368,2026-04-11,Singapore,Electronics,1,231.48,5
+TXN-51369,2026-04-11,Tokyo,Fashion,5,399.34,3
+TXN-51370,2026-04-11,Singapore,Electronics,2,488.0,4
+TXN-51371,2026-04-11,Singapore,Electronics,4,1176.81,4
+TXN-51372,2026-04-11,Singapore,Books,3,58.63,3
+TXN-51373,2026-04-12,Tokyo,Electronics,4,999.8,3
+TXN-51374,2026-04-12,London,Groceries,2,72.25,4
+TXN-51375,2026-04-12,Berlin,Fashion,4,266.99,4
+TXN-51376,2026-04-12,San Francisco,Electronics,5,1413.27,3
+TXN-51377,2026-04-12,Singapore,Home & Kitchen,1,99.77,5
+TXN-51378,2026-04-12,New York,Groceries,1,32.27,5
+TXN-51379,2026-04-12,Tokyo,Groceries,1,40.91,3
+TXN-51380,2026-04-12,New York,Electronics,4,979.93,5
+TXN-51381,2026-04-12,Tokyo,Groceries,5,157.69,5
+TXN-51382,2026-04-12,Tokyo,Books,4,81.69,5
+TXN-51383,2026-04-12,Berlin,Electronics,2,450.5,5
+TXN-51384,2026-04-12,New York,Books,5,106.06,4
+TXN-51385,2026-04-13,Tokyo,Groceries,1,38.14,5
+TXN-51386,2026-04-13,London,Electronics,5,1445.0,4
+TXN-51387,2026-04-13,Tokyo,Electronics,3,820.75,3
+TXN-51388,2026-04-13,New York,Home & Kitchen,4,373.39,4
+TXN-51389,2026-04-13,New York,Books,3,62.76,5
+TXN-51390,2026-04-13,Singapore,Books,2,37.68,3
+TXN-51391,2026-04-13,Singapore,Electronics,5,1214.43,4
+TXN-51392,2026-04-13,Berlin,Electronics,3,787.43,4
+TXN-51393,2026-04-13,New York,Electronics,3,687.61,5
+TXN-51394,2026-04-13,Tokyo,Electronics,1,240.88,5
+TXN-51395,2026-04-13,Tokyo,Home & Kitchen,5,401.49,5
+TXN-51396,2026-04-13,New York,Fashion,1,78.44,4
+TXN-51397,2026-04-13,Tokyo,Electronics,5,1142.18,5
+TXN-51398,2026-04-14,New York,Fashion,2,152.57,4
+TXN-51399,2026-04-14,Tokyo,Electronics,5,1189.01,5
+TXN-51400,2026-04-14,New York,Electronics,1,262.29,5
+TXN-51401,2026-04-14,New York,Fashion,2,143.9,5
+TXN-51402,2026-04-14,London,Books,1,23.86,5
+TXN-51403,2026-04-14,San Francisco,Home & Kitchen,3,293.49,3
+TXN-51404,2026-04-14,Berlin,Electronics,2,500.33,3
+TXN-51405,2026-04-14,San Francisco,Groceries,4,133.06,4
+TXN-51406,2026-04-14,San Francisco,Home & Kitchen,4,330.85,5
+TXN-51407,2026-04-14,San Francisco,Electronics,1,284.33,5
+TXN-51408,2026-04-14,Tokyo,Home & Kitchen,2,153.8,4
+TXN-51409,2026-04-14,New York,Electronics,1,238.46,3
+TXN-51410,2026-04-14,London,Home & Kitchen,4,376.74,4
+TXN-51411,2026-04-14,San Francisco,Fashion,2,152.87,5
+TXN-51412,2026-04-14,Tokyo,Books,2,47.26,5
+TXN-51413,2026-04-14,Berlin,Electronics,2,557.58,5
+TXN-51414,2026-04-14,Singapore,Electronics,3,753.27,3
+TXN-51415,2026-04-14,San Francisco,Home & Kitchen,2,158.99,5
+TXN-51416,2026-04-15,London,Home & Kitchen,5,447.21,4
+TXN-51417,2026-04-15,London,Fashion,1,67.07,3
+TXN-51418,2026-04-15,Tokyo,Books,2,37.92,3
+TXN-51419,2026-04-15,Singapore,Electronics,3,739.14,4
+TXN-51420,2026-04-15,London,Groceries,5,199.77,4
+TXN-51421,2026-04-15,New York,Electronics,1,294.36,3
+TXN-51422,2026-04-15,New York,Fashion,4,295.25,3
+TXN-51423,2026-04-15,Singapore,Fashion,4,301.79,4
+TXN-51424,2026-04-15,San Francisco,Books,3,58.14,3
+TXN-51425,2026-04-16,New York,Fashion,2,156.99,3
+TXN-51426,2026-04-16,San Francisco,Books,1,20.83,4
+TXN-51427,2026-04-16,Tokyo,Electronics,2,482.42,5
+TXN-51428,2026-04-16,San Francisco,Books,4,80.96,4
+TXN-51429,2026-04-16,Singapore,Fashion,3,250.46,3
+TXN-51430,2026-04-16,San Francisco,Groceries,1,38.77,3
+TXN-51431,2026-04-16,San Francisco,Groceries,1,40.44,4
+TXN-51432,2026-04-16,San Francisco,Books,3,57.96,4
+TXN-51433,2026-04-16,San Francisco,Home & Kitchen,5,497.96,5
+TXN-51434,2026-04-16,San Francisco,Home & Kitchen,1,87.0,5
+TXN-51435,2026-04-16,San Francisco,Books,5,104.2,4
+TXN-51436,2026-04-16,New York,Groceries,4,156.92,3
+TXN-51437,2026-04-16,London,Fashion,4,300.68,5
+TXN-51438,2026-04-17,New York,Home & Kitchen,4,405.98,3
+TXN-51439,2026-04-17,Singapore,Books,5,91.01,5
+TXN-51440,2026-04-17,Tokyo,Books,1,20.71,3
+TXN-51441,2026-04-17,Berlin,Electronics,1,276.99,4
+TXN-51442,2026-04-17,San Francisco,Fashion,3,207.63,5
+TXN-51443,2026-04-17,New York,Electronics,4,1100.71,3
+TXN-51444,2026-04-17,Berlin,Books,5,90.73,4
+TXN-51445,2026-04-17,San Francisco,Books,4,76.44,4
+TXN-51446,2026-04-17,Singapore,Books,1,23.16,3
+TXN-51447,2026-04-17,Singapore,Books,3,63.56,4
+TXN-51448,2026-04-18,Singapore,Groceries,5,185.98,3
+TXN-51449,2026-04-18,Berlin,Electronics,3,840.55,3
+TXN-51450,2026-04-18,Singapore,Home & Kitchen,3,297.43,3
+TXN-51451,2026-04-18,London,Books,4,86.86,4
+TXN-51452,2026-04-18,San Francisco,Groceries,5,194.51,5
+TXN-51453,2026-04-18,San Francisco,Fashion,3,204.03,3
+TXN-51454,2026-04-18,Singapore,Books,5,116.13,5
+TXN-51455,2026-04-18,Singapore,Fashion,2,139.46,4
+TXN-51456,2026-04-18,Singapore,Home & Kitchen,4,334.27,3
+TXN-51457,2026-04-18,London,Groceries,4,146.42,5
+TXN-51458,2026-04-18,Tokyo,Electronics,5,1379.37,5
+TXN-51459,2026-04-18,Tokyo,Groceries,5,176.83,5
+TXN-51460,2026-04-18,San Francisco,Electronics,4,926.19,4
+TXN-51461,2026-04-18,London,Fashion,1,65.3,4
+TXN-51462,2026-04-19,Tokyo,Fashion,2,162.75,5
+TXN-51463,2026-04-19,London,Electronics,4,1190.87,5
+TXN-51464,2026-04-19,Tokyo,Fashion,3,215.47,5
+TXN-51465,2026-04-19,London,Electronics,2,459.44,3
+TXN-51466,2026-04-19,Singapore,Home & Kitchen,3,260.99,4
+TXN-51467,2026-04-19,Tokyo,Groceries,5,192.46,5
+TXN-51468,2026-04-19,Tokyo,Home & Kitchen,4,337.02,3
+TXN-51469,2026-04-19,San Francisco,Groceries,3,101.64,4
+TXN-51470,2026-04-19,New York,Groceries,2,70.42,4
+TXN-51471,2026-04-20,San Francisco,Home & Kitchen,5,418.87,3
+TXN-51472,2026-04-20,San Francisco,Fashion,2,130.91,4
+TXN-51473,2026-04-20,San Francisco,Home & Kitchen,4,332.56,3
+TXN-51474,2026-04-20,Berlin,Fashion,1,76.98,4
+TXN-51475,2026-04-20,London,Fashion,4,297.35,3
+TXN-51476,2026-04-20,London,Home & Kitchen,1,99.97,4
+TXN-51477,2026-04-20,San Francisco,Books,4,94.27,3
+TXN-51478,2026-04-20,Singapore,Electronics,5,1490.85,4
+TXN-51479,2026-04-20,Tokyo,Groceries,3,125.04,5
+TXN-51480,2026-04-20,Berlin,Fashion,4,280.45,3
+TXN-51481,2026-04-21,New York,Books,2,44.14,3
+TXN-51482,2026-04-21,New York,Groceries,4,151.94,3
+TXN-51483,2026-04-21,London,Books,1,19.96,5
+TXN-51484,2026-04-21,Berlin,Fashion,5,338.33,4
+TXN-51485,2026-04-21,New York,Fashion,1,74.31,4
+TXN-51486,2026-04-21,Berlin,Electronics,4,958.34,4
+TXN-51487,2026-04-21,Berlin,Home & Kitchen,5,502.78,5
+TXN-51488,2026-04-21,Tokyo,Groceries,2,78.04,4
+TXN-51489,2026-04-21,Tokyo,Groceries,3,94.88,4
+TXN-51490,2026-04-21,London,Groceries,4,162.72,3
+TXN-51491,2026-04-21,Singapore,Fashion,4,314.29,4
+TXN-51492,2026-04-21,London,Books,2,45.67,4
+TXN-51493,2026-04-21,San Francisco,Books,5,107.94,3
+TXN-51494,2026-04-21,London,Fashion,4,335.02,5
+TXN-51495,2026-04-21,New York,Groceries,5,197.2,3
+TXN-51496,2026-04-21,Tokyo,Electronics,3,768.27,5
+TXN-51497,2026-04-21,Singapore,Books,5,112.66,3
+TXN-51498,2026-04-21,San Francisco,Fashion,4,276.31,4
+TXN-51499,2026-04-21,London,Electronics,5,1238.97,5
+TXN-51500,2026-04-22,San Francisco,Books,1,22.75,3
+TXN-51501,2026-04-22,London,Groceries,4,131.22,5
+TXN-51502,2026-04-22,Tokyo,Groceries,2,73.33,5
+TXN-51503,2026-04-22,New York,Fashion,1,79.06,4
+TXN-51504,2026-04-22,Berlin,Electronics,3,805.74,5
+TXN-51505,2026-04-22,London,Books,4,95.38,3
+TXN-51506,2026-04-22,Berlin,Groceries,5,158.42,4
+TXN-51507,2026-04-22,Berlin,Fashion,1,66.07,4
+TXN-51508,2026-04-22,London,Fashion,2,128.22,4
+TXN-51509,2026-04-22,Singapore,Books,3,54.88,4
+TXN-51510,2026-04-22,Singapore,Home & Kitchen,1,89.6,5
+TXN-51511,2026-04-22,New York,Fashion,5,394.03,5
+TXN-51512,2026-04-22,London,Groceries,3,103.05,5
+TXN-51513,2026-04-22,New York,Groceries,5,187.95,3
+TXN-51514,2026-04-22,San Francisco,Electronics,5,1230.53,4
+TXN-51515,2026-04-22,London,Books,2,37.23,3
+TXN-51516,2026-04-22,San Francisco,Home & Kitchen,2,193.55,5
+TXN-51517,2026-04-22,Singapore,Home & Kitchen,5,490.37,5
+TXN-51518,2026-04-22,Singapore,Home & Kitchen,1,87.14,3
+TXN-51519,2026-04-23,New York,Fashion,4,281.25,5
+TXN-51520,2026-04-23,San Francisco,Groceries,4,163.37,5
+TXN-51521,2026-04-23,London,Home & Kitchen,2,189.2,3
+TXN-51522,2026-04-23,San Francisco,Electronics,2,578.52,3
+TXN-51523,2026-04-23,London,Fashion,2,134.81,3
+TXN-51524,2026-04-23,Singapore,Books,1,18.47,4
+TXN-51525,2026-04-23,New York,Books,2,37.29,5
+TXN-51526,2026-04-23,Berlin,Home & Kitchen,1,88.46,4
+TXN-51527,2026-04-23,New York,Electronics,3,825.21,3
+TXN-51528,2026-04-24,Berlin,Electronics,2,538.14,3
+TXN-51529,2026-04-24,Singapore,Fashion,3,190.84,3
+TXN-51530,2026-04-24,Berlin,Groceries,3,105.59,5
+TXN-51531,2026-04-24,San Francisco,Home & Kitchen,5,455.21,3
+TXN-51532,2026-04-24,New York,Home & Kitchen,5,410.17,3
+TXN-51533,2026-04-24,San Francisco,Groceries,5,157.73,5
+TXN-51534,2026-04-24,San Francisco,Electronics,5,1444.24,4
+TXN-51535,2026-04-24,Singapore,Groceries,5,167.22,5
+TXN-51536,2026-04-24,San Francisco,Electronics,3,895.79,4
+TXN-51537,2026-04-24,Berlin,Fashion,2,143.12,4
+TXN-51538,2026-04-24,Tokyo,Electronics,1,263.98,4
+TXN-51539,2026-04-24,Singapore,Groceries,3,112.05,3
+TXN-51540,2026-04-24,London,Electronics,4,934.72,4
+TXN-51541,2026-04-24,Berlin,Books,3,66.37,4
+TXN-51542,2026-04-24,Berlin,Fashion,4,276.41,4
+TXN-51543,2026-04-24,New York,Fashion,4,330.88,4
+TXN-51544,2026-04-24,New York,Fashion,4,308.46,4
+TXN-51545,2026-04-24,Berlin,Books,1,18.72,4
+TXN-51546,2026-04-24,Singapore,Books,5,119.33,5
+TXN-51547,2026-04-24,New York,Fashion,3,250.44,4
+TXN-51548,2026-04-25,Tokyo,Home & Kitchen,1,82.44,4
+TXN-51549,2026-04-25,London,Books,5,107.81,5
+TXN-51550,2026-04-25,London,Books,4,88.0,4
+TXN-51551,2026-04-25,Berlin,Books,3,56.65,4
+TXN-51552,2026-04-25,New York,Electronics,3,785.1,3
+TXN-51553,2026-04-25,New York,Fashion,1,78.49,3
+TXN-51554,2026-04-25,Singapore,Books,1,23.83,4
+TXN-51555,2026-04-25,Singapore,Home & Kitchen,3,241.18,5
+TXN-51556,2026-04-25,New York,Home & Kitchen,1,93.36,5
+TXN-51557,2026-04-25,Tokyo,Books,2,39.52,4
+TXN-51558,2026-04-25,Berlin,Books,3,63.76,5
+TXN-51559,2026-04-26,New York,Electronics,4,1164.04,3
+TXN-51560,2026-04-26,Tokyo,Books,3,69.35,4
+TXN-51561,2026-04-26,New York,Books,1,19.06,5
+TXN-51562,2026-04-26,Singapore,Groceries,2,73.32,3
+TXN-51563,2026-04-26,Singapore,Groceries,4,146.47,3
+TXN-51564,2026-04-26,Singapore,Home & Kitchen,4,373.33,5
+TXN-51565,2026-04-26,Berlin,Home & Kitchen,4,354.54,3
+TXN-51566,2026-04-26,New York,Home & Kitchen,4,332.87,5
+TXN-51567,2026-04-26,Berlin,Books,3,67.8,4
+TXN-51568,2026-04-26,New York,Groceries,1,37.7,3
+TXN-51569,2026-04-26,London,Groceries,5,158.91,5
+TXN-51570,2026-04-26,Tokyo,Groceries,1,36.0,4
+TXN-51571,2026-04-26,London,Books,1,21.97,3
+TXN-51572,2026-04-26,Singapore,Fashion,3,226.33,5
+TXN-51573,2026-04-26,London,Electronics,1,250.32,3
+TXN-51574,2026-04-26,London,Home & Kitchen,1,88.25,4
+TXN-51575,2026-04-27,Tokyo,Home & Kitchen,3,231.06,4
+TXN-51576,2026-04-27,New York,Home & Kitchen,3,258.4,4
+TXN-51577,2026-04-27,Berlin,Groceries,1,39.99,3
+TXN-51578,2026-04-27,London,Fashion,4,294.23,5
+TXN-51579,2026-04-27,San Francisco,Groceries,5,173.22,4
+TXN-51580,2026-04-27,Tokyo,Fashion,1,80.65,5
+TXN-51581,2026-04-27,London,Fashion,3,191.99,5
+TXN-51582,2026-04-27,San Francisco,Books,5,112.29,3
+TXN-51583,2026-04-27,New York,Home & Kitchen,5,425.45,3
+TXN-51584,2026-04-27,Berlin,Home & Kitchen,4,349.56,4
+TXN-51585,2026-04-27,Singapore,Electronics,3,788.54,4
+TXN-51586,2026-04-27,Singapore,Books,5,99.4,4
+TXN-51587,2026-04-27,London,Books,5,105.46,5
+TXN-51588,2026-04-27,San Francisco,Home & Kitchen,1,92.51,5
+TXN-51589,2026-04-27,Berlin,Fashion,4,269.89,5
+TXN-51590,2026-04-27,London,Books,5,114.27,4
+TXN-51591,2026-04-27,Singapore,Home & Kitchen,1,89.82,4
+TXN-51592,2026-04-28,San Francisco,Fashion,2,157.35,4
+TXN-51593,2026-04-28,Tokyo,Books,3,69.48,3
+TXN-51594,2026-04-28,Tokyo,Fashion,3,240.89,5
+TXN-51595,2026-04-28,London,Fashion,5,339.79,3
+TXN-51596,2026-04-28,San Francisco,Electronics,2,454.16,4
+TXN-51597,2026-04-28,Tokyo,Books,5,119.74,4
+TXN-51598,2026-04-28,San Francisco,Electronics,2,490.91,3
+TXN-51599,2026-04-28,London,Groceries,5,166.74,3
+TXN-51600,2026-04-28,New York,Books,1,23.16,3
+TXN-51601,2026-04-28,Berlin,Groceries,3,121.82,4
+TXN-51602,2026-04-28,Singapore,Groceries,1,35.67,5
+TXN-51603,2026-04-28,San Francisco,Fashion,1,74.99,5
+TXN-51604,2026-04-28,Berlin,Electronics,5,1481.13,5
+TXN-51605,2026-04-28,Tokyo,Groceries,1,34.0,3
+TXN-51606,2026-04-28,London,Groceries,5,196.2,5
+TXN-51607,2026-04-29,Tokyo,Fashion,2,132.06,3
+TXN-51608,2026-04-29,London,Fashion,4,286.3,5
+TXN-51609,2026-04-29,Tokyo,Electronics,5,1265.51,3
+TXN-51610,2026-04-29,Berlin,Groceries,4,145.94,3
+TXN-51611,2026-04-29,San Francisco,Groceries,3,109.47,4
+TXN-51612,2026-04-29,New York,Groceries,5,159.33,5
+TXN-51613,2026-04-29,Singapore,Electronics,2,487.95,4
+TXN-51614,2026-04-29,Singapore,Groceries,3,122.95,5
+TXN-51615,2026-04-29,Berlin,Electronics,2,578.65,4
+TXN-51616,2026-04-29,Tokyo,Electronics,3,742.7,3
+TXN-51617,2026-04-29,San Francisco,Groceries,2,82.23,5
+TXN-51618,2026-04-29,Singapore,Groceries,4,159.15,4
+TXN-51619,2026-04-29,Tokyo,Electronics,4,1121.08,4
+TXN-51620,2026-04-29,New York,Books,2,44.38,5
+TXN-51621,2026-04-29,London,Electronics,4,1080.63,5
+TXN-51622,2026-04-29,Tokyo,Groceries,1,39.5,5
+TXN-51623,2026-04-29,Singapore,Fashion,4,318.45,3
+TXN-51624,2026-04-29,Tokyo,Electronics,2,544.24,4
+TXN-51625,2026-04-29,New York,Home & Kitchen,1,80.52,5
+TXN-51626,2026-04-30,Berlin,Fashion,4,318.58,4
+TXN-51627,2026-04-30,Tokyo,Books,2,39.13,5
+TXN-51628,2026-04-30,London,Home & Kitchen,3,244.7,4
+TXN-51629,2026-04-30,San Francisco,Groceries,4,162.81,5
+TXN-51630,2026-04-30,New York,Fashion,1,82.39,5
+TXN-51631,2026-04-30,Singapore,Home & Kitchen,2,199.25,4
+TXN-51632,2026-04-30,London,Fashion,2,128.09,5
+TXN-51633,2026-04-30,Berlin,Books,3,56.69,4
+TXN-51634,2026-04-30,Berlin,Fashion,1,63.3,5
+TXN-51635,2026-04-30,Tokyo,Books,4,74.84,5
+TXN-51636,2026-04-30,San Francisco,Fashion,3,207.14,4
+TXN-51637,2026-04-30,San Francisco,Books,4,92.55,5
+TXN-51638,2026-04-30,London,Fashion,2,143.57,4
+TXN-51639,2026-04-30,New York,Fashion,3,250.5,3
+TXN-51640,2026-04-30,Tokyo,Home & Kitchen,2,171.85,5
+TXN-51641,2026-04-30,New York,Books,1,20.81,4
+TXN-51642,2026-04-30,Singapore,Books,2,44.56,5
+TXN-51643,2026-04-30,Singapore,Books,5,97.69,3
+TXN-51644,2026-04-30,New York,Home & Kitchen,1,84.99,3
+TXN-51645,2026-05-01,Berlin,Groceries,5,194.75,3
+TXN-51646,2026-05-01,London,Electronics,5,1357.37,4
+TXN-51647,2026-05-01,Singapore,Books,3,56.38,5
+TXN-51648,2026-05-01,Berlin,Electronics,2,489.04,5
+TXN-51649,2026-05-01,London,Books,4,75.17,4
+TXN-51650,2026-05-01,Tokyo,Home & Kitchen,2,166.28,4
+TXN-51651,2026-05-01,San Francisco,Electronics,4,1161.5,4
+TXN-51652,2026-05-01,Tokyo,Groceries,3,122.94,4
+TXN-51653,2026-05-01,London,Home & Kitchen,5,422.41,3
+TXN-51654,2026-05-01,Singapore,Groceries,4,158.07,3
+TXN-51655,2026-05-01,Singapore,Home & Kitchen,4,311.43,3
+TXN-51656,2026-05-01,San Francisco,Electronics,2,455.38,4
+TXN-51657,2026-05-01,Singapore,Fashion,4,288.66,4
+TXN-51658,2026-05-01,Tokyo,Electronics,3,897.48,5
+TXN-51659,2026-05-01,Tokyo,Books,4,74.7,5
+TXN-51660,2026-05-02,London,Electronics,1,240.28,4
+TXN-51661,2026-05-02,San Francisco,Fashion,5,401.37,5
+TXN-51662,2026-05-02,San Francisco,Home & Kitchen,5,509.75,3
+TXN-51663,2026-05-02,Berlin,Home & Kitchen,2,174.24,3
+TXN-51664,2026-05-02,Tokyo,Fashion,1,81.63,3
+TXN-51665,2026-05-02,Singapore,Groceries,1,35.64,5
+TXN-51666,2026-05-02,London,Electronics,2,454.33,4
+TXN-51667,2026-05-02,Tokyo,Books,3,64.7,3
+TXN-51668,2026-05-02,New York,Groceries,5,207.42,4
+TXN-51669,2026-05-02,San Francisco,Home & Kitchen,2,197.03,5
+TXN-51670,2026-05-03,New York,Groceries,1,37.25,5
+TXN-51671,2026-05-03,New York,Books,4,78.12,3
+TXN-51672,2026-05-03,New York,Books,1,23.11,3
+TXN-51673,2026-05-03,Tokyo,Books,3,65.65,5
+TXN-51674,2026-05-03,New York,Fashion,3,219.92,4
+TXN-51675,2026-05-03,Singapore,Groceries,5,164.39,5
+TXN-51676,2026-05-03,London,Electronics,5,1199.95,4
+TXN-51677,2026-05-03,Tokyo,Books,3,64.14,4
+TXN-51678,2026-05-03,Tokyo,Electronics,3,813.12,4
+TXN-51679,2026-05-03,New York,Books,1,21.08,4
+TXN-51680,2026-05-03,Singapore,Fashion,2,165.09,5
+TXN-51681,2026-05-03,New York,Home & Kitchen,3,265.32,3
+TXN-51682,2026-05-04,London,Books,2,47.81,5
+TXN-51683,2026-05-04,San Francisco,Groceries,5,179.96,5
+TXN-51684,2026-05-04,Berlin,Electronics,1,293.8,5
+TXN-51685,2026-05-04,Berlin,Electronics,4,1023.91,4
+TXN-51686,2026-05-04,London,Home & Kitchen,3,249.0,3
+TXN-51687,2026-05-04,New York,Home & Kitchen,1,95.38,4
+TXN-51688,2026-05-04,San Francisco,Fashion,4,255.8,4
+TXN-51689,2026-05-04,London,Groceries,5,195.51,5
+TXN-51690,2026-05-04,Berlin,Books,3,60.14,3
+TXN-51691,2026-05-04,San Francisco,Fashion,1,78.69,5
+TXN-51692,2026-05-04,Singapore,Groceries,1,36.05,3
+TXN-51693,2026-05-04,Tokyo,Electronics,1,226.0,5
+TXN-51694,2026-05-04,Tokyo,Books,4,92.85,5
+TXN-51695,2026-05-04,Singapore,Home & Kitchen,4,336.89,5
+TXN-51696,2026-05-04,Singapore,Groceries,4,159.79,3
+TXN-51697,2026-05-04,San Francisco,Fashion,1,67.01,3
+TXN-51698,2026-05-04,New York,Fashion,2,146.21,3
+TXN-51699,2026-05-04,Tokyo,Fashion,5,335.05,4
+TXN-51700,2026-05-04,San Francisco,Books,4,82.13,3
+TXN-51701,2026-05-04,San Francisco,Fashion,4,332.96,4
+TXN-51702,2026-05-05,Berlin,Books,2,38.42,5
+TXN-51703,2026-05-05,New York,Books,3,54.14,5
+TXN-51704,2026-05-05,Tokyo,Books,4,89.69,5
+TXN-51705,2026-05-05,London,Home & Kitchen,1,88.93,4
+TXN-51706,2026-05-05,Berlin,Home & Kitchen,5,501.75,4
+TXN-51707,2026-05-05,Singapore,Fashion,1,74.09,4
+TXN-51708,2026-05-05,London,Home & Kitchen,5,390.6,5
+TXN-51709,2026-05-05,Tokyo,Books,1,20.97,5
+TXN-51710,2026-05-06,Singapore,Books,4,72.5,4
+TXN-51711,2026-05-06,Tokyo,Fashion,3,216.6,5
+TXN-51712,2026-05-06,Berlin,Fashion,3,247.07,5
+TXN-51713,2026-05-06,San Francisco,Books,3,67.01,4
+TXN-51714,2026-05-06,Singapore,Books,3,68.33,3
+TXN-51715,2026-05-06,San Francisco,Home & Kitchen,3,282.34,3
+TXN-51716,2026-05-06,San Francisco,Books,2,38.39,5
+TXN-51717,2026-05-06,New York,Books,4,94.63,4
+TXN-51718,2026-05-06,San Francisco,Groceries,2,74.69,3
+TXN-51719,2026-05-06,London,Groceries,3,115.82,3
+TXN-51720,2026-05-06,New York,Home & Kitchen,1,85.11,3
+TXN-51721,2026-05-06,San Francisco,Home & Kitchen,1,90.83,4
+TXN-51722,2026-05-06,London,Groceries,3,118.74,5
+TXN-51723,2026-05-07,Singapore,Fashion,5,378.45,3
+TXN-51724,2026-05-07,Tokyo,Electronics,4,1188.79,3
+TXN-51725,2026-05-07,Berlin,Electronics,5,1418.31,3
+TXN-51726,2026-05-07,New York,Home & Kitchen,5,395.94,5
+TXN-51727,2026-05-07,San Francisco,Electronics,3,710.33,4
+TXN-51728,2026-05-07,Berlin,Books,4,89.58,3
+TXN-51729,2026-05-07,Singapore,Fashion,3,210.08,3
+TXN-51730,2026-05-07,San Francisco,Electronics,4,1190.89,3
+TXN-51731,2026-05-07,Tokyo,Fashion,3,207.07,3
+TXN-51732,2026-05-07,London,Electronics,3,835.92,4
+TXN-51733,2026-05-07,Singapore,Groceries,2,66.18,5
+TXN-51734,2026-05-07,San Francisco,Books,2,45.62,4
+TXN-51735,2026-05-08,Berlin,Books,3,70.99,4
+TXN-51736,2026-05-08,New York,Fashion,5,414.08,3
+TXN-51737,2026-05-08,London,Groceries,4,167.24,3
+TXN-51738,2026-05-08,New York,Books,4,90.22,5
+TXN-51739,2026-05-08,Berlin,Fashion,1,83.53,5
+TXN-51740,2026-05-08,London,Home & Kitchen,4,347.0,5
+TXN-51741,2026-05-08,London,Home & Kitchen,3,299.06,3
+TXN-51742,2026-05-08,Berlin,Groceries,5,205.82,5
+TXN-51743,2026-05-08,Tokyo,Books,2,46.65,5
+TXN-51744,2026-05-08,Singapore,Home & Kitchen,4,377.14,5
+TXN-51745,2026-05-08,San Francisco,Books,3,55.52,5
+TXN-51746,2026-05-08,Tokyo,Groceries,2,73.93,5
+TXN-51747,2026-05-08,San Francisco,Groceries,1,36.87,4
+TXN-51748,2026-05-08,London,Home & Kitchen,2,154.19,5
+TXN-51749,2026-05-09,San Francisco,Groceries,3,117.39,5
+TXN-51750,2026-05-09,Singapore,Electronics,1,288.12,4
+TXN-51751,2026-05-09,London,Home & Kitchen,1,77.72,5
+TXN-51752,2026-05-09,Tokyo,Electronics,3,803.8,3
+TXN-51753,2026-05-09,London,Books,2,45.66,5
+TXN-51754,2026-05-09,Singapore,Home & Kitchen,5,490.17,3
+TXN-51755,2026-05-09,London,Groceries,3,115.51,5
+TXN-51756,2026-05-09,Singapore,Home & Kitchen,2,189.43,5
+TXN-51757,2026-05-09,New York,Fashion,3,221.54,3
+TXN-51758,2026-05-09,Tokyo,Groceries,1,33.04,4
+TXN-51759,2026-05-09,New York,Books,1,18.37,3
+TXN-51760,2026-05-09,San Francisco,Books,4,73.87,5
+TXN-51761,2026-05-09,Tokyo,Home & Kitchen,5,453.77,4
+TXN-51762,2026-05-09,Berlin,Groceries,4,152.73,4
+TXN-51763,2026-05-09,Singapore,Books,4,91.77,3
+TXN-51764,2026-05-09,San Francisco,Home & Kitchen,4,378.54,3
+TXN-51765,2026-05-09,Berlin,Home & Kitchen,1,94.21,4
+TXN-51766,2026-05-10,Singapore,Electronics,2,591.61,4
+TXN-51767,2026-05-10,Berlin,Electronics,4,933.1,4
+TXN-51768,2026-05-10,London,Home & Kitchen,1,89.83,3
+TXN-51769,2026-05-10,London,Groceries,3,104.05,4
+TXN-51770,2026-05-10,San Francisco,Electronics,2,567.57,4
+TXN-51771,2026-05-10,London,Electronics,3,723.51,5
+TXN-51772,2026-05-10,New York,Books,1,21.29,3
+TXN-51773,2026-05-10,Tokyo,Electronics,4,1071.92,5
+TXN-51774,2026-05-10,London,Books,4,83.41,5
+TXN-51775,2026-05-10,San Francisco,Home & Kitchen,2,178.74,4
+TXN-51776,2026-05-10,Singapore,Books,4,75.58,5
+TXN-51777,2026-05-10,New York,Groceries,5,192.39,4
+TXN-51778,2026-05-10,San Francisco,Books,4,80.14,3
+TXN-51779,2026-05-10,Singapore,Books,3,65.63,3
+TXN-51780,2026-05-10,Berlin,Electronics,3,801.23,3
+TXN-51781,2026-05-11,New York,Home & Kitchen,2,201.71,5
+TXN-51782,2026-05-11,New York,Home & Kitchen,5,449.02,4
+TXN-51783,2026-05-11,New York,Home & Kitchen,1,93.29,5
+TXN-51784,2026-05-11,New York,Fashion,3,238.57,3
+TXN-51785,2026-05-11,Tokyo,Home & Kitchen,1,97.08,5
+TXN-51786,2026-05-11,Tokyo,Groceries,5,159.86,3
+TXN-51787,2026-05-11,Tokyo,Groceries,2,71.71,5
+TXN-51788,2026-05-11,Tokyo,Groceries,3,97.37,3
+TXN-51789,2026-05-11,San Francisco,Home & Kitchen,3,240.52,4
+TXN-51790,2026-05-11,San Francisco,Electronics,3,889.24,5
+TXN-51791,2026-05-11,New York,Fashion,5,415.92,3
+TXN-51792,2026-05-11,Singapore,Electronics,1,247.35,3
+TXN-51793,2026-05-11,San Francisco,Groceries,4,163.51,4
+TXN-51794,2026-05-11,New York,Books,1,19.22,5
+TXN-51795,2026-05-11,San Francisco,Home & Kitchen,4,357.88,5
+TXN-51796,2026-05-11,New York,Books,3,55.09,4
+TXN-51797,2026-05-11,Tokyo,Home & Kitchen,1,88.85,4
+TXN-51798,2026-05-11,New York,Fashion,3,223.91,5
+TXN-51799,2026-05-12,San Francisco,Electronics,5,1369.33,3
+TXN-51800,2026-05-12,Berlin,Groceries,4,144.73,5
+TXN-51801,2026-05-12,San Francisco,Home & Kitchen,2,172.04,3
+TXN-51802,2026-05-12,Berlin,Fashion,4,332.75,5
+TXN-51803,2026-05-12,New York,Books,1,22.88,5
+TXN-51804,2026-05-12,Singapore,Groceries,2,63.01,4
+TXN-51805,2026-05-12,Berlin,Groceries,3,120.94,4
+TXN-51806,2026-05-12,Singapore,Groceries,2,75.29,5
+TXN-51807,2026-05-12,New York,Groceries,2,78.52,5
+TXN-51808,2026-05-12,London,Electronics,1,254.65,3
+TXN-51809,2026-05-12,Singapore,Fashion,5,419.88,4
+TXN-51810,2026-05-12,Berlin,Fashion,5,415.53,4
+TXN-51811,2026-05-12,Singapore,Groceries,3,125.36,5
+TXN-51812,2026-05-12,London,Books,2,43.95,4
+TXN-51813,2026-05-12,San Francisco,Groceries,4,166.28,4
+TXN-51814,2026-05-12,Singapore,Electronics,2,546.97,3
+TXN-51815,2026-05-12,Tokyo,Home & Kitchen,1,99.49,5
+TXN-51816,2026-05-12,Tokyo,Fashion,5,409.0,5
+TXN-51817,2026-05-13,Berlin,Books,1,22.72,5
+TXN-51818,2026-05-13,Berlin,Electronics,1,291.94,5
+TXN-51819,2026-05-13,Singapore,Books,1,20.12,4
+TXN-51820,2026-05-13,London,Home & Kitchen,4,324.07,5
+TXN-51821,2026-05-13,New York,Electronics,4,1011.14,3
+TXN-51822,2026-05-13,New York,Books,2,44.92,4
+TXN-51823,2026-05-13,San Francisco,Groceries,1,40.07,5
+TXN-51824,2026-05-13,Singapore,Groceries,2,67.92,4
+TXN-51825,2026-05-13,New York,Groceries,3,110.02,5
+TXN-51826,2026-05-13,San Francisco,Home & Kitchen,1,81.5,5
+TXN-51827,2026-05-13,New York,Books,3,64.24,4
+TXN-51828,2026-05-13,Berlin,Fashion,2,153.71,5
+TXN-51829,2026-05-13,Berlin,Home & Kitchen,2,156.33,3
+TXN-51830,2026-05-13,San Francisco,Electronics,3,885.05,3
+TXN-51831,2026-05-13,Singapore,Home & Kitchen,3,244.18,5
+TXN-51832,2026-05-14,Berlin,Home & Kitchen,3,281.57,4
+TXN-51833,2026-05-14,Tokyo,Electronics,1,289.04,4
+TXN-51834,2026-05-14,Tokyo,Books,3,56.19,5
+TXN-51835,2026-05-14,Tokyo,Books,3,63.31,3
+TXN-51836,2026-05-14,New York,Fashion,3,246.86,5
+TXN-51837,2026-05-14,London,Books,1,20.35,4
+TXN-51838,2026-05-14,Berlin,Electronics,1,299.27,3
+TXN-51839,2026-05-14,New York,Books,2,38.36,4
+TXN-51840,2026-05-15,Singapore,Electronics,1,227.09,4
+TXN-51841,2026-05-15,Berlin,Electronics,3,864.11,3
+TXN-51842,2026-05-15,Tokyo,Electronics,2,593.82,3
+TXN-51843,2026-05-15,Berlin,Groceries,2,82.81,5
+TXN-51844,2026-05-15,Tokyo,Home & Kitchen,1,92.45,5
+TXN-51845,2026-05-15,New York,Electronics,1,293.75,4
+TXN-51846,2026-05-15,Singapore,Groceries,1,39.72,3
+TXN-51847,2026-05-15,New York,Books,3,64.99,4
+TXN-51848,2026-05-15,New York,Electronics,1,266.94,4
+TXN-51849,2026-05-15,Tokyo,Books,1,21.7,4
+TXN-51850,2026-05-15,Berlin,Fashion,5,316.11,4
+TXN-51851,2026-05-15,Tokyo,Books,5,108.58,4
+TXN-51852,2026-05-16,Tokyo,Electronics,5,1248.07,3
+TXN-51853,2026-05-16,New York,Electronics,1,269.64,3
+TXN-51854,2026-05-16,San Francisco,Home & Kitchen,5,398.56,5
+TXN-51855,2026-05-16,London,Groceries,4,146.22,5
+TXN-51856,2026-05-16,San Francisco,Books,2,37.65,3
+TXN-51857,2026-05-16,San Francisco,Electronics,3,806.52,5
+TXN-51858,2026-05-16,London,Groceries,5,203.97,3
+TXN-51859,2026-05-16,Tokyo,Fashion,3,227.01,4
+TXN-51860,2026-05-16,New York,Groceries,5,188.29,5
+TXN-51861,2026-05-16,New York,Fashion,2,147.3,5
+TXN-51862,2026-05-16,Tokyo,Electronics,3,718.97,3
+TXN-51863,2026-05-16,New York,Fashion,3,200.93,4
+TXN-51864,2026-05-16,Berlin,Books,3,69.34,5
+TXN-51865,2026-05-16,Berlin,Groceries,3,107.69,3
+TXN-51866,2026-05-16,Tokyo,Electronics,1,262.19,3
+TXN-51867,2026-05-16,Singapore,Fashion,2,145.59,3
+TXN-51868,2026-05-16,Tokyo,Fashion,3,239.86,4
+TXN-51869,2026-05-16,Tokyo,Fashion,2,160.7,3
+TXN-51870,2026-05-17,New York,Electronics,3,681.75,3
+TXN-51871,2026-05-17,London,Fashion,4,268.33,5
+TXN-51872,2026-05-17,New York,Groceries,1,33.59,4
+TXN-51873,2026-05-17,San Francisco,Fashion,3,234.29,4
+TXN-51874,2026-05-17,San Francisco,Home & Kitchen,2,163.0,3
+TXN-51875,2026-05-17,New York,Groceries,1,40.23,3
+TXN-51876,2026-05-17,Singapore,Books,1,20.03,3
+TXN-51877,2026-05-17,Tokyo,Groceries,2,70.76,4
+TXN-51878,2026-05-17,Berlin,Fashion,5,407.57,5
+TXN-51879,2026-05-17,New York,Electronics,2,582.41,3
+TXN-51880,2026-05-17,San Francisco,Fashion,5,354.71,4
+TXN-51881,2026-05-17,Berlin,Groceries,4,167.03,3
+TXN-51882,2026-05-17,Berlin,Electronics,5,1195.91,5
+TXN-51883,2026-05-18,London,Fashion,2,128.24,4
+TXN-51884,2026-05-18,Berlin,Fashion,5,408.01,3
+TXN-51885,2026-05-18,Tokyo,Electronics,5,1149.33,5
+TXN-51886,2026-05-18,Singapore,Books,5,101.23,5
+TXN-51887,2026-05-18,San Francisco,Books,3,66.82,5
+TXN-51888,2026-05-18,Singapore,Books,4,83.37,5
+TXN-51889,2026-05-18,Singapore,Books,5,109.49,3
+TXN-51890,2026-05-18,San Francisco,Fashion,4,324.51,4
+TXN-51891,2026-05-18,London,Fashion,4,326.65,5
+TXN-51892,2026-05-18,London,Fashion,3,223.68,3
+TXN-51893,2026-05-18,London,Electronics,4,1055.65,3
+TXN-51894,2026-05-18,New York,Home & Kitchen,4,358.25,4
+TXN-51895,2026-05-19,Tokyo,Books,4,81.81,4
+TXN-51896,2026-05-19,London,Groceries,4,127.04,4
+TXN-51897,2026-05-19,London,Fashion,1,70.54,3
+TXN-51898,2026-05-19,Berlin,Groceries,5,186.2,3
+TXN-51899,2026-05-19,San Francisco,Groceries,1,32.75,4
+TXN-51900,2026-05-19,Berlin,Electronics,2,500.06,5
+TXN-51901,2026-05-19,London,Groceries,3,117.97,5
+TXN-51902,2026-05-19,San Francisco,Groceries,5,209.89,5
+TXN-51903,2026-05-19,London,Home & Kitchen,1,96.14,4
+TXN-51904,2026-05-19,Tokyo,Groceries,4,160.52,5
+TXN-51905,2026-05-19,Tokyo,Electronics,5,1495.98,3
+TXN-51906,2026-05-19,San Francisco,Books,2,44.68,3
+TXN-51907,2026-05-19,San Francisco,Books,5,107.61,5
+TXN-51908,2026-05-19,Singapore,Books,4,80.18,3
+TXN-51909,2026-05-20,Tokyo,Fashion,4,269.61,4
+TXN-51910,2026-05-20,New York,Home & Kitchen,3,240.13,3
+TXN-51911,2026-05-20,Singapore,Groceries,1,36.75,5
+TXN-51912,2026-05-20,London,Groceries,2,71.8,5
+TXN-51913,2026-05-20,Singapore,Books,5,98.99,5
+TXN-51914,2026-05-20,Berlin,Electronics,1,294.16,3
+TXN-51915,2026-05-20,Berlin,Groceries,5,205.47,5
+TXN-51916,2026-05-20,Tokyo,Books,2,47.38,3
+TXN-51917,2026-05-20,Tokyo,Home & Kitchen,2,177.21,4
+TXN-51918,2026-05-20,Tokyo,Home & Kitchen,3,236.63,3
+TXN-51919,2026-05-20,San Francisco,Home & Kitchen,1,97.58,5
+TXN-51920,2026-05-20,New York,Books,2,38.39,4
+TXN-51921,2026-05-20,San Francisco,Groceries,2,69.11,5
+TXN-51922,2026-05-21,New York,Books,3,63.33,3
+TXN-51923,2026-05-21,Tokyo,Groceries,4,132.6,3
+TXN-51924,2026-05-21,Berlin,Fashion,4,292.17,3
+TXN-51925,2026-05-21,San Francisco,Books,2,46.45,4
+TXN-51926,2026-05-21,Singapore,Books,4,75.81,5
+TXN-51927,2026-05-21,Berlin,Groceries,2,73.55,5
+TXN-51928,2026-05-21,London,Books,2,36.09,3
+TXN-51929,2026-05-21,New York,Books,4,86.52,3
+TXN-51930,2026-05-21,London,Home & Kitchen,5,494.6,4
+TXN-51931,2026-05-22,New York,Home & Kitchen,1,83.84,4
+TXN-51932,2026-05-22,Singapore,Groceries,3,106.82,3
+TXN-51933,2026-05-22,San Francisco,Books,2,46.8,5
+TXN-51934,2026-05-22,Tokyo,Books,4,93.86,3
+TXN-51935,2026-05-22,New York,Home & Kitchen,4,377.26,3
+TXN-51936,2026-05-22,San Francisco,Fashion,3,244.6,5
+TXN-51937,2026-05-22,Singapore,Groceries,1,38.83,5
+TXN-51938,2026-05-22,Tokyo,Fashion,4,335.36,5
+TXN-51939,2026-05-22,London,Electronics,1,281.65,5
+TXN-51940,2026-05-22,Tokyo,Groceries,4,132.92,3
+TXN-51941,2026-05-22,New York,Home & Kitchen,4,308.73,5
+TXN-51942,2026-05-22,Tokyo,Books,3,67.43,3
+TXN-51943,2026-05-22,New York,Books,1,19.5,5
+TXN-51944,2026-05-22,London,Fashion,4,292.72,3
+TXN-51945,2026-05-22,Berlin,Electronics,2,557.04,4
+TXN-51946,2026-05-23,London,Books,2,38.05,3
+TXN-51947,2026-05-23,New York,Home & Kitchen,2,168.0,5
+TXN-51948,2026-05-23,San Francisco,Books,1,22.03,3
+TXN-51949,2026-05-23,San Francisco,Groceries,4,141.04,3
+TXN-51950,2026-05-23,Singapore,Electronics,5,1206.06,5
+TXN-51951,2026-05-23,Singapore,Electronics,5,1365.38,5
+TXN-51952,2026-05-23,Tokyo,Electronics,3,774.9,5
+TXN-51953,2026-05-23,New York,Electronics,4,1130.13,3
+TXN-51954,2026-05-23,San Francisco,Groceries,2,64.92,4
+TXN-51955,2026-05-23,New York,Electronics,3,859.62,5
+TXN-51956,2026-05-24,San Francisco,Electronics,1,284.77,5
+TXN-51957,2026-05-24,Singapore,Fashion,2,127.85,5
+TXN-51958,2026-05-24,London,Electronics,3,801.46,3
+TXN-51959,2026-05-24,San Francisco,Home & Kitchen,5,432.87,4
+TXN-51960,2026-05-24,San Francisco,Electronics,2,465.88,4
+TXN-51961,2026-05-24,New York,Fashion,4,306.94,3
+TXN-51962,2026-05-24,San Francisco,Books,4,77.28,5
+TXN-51963,2026-05-24,Singapore,Groceries,5,176.87,3
+TXN-51964,2026-05-24,Tokyo,Fashion,3,237.36,4
+TXN-51965,2026-05-24,Singapore,Electronics,5,1421.72,5
+TXN-51966,2026-05-24,London,Fashion,1,75.6,5
+TXN-51967,2026-05-24,Singapore,Books,2,39.98,5
+TXN-51968,2026-05-24,Singapore,Groceries,4,128.84,3
+TXN-51969,2026-05-24,Berlin,Home & Kitchen,4,345.0,5
+TXN-51970,2026-05-24,Berlin,Fashion,5,388.99,3
+TXN-51971,2026-05-24,New York,Fashion,5,394.69,3
+TXN-51972,2026-05-24,San Francisco,Groceries,4,157.8,5
+TXN-51973,2026-05-24,New York,Electronics,2,506.18,4
+TXN-51974,2026-05-25,Tokyo,Fashion,2,152.97,3
+TXN-51975,2026-05-25,Tokyo,Home & Kitchen,3,239.77,4
+TXN-51976,2026-05-25,Berlin,Electronics,4,1094.41,4
+TXN-51977,2026-05-25,San Francisco,Electronics,3,752.11,3
+TXN-51978,2026-05-25,New York,Home & Kitchen,2,193.87,5
+TXN-51979,2026-05-25,Berlin,Fashion,4,295.8,3
+TXN-51980,2026-05-25,Singapore,Books,1,18.39,4
+TXN-51981,2026-05-25,San Francisco,Electronics,1,272.58,3
+TXN-51982,2026-05-25,San Francisco,Fashion,1,66.65,5
+TXN-51983,2026-05-25,San Francisco,Fashion,5,323.21,5
+TXN-51984,2026-05-25,London,Books,2,44.66,3
+TXN-51985,2026-05-26,Berlin,Fashion,2,138.73,5
+TXN-51986,2026-05-26,Singapore,Books,2,39.26,4
+TXN-51987,2026-05-26,London,Electronics,4,1013.32,4
+TXN-51988,2026-05-26,Tokyo,Books,5,108.28,4
+TXN-51989,2026-05-26,Tokyo,Fashion,1,79.0,4
+TXN-51990,2026-05-26,London,Electronics,5,1326.45,5
+TXN-51991,2026-05-26,London,Fashion,4,290.95,4
+TXN-51992,2026-05-26,Tokyo,Groceries,5,189.32,3
+TXN-51993,2026-05-26,San Francisco,Groceries,4,134.22,3
+TXN-51994,2026-05-26,New York,Electronics,5,1398.89,4
+TXN-51995,2026-05-26,Tokyo,Books,4,94.57,5
+TXN-51996,2026-05-26,Tokyo,Groceries,4,138.93,5
+TXN-51997,2026-05-26,Tokyo,Electronics,1,299.44,3
+TXN-51998,2026-05-26,Berlin,Books,2,38.33,4
+TXN-51999,2026-05-27,Berlin,Groceries,4,152.67,4
+TXN-52000,2026-05-27,Singapore,Electronics,4,1177.96,5
+TXN-52001,2026-05-27,San Francisco,Fashion,4,254.9,4
+TXN-52002,2026-05-27,Singapore,Electronics,2,489.2,4
+TXN-52003,2026-05-27,London,Fashion,2,151.29,5
+TXN-52004,2026-05-27,New York,Fashion,1,79.19,5
+TXN-52005,2026-05-27,Tokyo,Books,5,119.22,3
+TXN-52006,2026-05-27,San Francisco,Home & Kitchen,4,322.91,4
+TXN-52007,2026-05-27,Singapore,Groceries,3,110.27,5
+TXN-52008,2026-05-27,Berlin,Books,3,67.21,5
+TXN-52009,2026-05-27,New York,Electronics,5,1416.26,4
+TXN-52010,2026-05-27,London,Fashion,2,165.06,4
+TXN-52011,2026-05-28,New York,Groceries,2,80.14,3
+TXN-52012,2026-05-28,New York,Electronics,4,1057.49,5
+TXN-52013,2026-05-28,Singapore,Groceries,4,133.17,4
+TXN-52014,2026-05-28,Singapore,Fashion,2,134.32,3
+TXN-52015,2026-05-28,New York,Home & Kitchen,4,363.84,3
+TXN-52016,2026-05-28,San Francisco,Fashion,1,78.75,3
+TXN-52017,2026-05-28,Tokyo,Groceries,4,152.33,5
+TXN-52018,2026-05-28,Singapore,Electronics,2,461.97,3
+TXN-52019,2026-05-28,New York,Books,3,55.16,3
+TXN-52020,2026-05-28,San Francisco,Home & Kitchen,4,355.49,3
+TXN-52021,2026-05-28,New York,Electronics,3,844.15,3
+TXN-52022,2026-05-28,New York,Home & Kitchen,1,81.88,3
+TXN-52023,2026-05-28,Berlin,Books,5,119.61,4
+TXN-52024,2026-05-28,Tokyo,Books,3,64.88,4
+TXN-52025,2026-05-28,Singapore,Groceries,3,125.98,3
+TXN-52026,2026-05-28,Singapore,Groceries,4,141.89,3
+TXN-52027,2026-05-28,London,Groceries,1,31.53,5
+TXN-52028,2026-05-28,Singapore,Books,2,36.31,3
+TXN-52029,2026-05-28,London,Home & Kitchen,2,171.79,5
+TXN-52030,2026-05-29,Berlin,Books,4,87.85,3
+TXN-52031,2026-05-29,New York,Groceries,3,122.01,5
+TXN-52032,2026-05-29,Singapore,Groceries,4,135.81,4
+TXN-52033,2026-05-29,Singapore,Books,5,113.82,4
+TXN-52034,2026-05-29,Tokyo,Books,1,22.41,4
+TXN-52035,2026-05-29,San Francisco,Home & Kitchen,2,197.36,5
+TXN-52036,2026-05-29,New York,Home & Kitchen,2,178.39,3
+TXN-52037,2026-05-29,Singapore,Groceries,5,209.33,4
+TXN-52038,2026-05-29,Tokyo,Fashion,1,73.13,5
+TXN-52039,2026-05-29,San Francisco,Fashion,2,133.16,5
+TXN-52040,2026-05-29,New York,Electronics,4,1198.01,3
+TXN-52041,2026-05-29,London,Fashion,4,316.37,3
+TXN-52042,2026-05-29,Singapore,Groceries,4,165.96,5
+TXN-52043,2026-05-29,Singapore,Electronics,2,588.41,5
+TXN-52044,2026-05-29,New York,Books,3,69.69,5
+TXN-52045,2026-05-29,New York,Home & Kitchen,3,258.34,5
+TXN-52046,2026-05-29,Singapore,Books,5,118.99,4
+TXN-52047,2026-05-29,San Francisco,Fashion,3,196.29,3
+TXN-52048,2026-05-30,London,Electronics,5,1476.45,5
+TXN-52049,2026-05-30,Berlin,Electronics,3,703.67,4
+TXN-52050,2026-05-30,Berlin,Books,1,19.86,5
+TXN-52051,2026-05-30,San Francisco,Home & Kitchen,4,405.94,4
+TXN-52052,2026-05-30,Singapore,Groceries,2,73.91,5
+TXN-52053,2026-05-30,San Francisco,Home & Kitchen,1,86.58,5
+TXN-52054,2026-05-30,London,Books,2,45.79,4
+TXN-52055,2026-05-30,Tokyo,Fashion,4,264.38,4
+TXN-52056,2026-05-30,Singapore,Fashion,1,75.58,4
+TXN-52057,2026-05-31,London,Electronics,5,1304.36,3
+TXN-52058,2026-05-31,London,Books,4,73.41,4
+TXN-52059,2026-05-31,Singapore,Fashion,2,161.62,3
+TXN-52060,2026-05-31,San Francisco,Electronics,4,1118.22,4
+TXN-52061,2026-05-31,New York,Fashion,5,356.19,4
+TXN-52062,2026-05-31,London,Books,4,81.39,5
+TXN-52063,2026-05-31,London,Groceries,2,77.72,5
+TXN-52064,2026-05-31,New York,Books,2,39.88,5
+TXN-52065,2026-05-31,Singapore,Electronics,3,777.94,3
+TXN-52066,2026-05-31,San Francisco,Home & Kitchen,4,376.99,4
+TXN-52067,2026-05-31,San Francisco,Fashion,2,159.78,3
+TXN-52068,2026-05-31,London,Electronics,5,1163.23,3
+TXN-52069,2026-05-31,Tokyo,Books,2,47.11,3
+TXN-52070,2026-05-31,Tokyo,Groceries,2,82.85,3
+TXN-52071,2026-05-31,Singapore,Home & Kitchen,3,274.89,3
+TXN-52072,2026-05-31,San Francisco,Books,1,18.71,4
+TXN-52073,2026-06-01,Singapore,Groceries,5,207.61,5
+TXN-52074,2026-06-01,Singapore,Books,1,22.67,5
+TXN-52075,2026-06-01,London,Books,4,80.82,3
+TXN-52076,2026-06-01,New York,Electronics,1,261.69,5
+TXN-52077,2026-06-01,San Francisco,Home & Kitchen,1,91.46,5
+TXN-52078,2026-06-01,London,Books,1,22.77,3
+TXN-52079,2026-06-01,Tokyo,Books,4,79.16,3
+TXN-52080,2026-06-01,London,Electronics,1,278.53,5
+TXN-52081,2026-06-01,Tokyo,Fashion,1,71.27,5
+TXN-52082,2026-06-01,Tokyo,Home & Kitchen,1,89.73,5
+TXN-52083,2026-06-01,Singapore,Home & Kitchen,1,95.71,3
+TXN-52084,2026-06-01,San Francisco,Electronics,5,1385.71,3
+TXN-52085,2026-06-01,Tokyo,Home & Kitchen,3,238.91,3
+TXN-52086,2026-06-01,San Francisco,Home & Kitchen,2,157.48,4
+TXN-52087,2026-06-01,New York,Electronics,1,262.96,4
+TXN-52088,2026-06-02,Tokyo,Fashion,1,68.22,3
+TXN-52089,2026-06-02,London,Home & Kitchen,5,439.23,5
+TXN-52090,2026-06-02,Singapore,Books,3,63.41,4
+TXN-52091,2026-06-02,Berlin,Home & Kitchen,5,409.25,3
+TXN-52092,2026-06-02,San Francisco,Electronics,1,239.11,4
+TXN-52093,2026-06-02,San Francisco,Fashion,5,372.97,5
+TXN-52094,2026-06-02,London,Groceries,2,78.31,4
+TXN-52095,2026-06-02,Berlin,Electronics,3,733.65,5
+TXN-52096,2026-06-02,Tokyo,Fashion,4,258.99,4
+TXN-52097,2026-06-02,Singapore,Books,2,42.43,3
+TXN-52098,2026-06-02,Singapore,Groceries,2,78.0,5
+TXN-52099,2026-06-02,Berlin,Home & Kitchen,2,174.4,3
+TXN-52100,2026-06-02,Tokyo,Groceries,4,127.09,5
+TXN-52101,2026-06-02,New York,Fashion,3,196.85,3
+TXN-52102,2026-06-02,Tokyo,Home & Kitchen,1,84.9,3
+TXN-52103,2026-06-02,London,Groceries,3,99.11,3
+TXN-52104,2026-06-03,New York,Electronics,4,1193.85,3
+TXN-52105,2026-06-03,New York,Books,1,19.05,5
+TXN-52106,2026-06-03,Berlin,Groceries,4,130.01,4
+TXN-52107,2026-06-03,London,Home & Kitchen,5,417.06,3
+TXN-52108,2026-06-03,San Francisco,Electronics,3,887.96,4
+TXN-52109,2026-06-03,London,Fashion,5,372.93,4
+TXN-52110,2026-06-03,Berlin,Books,2,39.11,5
+TXN-52111,2026-06-03,Singapore,Home & Kitchen,2,186.54,3
+TXN-52112,2026-06-03,Berlin,Books,3,54.95,5
+TXN-52113,2026-06-03,Singapore,Groceries,2,77.24,4
+TXN-52114,2026-06-03,San Francisco,Books,4,95.67,4
+TXN-52115,2026-06-03,London,Home & Kitchen,3,302.38,5
+TXN-52116,2026-06-04,London,Fashion,1,82.9,4
+TXN-52117,2026-06-04,New York,Groceries,1,32.31,3
+TXN-52118,2026-06-04,San Francisco,Electronics,5,1146.53,5
+TXN-52119,2026-06-04,Berlin,Groceries,4,159.95,3
+TXN-52120,2026-06-04,Singapore,Books,5,117.97,3
+TXN-52121,2026-06-04,Tokyo,Books,5,110.55,5
+TXN-52122,2026-06-04,Singapore,Home & Kitchen,1,86.84,5
+TXN-52123,2026-06-04,Singapore,Fashion,1,78.0,5
+TXN-52124,2026-06-04,Singapore,Home & Kitchen,3,248.18,5
+TXN-52125,2026-06-04,Singapore,Home & Kitchen,5,387.9,4
+TXN-52126,2026-06-04,Singapore,Fashion,5,409.9,3
+TXN-52127,2026-06-04,London,Electronics,2,527.05,3
+TXN-52128,2026-06-04,Tokyo,Books,4,76.09,3
+TXN-52129,2026-06-04,Singapore,Groceries,2,80.47,3
+TXN-52130,2026-06-04,London,Groceries,4,138.33,3
+TXN-52131,2026-06-04,Singapore,Electronics,5,1272.61,4
+TXN-52132,2026-06-04,New York,Home & Kitchen,4,397.03,4
+TXN-52133,2026-06-04,London,Electronics,1,271.16,4
+TXN-52134,2026-06-04,London,Groceries,1,31.55,5
+TXN-52135,2026-06-05,London,Books,1,18.61,4
+TXN-52136,2026-06-05,New York,Fashion,5,369.0,3
+TXN-52137,2026-06-05,New York,Books,4,72.17,5
+TXN-52138,2026-06-05,San Francisco,Groceries,4,142.61,4
+TXN-52139,2026-06-05,Tokyo,Groceries,2,74.26,4
+TXN-52140,2026-06-05,Tokyo,Electronics,4,948.55,4
+TXN-52141,2026-06-05,New York,Books,3,69.9,5
+TXN-52142,2026-06-05,New York,Fashion,2,137.97,3
+TXN-52143,2026-06-05,Tokyo,Books,3,70.22,3
+TXN-52144,2026-06-05,Tokyo,Fashion,3,196.48,4
+TXN-52145,2026-06-06,Singapore,Books,2,39.9,4
+TXN-52146,2026-06-06,Singapore,Home & Kitchen,4,319.4,3
+TXN-52147,2026-06-06,San Francisco,Electronics,2,501.62,3
+TXN-52148,2026-06-06,New York,Fashion,3,216.07,5
+TXN-52149,2026-06-06,Tokyo,Electronics,4,986.84,4
+TXN-52150,2026-06-06,Tokyo,Electronics,2,542.64,5
+TXN-52151,2026-06-06,San Francisco,Home & Kitchen,2,167.34,3
+TXN-52152,2026-06-06,Singapore,Groceries,2,76.99,4
+TXN-52153,2026-06-06,Tokyo,Fashion,1,77.72,5
+TXN-52154,2026-06-06,San Francisco,Home & Kitchen,2,203.62,5
+TXN-52155,2026-06-06,San Francisco,Fashion,1,65.78,3
+TXN-52156,2026-06-06,San Francisco,Groceries,2,71.95,5
+TXN-52157,2026-06-06,New York,Fashion,1,70.99,5
+TXN-52158,2026-06-06,Singapore,Groceries,2,67.66,4
+TXN-52159,2026-06-06,New York,Books,5,102.81,3
+TXN-52160,2026-06-06,New York,Groceries,3,105.95,4
+TXN-52161,2026-06-07,San Francisco,Books,3,70.11,3
+TXN-52162,2026-06-07,New York,Electronics,1,274.53,4
+TXN-52163,2026-06-07,London,Fashion,4,275.53,5
+TXN-52164,2026-06-07,Tokyo,Electronics,2,487.84,4
+TXN-52165,2026-06-07,London,Groceries,3,98.01,5
+TXN-52166,2026-06-07,Singapore,Electronics,5,1413.92,3
+TXN-52167,2026-06-07,London,Groceries,3,117.9,5
+TXN-52168,2026-06-07,Berlin,Home & Kitchen,3,247.73,4
+TXN-52169,2026-06-07,Berlin,Fashion,4,259.33,3
+TXN-52170,2026-06-07,Singapore,Fashion,5,327.64,5
+TXN-52171,2026-06-07,San Francisco,Fashion,4,329.74,3
+TXN-52172,2026-06-07,Berlin,Home & Kitchen,3,252.56,4
+TXN-52173,2026-06-07,Berlin,Fashion,2,127.84,3
+TXN-52174,2026-06-07,Berlin,Books,3,70.05,5
+TXN-52175,2026-06-07,London,Groceries,4,152.45,3
+TXN-52176,2026-06-07,New York,Books,4,82.06,5
+TXN-52177,2026-06-07,San Francisco,Electronics,5,1227.81,3
+TXN-52178,2026-06-07,New York,Groceries,5,160.69,5
+TXN-52179,2026-06-07,Singapore,Fashion,4,293.58,5
+TXN-52180,2026-06-08,San Francisco,Electronics,4,1125.22,4
+TXN-52181,2026-06-08,Tokyo,Home & Kitchen,4,367.94,3
+TXN-52182,2026-06-08,New York,Fashion,2,150.02,5
+TXN-52183,2026-06-08,Berlin,Electronics,4,1051.15,5
+TXN-52184,2026-06-08,London,Home & Kitchen,3,294.71,4
+TXN-52185,2026-06-08,Berlin,Groceries,1,33.3,3
+TXN-52186,2026-06-08,San Francisco,Home & Kitchen,3,232.49,3
+TXN-52187,2026-06-08,San Francisco,Groceries,3,122.01,3
+TXN-52188,2026-06-08,San Francisco,Fashion,5,327.2,5
+TXN-52189,2026-06-08,Singapore,Groceries,5,208.54,4
+TXN-52190,2026-06-08,Singapore,Electronics,5,1224.01,3
+TXN-52191,2026-06-08,Berlin,Books,3,59.84,3
+TXN-52192,2026-06-08,London,Electronics,2,559.57,4
+TXN-52193,2026-06-08,London,Fashion,1,74.29,5
+TXN-52194,2026-06-08,Singapore,Electronics,4,1183.7,4
+TXN-52195,2026-06-08,Berlin,Home & Kitchen,2,194.66,3
+TXN-52196,2026-06-09,San Francisco,Groceries,5,190.56,4
+TXN-52197,2026-06-09,Tokyo,Fashion,2,156.65,4
+TXN-52198,2026-06-09,San Francisco,Groceries,4,129.94,3
+TXN-52199,2026-06-09,San Francisco,Books,2,38.27,4
+TXN-52200,2026-06-09,Singapore,Fashion,3,190.33,3
+TXN-52201,2026-06-09,Tokyo,Fashion,5,334.72,3
+TXN-52202,2026-06-09,Tokyo,Electronics,2,518.25,5
+TXN-52203,2026-06-09,New York,Books,5,94.12,3
+TXN-52204,2026-06-09,New York,Home & Kitchen,4,345.17,3
+TXN-52205,2026-06-09,Singapore,Electronics,1,234.91,3
+TXN-52206,2026-06-09,San Francisco,Groceries,5,158.21,3
+TXN-52207,2026-06-09,Berlin,Electronics,3,866.86,3
+TXN-52208,2026-06-09,San Francisco,Fashion,4,315.81,4
+TXN-52209,2026-06-10,London,Groceries,4,132.49,3
+TXN-52210,2026-06-10,Singapore,Home & Kitchen,3,277.5,3
+TXN-52211,2026-06-10,New York,Electronics,1,265.85,3
+TXN-52212,2026-06-10,Tokyo,Home & Kitchen,2,153.06,3
+TXN-52213,2026-06-10,San Francisco,Electronics,4,1015.61,4
+TXN-52214,2026-06-10,San Francisco,Groceries,4,154.84,5
+TXN-52215,2026-06-10,Tokyo,Electronics,2,598.62,3
+TXN-52216,2026-06-10,London,Electronics,3,692.17,4
+TXN-52217,2026-06-10,London,Electronics,1,292.17,5
+TXN-52218,2026-06-10,San Francisco,Fashion,4,296.56,5
+TXN-52219,2026-06-11,San Francisco,Books,3,65.25,4
+TXN-52220,2026-06-11,New York,Groceries,3,123.36,5
+TXN-52221,2026-06-11,London,Groceries,1,39.78,3
+TXN-52222,2026-06-11,London,Fashion,2,142.41,5
+TXN-52223,2026-06-11,New York,Books,1,21.47,5
+TXN-52224,2026-06-11,San Francisco,Groceries,1,34.89,3
+TXN-52225,2026-06-11,Tokyo,Fashion,3,209.12,4
+TXN-52226,2026-06-11,Singapore,Books,4,86.44,5
+TXN-52227,2026-06-11,San Francisco,Groceries,2,71.05,5
+TXN-52228,2026-06-11,Berlin,Books,5,104.78,5
+TXN-52229,2026-06-12,New York,Books,5,111.45,5
+TXN-52230,2026-06-12,Singapore,Home & Kitchen,2,188.86,3
+TXN-52231,2026-06-12,New York,Groceries,2,83.87,3
+TXN-52232,2026-06-12,Berlin,Groceries,4,166.22,3
+TXN-52233,2026-06-12,London,Electronics,3,865.97,3
+TXN-52234,2026-06-12,Tokyo,Groceries,2,80.54,5
+TXN-52235,2026-06-12,San Francisco,Books,2,45.93,3
+TXN-52236,2026-06-12,New York,Fashion,2,141.85,3
+TXN-52237,2026-06-12,London,Books,1,22.21,5
+TXN-52238,2026-06-12,New York,Home & Kitchen,4,391.42,3
+TXN-52239,2026-06-12,San Francisco,Electronics,3,706.79,3
+TXN-52240,2026-06-13,Berlin,Electronics,4,944.92,3
+TXN-52241,2026-06-13,Singapore,Books,2,44.98,5
+TXN-52242,2026-06-13,Tokyo,Groceries,4,156.35,4
+TXN-52243,2026-06-13,London,Electronics,1,236.69,5
+TXN-52244,2026-06-13,Berlin,Electronics,2,525.49,3
+TXN-52245,2026-06-13,Tokyo,Books,4,85.3,4
+TXN-52246,2026-06-13,Berlin,Home & Kitchen,3,283.77,4
+TXN-52247,2026-06-13,London,Fashion,1,73.95,3
+TXN-52248,2026-06-13,Tokyo,Fashion,5,320.88,4
+TXN-52249,2026-06-14,Berlin,Home & Kitchen,1,97.32,4
+TXN-52250,2026-06-14,London,Books,4,91.85,3
+TXN-52251,2026-06-14,London,Electronics,4,958.42,3
+TXN-52252,2026-06-14,New York,Electronics,3,810.72,4
+TXN-52253,2026-06-14,San Francisco,Electronics,3,711.62,3
+TXN-52254,2026-06-14,San Francisco,Electronics,5,1129.12,4
+TXN-52255,2026-06-14,Berlin,Fashion,2,152.81,3
+TXN-52256,2026-06-14,London,Fashion,1,83.51,5
+TXN-52257,2026-06-14,Berlin,Electronics,4,913.7,4
+TXN-52258,2026-06-14,London,Electronics,1,298.54,4
+TXN-52259,2026-06-15,San Francisco,Home & Kitchen,3,287.02,5
+TXN-52260,2026-06-15,San Francisco,Groceries,1,34.98,5
+TXN-52261,2026-06-15,New York,Home & Kitchen,5,485.46,3
+TXN-52262,2026-06-15,Berlin,Electronics,4,1043.09,3
+TXN-52263,2026-06-15,San Francisco,Groceries,2,77.33,3
+TXN-52264,2026-06-15,Singapore,Electronics,2,582.66,5
+TXN-52265,2026-06-15,Singapore,Fashion,2,167.72,5
+TXN-52266,2026-06-15,Singapore,Home & Kitchen,5,465.55,4
+TXN-52267,2026-06-15,San Francisco,Books,3,59.24,5
+TXN-52268,2026-06-15,New York,Books,4,77.74,5
+TXN-52269,2026-06-15,New York,Home & Kitchen,2,181.91,4
+TXN-52270,2026-06-15,New York,Electronics,2,564.95,4
+TXN-52271,2026-06-15,New York,Home & Kitchen,4,315.6,4
+TXN-52272,2026-06-15,London,Fashion,2,128.86,5
+TXN-52273,2026-06-16,New York,Groceries,1,33.38,4
+TXN-52274,2026-06-16,Tokyo,Groceries,3,118.54,4
+TXN-52275,2026-06-16,New York,Fashion,5,366.27,4
+TXN-52276,2026-06-16,Tokyo,Groceries,4,161.99,5
+TXN-52277,2026-06-16,Tokyo,Fashion,3,221.29,5
+TXN-52278,2026-06-16,London,Groceries,1,38.66,5
+TXN-52279,2026-06-16,London,Books,1,21.72,5
+TXN-52280,2026-06-16,Singapore,Electronics,2,554.96,5
+TXN-52281,2026-06-16,San Francisco,Electronics,1,246.8,3
+TXN-52282,2026-06-16,Tokyo,Home & Kitchen,1,82.19,4
+TXN-52283,2026-06-16,London,Electronics,4,1040.55,5
+TXN-52284,2026-06-16,New York,Books,1,19.08,3
+TXN-52285,2026-06-16,Tokyo,Books,2,40.82,3
+TXN-52286,2026-06-17,Berlin,Groceries,4,134.93,5
+TXN-52287,2026-06-17,New York,Books,3,62.18,5
+TXN-52288,2026-06-17,Tokyo,Fashion,2,152.89,4
+TXN-52289,2026-06-17,New York,Home & Kitchen,5,481.21,3
+TXN-52290,2026-06-17,Tokyo,Groceries,4,134.96,3
+TXN-52291,2026-06-17,Singapore,Electronics,4,980.95,5
+TXN-52292,2026-06-17,New York,Fashion,2,128.91,4
+TXN-52293,2026-06-17,London,Electronics,4,1161.39,5
+TXN-52294,2026-06-17,Singapore,Fashion,3,200.6,3
+TXN-52295,2026-06-17,Tokyo,Electronics,3,891.76,4
+TXN-52296,2026-06-17,San Francisco,Fashion,3,248.34,4
+TXN-52297,2026-06-17,Berlin,Books,2,47.59,4
+TXN-52298,2026-06-17,Singapore,Groceries,5,177.93,3
+TXN-52299,2026-06-18,San Francisco,Home & Kitchen,1,94.93,5
+TXN-52300,2026-06-18,San Francisco,Home & Kitchen,3,280.3,5
+TXN-52301,2026-06-18,New York,Groceries,2,81.83,3
+TXN-52302,2026-06-18,London,Books,1,22.75,5
+TXN-52303,2026-06-18,London,Books,5,111.67,4
+TXN-52304,2026-06-18,Singapore,Fashion,4,305.67,5
+TXN-52305,2026-06-18,New York,Electronics,2,561.86,3
+TXN-52306,2026-06-18,Singapore,Books,5,113.23,5
+TXN-52307,2026-06-18,San Francisco,Books,3,57.78,3
+TXN-52308,2026-06-18,New York,Home & Kitchen,3,291.75,3
+TXN-52309,2026-06-18,London,Groceries,5,200.5,3
+TXN-52310,2026-06-18,Singapore,Books,4,81.94,4
+TXN-52311,2026-06-18,Berlin,Groceries,4,147.97,4
+TXN-52312,2026-06-18,San Francisco,Electronics,4,1028.52,3
+TXN-52313,2026-06-18,Berlin,Home & Kitchen,2,180.68,4
+TXN-52314,2026-06-18,Singapore,Groceries,4,152.63,5
+TXN-52315,2026-06-19,New York,Electronics,1,231.72,3
+TXN-52316,2026-06-19,Tokyo,Home & Kitchen,1,89.16,5
+TXN-52317,2026-06-19,New York,Home & Kitchen,4,357.34,3
+TXN-52318,2026-06-19,Tokyo,Groceries,2,67.68,4
+TXN-52319,2026-06-19,Tokyo,Home & Kitchen,1,81.49,4
+TXN-52320,2026-06-19,London,Electronics,4,1023.88,5
+TXN-52321,2026-06-19,New York,Books,3,68.08,5
+TXN-52322,2026-06-19,London,Groceries,3,104.18,4
+TXN-52323,2026-06-19,New York,Fashion,4,254.74,3
+TXN-52324,2026-06-19,London,Fashion,5,401.1,5
+TXN-52325,2026-06-19,London,Groceries,2,83.14,4
+TXN-52326,2026-06-19,Berlin,Fashion,4,268.18,5
+TXN-52327,2026-06-19,New York,Books,5,102.87,5
+TXN-52328,2026-06-19,Singapore,Books,2,40.84,4
+TXN-52329,2026-06-19,San Francisco,Home & Kitchen,4,329.56,5
+TXN-52330,2026-06-19,Berlin,Fashion,1,76.26,4
+TXN-52331,2026-06-19,Berlin,Groceries,2,82.92,3
+TXN-52332,2026-06-20,New York,Electronics,4,903.46,5
+TXN-52333,2026-06-20,New York,Fashion,5,389.3,3
+TXN-52334,2026-06-20,Tokyo,Home & Kitchen,1,95.43,3
+TXN-52335,2026-06-20,Singapore,Books,3,57.36,5
+TXN-52336,2026-06-20,London,Fashion,2,148.49,3
+TXN-52337,2026-06-20,London,Books,1,19.65,3
+TXN-52338,2026-06-20,Singapore,Electronics,5,1450.1,3
+TXN-52339,2026-06-20,Berlin,Books,1,18.64,4
+TXN-52340,2026-06-20,San Francisco,Groceries,1,32.31,4
+TXN-52341,2026-06-21,New York,Books,4,91.09,4
+TXN-52342,2026-06-21,Tokyo,Electronics,1,240.77,4
+TXN-52343,2026-06-21,London,Books,4,91.41,3
+TXN-52344,2026-06-21,New York,Groceries,2,76.85,5
+TXN-52345,2026-06-21,New York,Home & Kitchen,1,101.39,4
+TXN-52346,2026-06-21,Berlin,Books,5,106.39,3
+TXN-52347,2026-06-21,Singapore,Home & Kitchen,3,300.38,3
+TXN-52348,2026-06-21,New York,Home & Kitchen,5,385.44,5
+TXN-52349,2026-06-21,San Francisco,Fashion,3,196.23,3
+TXN-52350,2026-06-21,London,Electronics,2,482.96,5
+TXN-52351,2026-06-21,London,Fashion,3,219.34,3
+TXN-52352,2026-06-22,Singapore,Home & Kitchen,3,265.23,4
+TXN-52353,2026-06-22,Berlin,Books,4,94.14,4
+TXN-52354,2026-06-22,San Francisco,Fashion,3,249.6,3
+TXN-52355,2026-06-22,Berlin,Home & Kitchen,3,242.17,3
+TXN-52356,2026-06-22,Tokyo,Books,4,82.17,5
+TXN-52357,2026-06-22,London,Groceries,5,163.15,4
+TXN-52358,2026-06-22,San Francisco,Books,5,100.59,5
+TXN-52359,2026-06-22,Tokyo,Electronics,2,583.42,5
+TXN-52360,2026-06-22,Berlin,Groceries,4,138.33,5
+TXN-52361,2026-06-22,London,Home & Kitchen,4,309.05,3
+TXN-52362,2026-06-22,Tokyo,Groceries,2,70.51,3
+TXN-52363,2026-06-22,Singapore,Fashion,3,212.43,4
+TXN-52364,2026-06-22,New York,Electronics,3,829.87,5
+TXN-52365,2026-06-23,Tokyo,Fashion,5,398.5,3
+TXN-52366,2026-06-23,New York,Home & Kitchen,4,334.93,3
+TXN-52367,2026-06-23,San Francisco,Home & Kitchen,1,90.8,5
+TXN-52368,2026-06-23,Singapore,Home & Kitchen,1,91.14,5
+TXN-52369,2026-06-23,Singapore,Books,4,79.63,4
+TXN-52370,2026-06-23,San Francisco,Fashion,1,79.86,4
+TXN-52371,2026-06-23,London,Electronics,4,935.78,4
+TXN-52372,2026-06-23,Berlin,Fashion,3,226.24,3
+TXN-52373,2026-06-23,New York,Home & Kitchen,3,230.86,5
+TXN-52374,2026-06-23,Tokyo,Electronics,3,704.49,4
+TXN-52375,2026-06-23,Berlin,Electronics,5,1139.67,5
+TXN-52376,2026-06-23,New York,Electronics,4,928.54,4
+TXN-52377,2026-06-23,London,Groceries,3,118.24,4
+TXN-52378,2026-06-24,London,Home & Kitchen,4,368.46,4
+TXN-52379,2026-06-24,Singapore,Groceries,4,146.72,5
+TXN-52380,2026-06-24,London,Electronics,5,1163.53,3
+TXN-52381,2026-06-24,New York,Electronics,2,465.77,4
+TXN-52382,2026-06-24,San Francisco,Books,2,37.06,5
+TXN-52383,2026-06-24,Berlin,Groceries,1,41.31,3
+TXN-52384,2026-06-24,New York,Groceries,1,32.0,4
+TXN-52385,2026-06-24,London,Electronics,3,829.78,4
+TXN-52386,2026-06-24,Singapore,Groceries,2,82.42,5
+TXN-52387,2026-06-25,San Francisco,Electronics,3,868.93,5
+TXN-52388,2026-06-25,Singapore,Books,4,88.04,5
+TXN-52389,2026-06-25,San Francisco,Home & Kitchen,5,443.44,4
+TXN-52390,2026-06-25,London,Groceries,4,135.48,4
+TXN-52391,2026-06-25,Singapore,Groceries,1,35.21,3
+TXN-52392,2026-06-25,Singapore,Fashion,1,64.58,4
+TXN-52393,2026-06-25,San Francisco,Electronics,1,275.29,4
+TXN-52394,2026-06-25,San Francisco,Books,4,74.51,3
+TXN-52395,2026-06-25,Berlin,Home & Kitchen,5,491.95,4
+TXN-52396,2026-06-25,Singapore,Books,2,46.17,3
+TXN-52397,2026-06-25,San Francisco,Fashion,3,213.29,4
+TXN-52398,2026-06-25,Berlin,Home & Kitchen,2,192.78,3
+TXN-52399,2026-06-25,London,Electronics,4,949.26,4
+TXN-52400,2026-06-25,Singapore,Home & Kitchen,1,80.26,3
+TXN-52401,2026-06-25,San Francisco,Electronics,1,292.06,3
+TXN-52402,2026-06-26,Tokyo,Electronics,5,1294.74,4
+TXN-52403,2026-06-26,Berlin,Electronics,1,251.58,3
+TXN-52404,2026-06-26,Tokyo,Fashion,5,360.24,4
+TXN-52405,2026-06-26,Tokyo,Electronics,3,758.2,3
+TXN-52406,2026-06-26,Singapore,Books,4,76.65,3
+TXN-52407,2026-06-26,San Francisco,Books,5,98.28,5
+TXN-52408,2026-06-26,Berlin,Books,4,74.62,3
+TXN-52409,2026-06-26,New York,Fashion,2,130.84,3
+TXN-52410,2026-06-26,London,Home & Kitchen,2,156.36,3
+TXN-52411,2026-06-26,San Francisco,Groceries,5,194.22,4
+TXN-52412,2026-06-26,Tokyo,Books,1,19.32,5
+TXN-52413,2026-06-26,Tokyo,Groceries,2,66.59,3
+TXN-52414,2026-06-27,Singapore,Groceries,5,172.62,3
+TXN-52415,2026-06-27,San Francisco,Electronics,5,1465.42,5
+TXN-52416,2026-06-27,Singapore,Books,3,69.35,5
+TXN-52417,2026-06-27,San Francisco,Fashion,3,231.93,3
+TXN-52418,2026-06-27,London,Fashion,4,263.91,3
+TXN-52419,2026-06-27,Tokyo,Books,3,54.37,4
+TXN-52420,2026-06-27,San Francisco,Electronics,1,269.55,4
+TXN-52421,2026-06-27,New York,Home & Kitchen,4,395.07,4
+TXN-52422,2026-06-27,New York,Electronics,1,267.55,4
+TXN-52423,2026-06-27,Berlin,Fashion,5,332.57,3
+TXN-52424,2026-06-27,New York,Electronics,3,855.88,4
+TXN-52425,2026-06-27,Tokyo,Books,3,71.82,4
+TXN-52426,2026-06-27,London,Books,3,62.26,4
+TXN-52427,2026-06-28,Berlin,Groceries,5,182.93,4
+TXN-52428,2026-06-28,Singapore,Home & Kitchen,1,80.27,4
+TXN-52429,2026-06-28,Singapore,Fashion,2,141.0,3
+TXN-52430,2026-06-28,Berlin,Fashion,4,282.19,5
+TXN-52431,2026-06-28,San Francisco,Electronics,4,1091.62,4
+TXN-52432,2026-06-28,Tokyo,Home & Kitchen,5,404.81,5
+TXN-52433,2026-06-28,London,Groceries,4,150.74,4
+TXN-52434,2026-06-28,San Francisco,Groceries,1,37.58,5
+TXN-52435,2026-06-28,Berlin,Groceries,1,36.05,4
+TXN-52436,2026-06-28,London,Home & Kitchen,3,237.93,3
+TXN-52437,2026-06-28,Singapore,Books,2,41.6,3
+TXN-52438,2026-06-28,London,Home & Kitchen,5,453.66,3
+TXN-52439,2026-06-29,London,Books,1,22.8,3
+TXN-52440,2026-06-29,New York,Books,2,39.4,5
+TXN-52441,2026-06-29,New York,Electronics,4,991.75,4
+TXN-52442,2026-06-29,Singapore,Groceries,1,32.02,3
+TXN-52443,2026-06-29,London,Groceries,5,192.43,5
+TXN-52444,2026-06-29,New York,Fashion,3,197.99,5
+TXN-52445,2026-06-29,Tokyo,Fashion,5,411.42,4
+TXN-52446,2026-06-29,New York,Fashion,4,330.37,3
+TXN-52447,2026-06-29,Tokyo,Books,4,95.21,3
+TXN-52448,2026-06-29,London,Groceries,5,173.81,5
+TXN-52449,2026-06-29,Singapore,Books,3,68.48,3
+TXN-52450,2026-06-29,London,Fashion,2,143.49,3
+TXN-52451,2026-06-30,New York,Groceries,3,112.35,5
+TXN-52452,2026-06-30,Berlin,Books,2,40.51,4
+TXN-52453,2026-06-30,San Francisco,Electronics,5,1290.71,4
+TXN-52454,2026-06-30,Singapore,Home & Kitchen,3,265.33,4
+TXN-52455,2026-06-30,Tokyo,Books,4,83.07,5
+TXN-52456,2026-06-30,Tokyo,Electronics,1,281.69,5
+TXN-52457,2026-06-30,San Francisco,Groceries,5,184.39,3
+TXN-52458,2026-06-30,Berlin,Home & Kitchen,5,494.42,3
+TXN-52459,2026-06-30,San Francisco,Books,4,88.08,4
+TXN-52460,2026-06-30,Tokyo,Home & Kitchen,1,78.66,4
+TXN-52461,2026-06-30,London,Electronics,5,1161.52,4
+TXN-52462,2026-06-30,Tokyo,Home & Kitchen,3,295.62,3
+TXN-52463,2026-07-01,Singapore,Home & Kitchen,5,476.77,3
+TXN-52464,2026-07-01,Berlin,Fashion,2,149.61,4
+TXN-52465,2026-07-01,San Francisco,Fashion,2,138.64,4
+TXN-52466,2026-07-01,Tokyo,Electronics,5,1382.92,3
+TXN-52467,2026-07-01,New York,Electronics,2,540.57,3
+TXN-52468,2026-07-01,New York,Home & Kitchen,2,163.42,4
+TXN-52469,2026-07-01,Berlin,Electronics,4,1017.21,3
+TXN-52470,2026-07-01,Tokyo,Groceries,4,167.27,3
+TXN-52471,2026-07-01,London,Home & Kitchen,5,469.37,5
+TXN-52472,2026-07-01,New York,Home & Kitchen,4,320.92,3
+TXN-52473,2026-07-01,San Francisco,Fashion,2,133.17,5
+TXN-52474,2026-07-01,San Francisco,Home & Kitchen,4,355.01,4
+TXN-52475,2026-07-01,Berlin,Electronics,4,1010.2,4
+TXN-52476,2026-07-01,Tokyo,Books,1,20.78,4
+TXN-52477,2026-07-01,New York,Fashion,3,217.8,5
+TXN-52478,2026-07-01,New York,Books,5,99.08,5
+TXN-52479,2026-07-01,Tokyo,Home & Kitchen,1,99.66,4
+TXN-52480,2026-07-01,Tokyo,Fashion,4,275.26,3
+TXN-52481,2026-07-01,Berlin,Groceries,5,168.57,5
+TXN-52482,2026-07-02,Berlin,Books,1,19.05,3
+TXN-52483,2026-07-02,Singapore,Groceries,5,175.31,5
+TXN-52484,2026-07-02,London,Fashion,3,247.18,3
+TXN-52485,2026-07-02,Tokyo,Books,4,86.54,3
+TXN-52486,2026-07-02,Singapore,Home & Kitchen,5,481.36,5
+TXN-52487,2026-07-02,San Francisco,Groceries,3,113.05,5
+TXN-52488,2026-07-02,Berlin,Groceries,5,201.07,3
+TXN-52489,2026-07-02,New York,Electronics,2,484.76,5
+TXN-52490,2026-07-02,Tokyo,Electronics,4,997.1,3
+TXN-52491,2026-07-02,New York,Fashion,2,156.58,4
+TXN-52492,2026-07-02,New York,Books,1,21.67,3
+TXN-52493,2026-07-02,Singapore,Electronics,1,258.11,4
+TXN-52494,2026-07-02,Singapore,Home & Kitchen,1,100.05,4
+TXN-52495,2026-07-02,Singapore,Electronics,4,1013.29,5
+TXN-52496,2026-07-02,Berlin,Home & Kitchen,2,162.98,4
+TXN-52497,2026-07-02,Singapore,Books,3,58.06,5
+TXN-52498,2026-07-03,Berlin,Books,2,37.03,3
+TXN-52499,2026-07-03,San Francisco,Electronics,1,285.75,3
+TXN-52500,2026-07-03,Tokyo,Groceries,5,186.2,3
+TXN-52501,2026-07-03,San Francisco,Groceries,5,183.55,3
+TXN-52502,2026-07-03,Tokyo,Home & Kitchen,5,427.39,5
+TXN-52503,2026-07-03,San Francisco,Home & Kitchen,1,87.69,5
+TXN-52504,2026-07-03,New York,Books,5,92.34,5
+TXN-52505,2026-07-03,New York,Groceries,1,36.74,3
+TXN-52506,2026-07-03,Berlin,Home & Kitchen,3,231.22,4
+TXN-52507,2026-07-03,Tokyo,Groceries,3,96.64,3
+TXN-52508,2026-07-04,Berlin,Electronics,5,1215.52,5
+TXN-52509,2026-07-04,Berlin,Home & Kitchen,3,260.04,3
+TXN-52510,2026-07-04,Singapore,Home & Kitchen,1,91.36,4
+TXN-52511,2026-07-04,New York,Electronics,3,769.82,3
+TXN-52512,2026-07-04,New York,Groceries,2,67.29,5
+TXN-52513,2026-07-04,Singapore,Groceries,1,33.97,3
+TXN-52514,2026-07-04,Berlin,Home & Kitchen,1,85.32,3
+TXN-52515,2026-07-04,Berlin,Books,5,117.88,5
+TXN-52516,2026-07-04,San Francisco,Books,3,67.02,3
+TXN-52517,2026-07-04,Tokyo,Electronics,5,1209.47,4
+TXN-52518,2026-07-04,Tokyo,Books,3,68.07,3
+TXN-52519,2026-07-04,New York,Electronics,1,283.02,3
+TXN-52520,2026-07-05,Tokyo,Home & Kitchen,1,90.59,3
+TXN-52521,2026-07-05,Tokyo,Books,2,41.16,4
+TXN-52522,2026-07-05,San Francisco,Home & Kitchen,1,87.67,5
+TXN-52523,2026-07-05,London,Groceries,2,70.21,3
+TXN-52524,2026-07-05,San Francisco,Fashion,1,75.36,3
+TXN-52525,2026-07-05,Singapore,Books,5,107.04,3
+TXN-52526,2026-07-05,New York,Fashion,1,64.19,4
+TXN-52527,2026-07-05,London,Fashion,1,69.6,5
+TXN-52528,2026-07-05,London,Fashion,2,151.46,4
+TXN-52529,2026-07-05,Singapore,Electronics,1,230.73,5
+TXN-52530,2026-07-05,Tokyo,Fashion,3,245.55,3
+TXN-52531,2026-07-05,Singapore,Books,3,70.95,5
+TXN-52532,2026-07-05,Singapore,Groceries,2,74.06,4
+TXN-52533,2026-07-05,Singapore,Groceries,5,183.93,3
+TXN-52534,2026-07-05,Tokyo,Groceries,5,183.03,3
+TXN-52535,2026-07-05,San Francisco,Fashion,5,339.21,5
+TXN-52536,2026-07-06,New York,Fashion,3,234.67,3
+TXN-52537,2026-07-06,San Francisco,Electronics,4,1094.97,4
+TXN-52538,2026-07-06,New York,Electronics,4,1150.9,4
+TXN-52539,2026-07-06,Berlin,Groceries,4,138.62,3
+TXN-52540,2026-07-06,London,Electronics,5,1268.98,3
+TXN-52541,2026-07-06,Tokyo,Books,4,73.07,3
+TXN-52542,2026-07-06,San Francisco,Books,4,84.78,5
+TXN-52543,2026-07-06,New York,Groceries,5,197.56,3
+TXN-52544,2026-07-06,London,Home & Kitchen,3,291.48,5
+TXN-52545,2026-07-06,New York,Fashion,3,234.72,5
+TXN-52546,2026-07-06,Tokyo,Books,1,22.84,5
+TXN-52547,2026-07-06,Singapore,Books,3,69.45,5
+TXN-52548,2026-07-06,Tokyo,Books,5,111.58,5
+TXN-52549,2026-07-06,San Francisco,Groceries,4,145.63,3
+TXN-52550,2026-07-06,New York,Fashion,3,239.37,4
+TXN-52551,2026-07-06,San Francisco,Electronics,5,1235.93,5
+TXN-52552,2026-07-07,Berlin,Electronics,3,756.38,5
+TXN-52553,2026-07-07,Singapore,Groceries,5,158.15,4
+TXN-52554,2026-07-07,Singapore,Home & Kitchen,3,293.45,3
+TXN-52555,2026-07-07,Tokyo,Books,1,20.64,4
+TXN-52556,2026-07-07,London,Electronics,4,1091.32,5
+TXN-52557,2026-07-07,Tokyo,Fashion,1,75.17,3
+TXN-52558,2026-07-07,Berlin,Groceries,5,173.99,3
+TXN-52559,2026-07-07,San Francisco,Books,3,67.79,4
+TXN-52560,2026-07-07,Tokyo,Groceries,2,67.78,3
+TXN-52561,2026-07-07,Berlin,Fashion,1,67.89,5
+TXN-52562,2026-07-07,San Francisco,Electronics,5,1447.71,5
+TXN-52563,2026-07-07,New York,Groceries,5,195.16,3
+TXN-52564,2026-07-07,London,Groceries,1,38.62,4
+TXN-52565,2026-07-07,Singapore,Home & Kitchen,1,91.81,4
+TXN-52566,2026-07-08,Berlin,Electronics,4,933.95,3
+TXN-52567,2026-07-08,San Francisco,Fashion,3,224.93,5
+TXN-52568,2026-07-08,New York,Books,4,93.02,3
+TXN-52569,2026-07-08,London,Electronics,5,1420.56,4
+TXN-52570,2026-07-08,Singapore,Books,3,62.47,4
+TXN-52571,2026-07-08,New York,Home & Kitchen,2,171.78,4
+TXN-52572,2026-07-08,Berlin,Fashion,1,65.23,3
+TXN-52573,2026-07-08,Berlin,Groceries,5,198.63,5
+TXN-52574,2026-07-08,San Francisco,Groceries,4,160.89,3
+TXN-52575,2026-07-09,Tokyo,Fashion,1,83.06,3
+TXN-52576,2026-07-09,Berlin,Home & Kitchen,5,462.87,5
+TXN-52577,2026-07-09,Berlin,Books,1,23.09,5
+TXN-52578,2026-07-09,Berlin,Electronics,4,1097.76,5
+TXN-52579,2026-07-09,London,Books,3,57.51,5
+TXN-52580,2026-07-09,San Francisco,Groceries,3,102.16,4
+TXN-52581,2026-07-09,Tokyo,Fashion,3,236.14,3
+TXN-52582,2026-07-09,Tokyo,Fashion,4,282.4,4
+TXN-52583,2026-07-09,Berlin,Home & Kitchen,1,99.82,5
+TXN-52584,2026-07-09,Berlin,Books,2,41.39,4
+TXN-52585,2026-07-09,Berlin,Fashion,2,164.88,3
+TXN-52586,2026-07-09,Singapore,Books,5,109.98,5
+TXN-52587,2026-07-09,London,Groceries,3,104.39,3
+TXN-52588,2026-07-09,Tokyo,Books,5,119.5,5
+TXN-52589,2026-07-09,Singapore,Books,2,46.8,4
+TXN-52590,2026-07-09,San Francisco,Electronics,1,256.4,5
+TXN-52591,2026-07-09,Singapore,Books,1,18.76,3
+TXN-52592,2026-07-09,New York,Books,2,47.88,3
+TXN-52593,2026-07-10,Tokyo,Home & Kitchen,4,342.15,4
+TXN-52594,2026-07-10,San Francisco,Home & Kitchen,3,238.61,4
+TXN-52595,2026-07-10,Berlin,Home & Kitchen,5,396.24,5
+TXN-52596,2026-07-10,New York,Electronics,3,888.73,4
+TXN-52597,2026-07-10,Singapore,Books,4,78.94,4
+TXN-52598,2026-07-10,Singapore,Fashion,2,156.4,5
+TXN-52599,2026-07-10,New York,Home & Kitchen,2,198.68,5
+TXN-52600,2026-07-10,London,Home & Kitchen,4,344.7,4
+TXN-52601,2026-07-10,Berlin,Fashion,5,344.33,3
+TXN-52602,2026-07-10,London,Fashion,4,280.65,5
+TXN-52603,2026-07-10,Berlin,Home & Kitchen,5,447.3,4
+TXN-52604,2026-07-10,London,Groceries,4,139.38,3
+TXN-52605,2026-07-10,New York,Fashion,2,144.08,4
+TXN-52606,2026-07-10,Berlin,Home & Kitchen,3,237.11,4
+TXN-52607,2026-07-10,New York,Fashion,3,206.25,4
+TXN-52608,2026-07-10,San Francisco,Fashion,3,248.17,4
+TXN-52609,2026-07-11,San Francisco,Electronics,3,706.73,3
+TXN-52610,2026-07-11,Berlin,Home & Kitchen,2,154.39,3
+TXN-52611,2026-07-11,Berlin,Home & Kitchen,2,153.34,3
+TXN-52612,2026-07-11,San Francisco,Groceries,3,124.17,5
+TXN-52613,2026-07-11,Singapore,Books,4,84.5,4
+TXN-52614,2026-07-11,New York,Groceries,1,36.17,4
+TXN-52615,2026-07-11,London,Books,1,23.19,4
+TXN-52616,2026-07-11,London,Electronics,1,280.82,3
+TXN-52617,2026-07-11,London,Electronics,2,526.06,4
+TXN-52618,2026-07-11,Singapore,Books,5,110.16,3
+TXN-52619,2026-07-11,New York,Groceries,4,130.22,5
+TXN-52620,2026-07-11,London,Home & Kitchen,2,195.91,5
+TXN-52621,2026-07-11,Singapore,Electronics,1,243.44,5
+TXN-52622,2026-07-11,San Francisco,Books,2,39.18,3
+TXN-52623,2026-07-11,San Francisco,Books,4,78.78,3
+TXN-52624,2026-07-11,Berlin,Electronics,2,450.48,3
+TXN-52625,2026-07-11,Berlin,Books,5,96.26,3
+TXN-52626,2026-07-12,Singapore,Books,3,65.04,5
+TXN-52627,2026-07-12,San Francisco,Home & Kitchen,3,266.54,5
+TXN-52628,2026-07-12,London,Fashion,2,162.75,5
+TXN-52629,2026-07-12,Tokyo,Books,4,86.35,5
+TXN-52630,2026-07-12,London,Books,1,19.31,4
+TXN-52631,2026-07-12,Tokyo,Books,3,58.45,4
+TXN-52632,2026-07-12,San Francisco,Electronics,4,1186.89,5
+TXN-52633,2026-07-12,London,Electronics,4,1111.45,4
+TXN-52634,2026-07-13,Berlin,Books,4,88.49,3
+TXN-52635,2026-07-13,London,Groceries,5,168.79,4
+TXN-52636,2026-07-13,Berlin,Electronics,3,733.86,4
+TXN-52637,2026-07-13,Tokyo,Books,4,82.2,4
+TXN-52638,2026-07-13,London,Electronics,4,1118.46,4
+TXN-52639,2026-07-13,London,Electronics,4,1022.94,5
+TXN-52640,2026-07-13,Berlin,Fashion,2,158.74,3
+TXN-52641,2026-07-13,Berlin,Home & Kitchen,3,239.38,5
+TXN-52642,2026-07-13,Singapore,Electronics,1,285.18,3
+TXN-52643,2026-07-13,London,Groceries,5,160.83,3
+TXN-52644,2026-07-13,San Francisco,Home & Kitchen,3,270.46,3
+TXN-52645,2026-07-13,Tokyo,Home & Kitchen,2,167.8,3
+TXN-52646,2026-07-13,London,Groceries,4,135.06,5
+TXN-52647,2026-07-13,New York,Fashion,1,80.76,5
+TXN-52648,2026-07-13,Berlin,Electronics,4,1137.4,3
+TXN-52649,2026-07-13,London,Fashion,3,190.53,5
+TXN-52650,2026-07-13,New York,Fashion,3,236.24,4
+TXN-52651,2026-07-13,San Francisco,Books,3,69.52,3
+TXN-52652,2026-07-13,Berlin,Electronics,4,906.05,5
+TXN-52653,2026-07-13,Berlin,Home & Kitchen,2,157.87,5
+TXN-52654,2026-07-14,San Francisco,Books,5,115.78,4
+TXN-52655,2026-07-14,Berlin,Books,1,19.81,4
+TXN-52656,2026-07-14,New York,Fashion,3,250.06,5
+TXN-52657,2026-07-14,Tokyo,Books,3,61.73,3
+TXN-52658,2026-07-14,Berlin,Books,3,62.7,5
+TXN-52659,2026-07-14,Berlin,Home & Kitchen,2,172.5,4
+TXN-52660,2026-07-14,London,Books,5,111.44,4
+TXN-52661,2026-07-14,Berlin,Fashion,1,71.34,3
+TXN-52662,2026-07-14,London,Books,4,85.52,5
+TXN-52663,2026-07-14,London,Groceries,2,80.0,3
+TXN-52664,2026-07-14,Berlin,Electronics,2,481.15,4
+TXN-52665,2026-07-14,San Francisco,Home & Kitchen,1,80.1,5
+TXN-52666,2026-07-14,Berlin,Books,5,112.82,3
+TXN-52667,2026-07-14,London,Books,4,79.47,4
+TXN-52668,2026-07-14,New York,Fashion,3,232.41,5
+TXN-52669,2026-07-14,New York,Books,3,66.43,5
+TXN-52670,2026-07-14,Berlin,Books,4,79.51,5
+TXN-52671,2026-07-14,London,Fashion,4,311.54,5
+TXN-52672,2026-07-14,Singapore,Home & Kitchen,1,99.99,4
+TXN-52673,2026-07-14,Tokyo,Electronics,2,563.53,3
+TXN-52674,2026-07-15,San Francisco,Electronics,2,515.64,3
+TXN-52675,2026-07-15,Tokyo,Electronics,4,951.22,5
+TXN-52676,2026-07-15,San Francisco,Books,5,102.54,3
+TXN-52677,2026-07-15,New York,Groceries,4,167.82,5
+TXN-52678,2026-07-15,Berlin,Groceries,3,113.88,4
+TXN-52679,2026-07-15,Singapore,Home & Kitchen,2,160.22,5
+TXN-52680,2026-07-15,Berlin,Fashion,3,221.72,4
+TXN-52681,2026-07-15,Tokyo,Books,2,47.23,5
+TXN-52682,2026-07-15,San Francisco,Fashion,5,390.08,4
+TXN-52683,2026-07-15,London,Electronics,4,953.77,4
+TXN-52684,2026-07-15,New York,Electronics,3,832.83,3
+TXN-52685,2026-07-15,Berlin,Electronics,4,999.31,3
+TXN-52686,2026-07-15,Tokyo,Home & Kitchen,5,402.45,4
+TXN-52687,2026-07-15,San Francisco,Home & Kitchen,3,277.6,3
+TXN-52688,2026-07-15,London,Groceries,4,150.55,4
+TXN-52689,2026-07-15,Berlin,Groceries,4,165.24,5
+TXN-52690,2026-07-16,New York,Fashion,5,331.0,5
+TXN-52691,2026-07-16,London,Fashion,2,137.04,3
+TXN-52692,2026-07-16,Berlin,Fashion,5,382.71,4
+TXN-52693,2026-07-16,Berlin,Groceries,5,189.25,5
+TXN-52694,2026-07-16,Singapore,Home & Kitchen,4,327.35,3
+TXN-52695,2026-07-16,San Francisco,Fashion,1,82.52,5
+TXN-52696,2026-07-16,San Francisco,Fashion,2,145.97,3
+TXN-52697,2026-07-16,New York,Groceries,1,32.94,4
+TXN-52698,2026-07-16,Singapore,Books,4,79.85,5
+TXN-52699,2026-07-16,San Francisco,Electronics,5,1272.47,4
+TXN-52700,2026-07-16,London,Books,3,69.1,4
+TXN-52701,2026-07-16,New York,Home & Kitchen,5,489.88,3
+TXN-52702,2026-07-16,Singapore,Groceries,2,80.64,5
+TXN-52703,2026-07-16,Tokyo,Books,3,66.34,5
+TXN-52704,2026-07-16,Singapore,Books,3,57.2,4
+TXN-52705,2026-07-16,Singapore,Books,3,67.11,3
+TXN-52706,2026-07-17,San Francisco,Home & Kitchen,4,344.17,5
+TXN-52707,2026-07-17,San Francisco,Electronics,4,1008.3,3
+TXN-52708,2026-07-17,Berlin,Electronics,3,748.9,4
+TXN-52709,2026-07-17,Berlin,Groceries,1,37.87,3
+TXN-52710,2026-07-17,Singapore,Groceries,4,142.73,5
+TXN-52711,2026-07-17,London,Groceries,1,41.7,3
+TXN-52712,2026-07-17,Berlin,Books,4,83.77,4
+TXN-52713,2026-07-17,New York,Home & Kitchen,1,85.92,5
+TXN-52714,2026-07-17,Singapore,Fashion,2,162.58,3
+TXN-52715,2026-07-17,Tokyo,Electronics,1,229.2,5
+TXN-52716,2026-07-17,London,Electronics,1,289.34,4
+TXN-52717,2026-07-17,Singapore,Fashion,5,392.43,4
+TXN-52718,2026-07-17,Singapore,Groceries,2,82.02,5
+TXN-52719,2026-07-17,Berlin,Groceries,1,41.38,4
+TXN-52720,2026-07-17,Singapore,Books,1,18.39,5
+TXN-52721,2026-07-17,Singapore,Fashion,3,194.29,4
+TXN-52722,2026-07-17,London,Electronics,5,1199.51,5
+TXN-52723,2026-07-18,Singapore,Fashion,1,69.53,5
+TXN-52724,2026-07-18,New York,Groceries,3,109.19,5
+TXN-52725,2026-07-18,Berlin,Electronics,4,926.45,3
+TXN-52726,2026-07-18,Singapore,Fashion,1,66.9,5
+TXN-52727,2026-07-18,San Francisco,Electronics,1,241.31,4
+TXN-52728,2026-07-18,New York,Books,2,39.69,5
+TXN-52729,2026-07-18,Singapore,Fashion,2,139.04,4
+TXN-52730,2026-07-18,San Francisco,Groceries,3,98.92,4
+TXN-52731,2026-07-18,San Francisco,Books,2,39.27,3
+TXN-52732,2026-07-18,London,Fashion,3,232.95,4
+TXN-52733,2026-07-18,Tokyo,Electronics,3,805.21,4
+TXN-52734,2026-07-18,Tokyo,Home & Kitchen,2,154.87,5
+TXN-52735,2026-07-18,San Francisco,Books,5,107.06,5
+TXN-52736,2026-07-18,London,Books,3,57.73,5
+TXN-52737,2026-07-19,Singapore,Home & Kitchen,3,236.44,3
+TXN-52738,2026-07-19,San Francisco,Groceries,4,136.96,3
+TXN-52739,2026-07-19,Singapore,Home & Kitchen,2,177.24,4
+TXN-52740,2026-07-19,London,Home & Kitchen,3,272.63,5
+TXN-52741,2026-07-19,New York,Home & Kitchen,3,283.15,5
+TXN-52742,2026-07-19,New York,Groceries,2,71.85,4
+TXN-52743,2026-07-19,Singapore,Groceries,1,33.46,4
+TXN-52744,2026-07-19,San Francisco,Groceries,4,148.96,3
+TXN-52745,2026-07-19,Berlin,Books,4,86.25,5
+TXN-52746,2026-07-19,Singapore,Books,4,83.37,3
+TXN-52747,2026-07-19,Singapore,Groceries,3,113.43,4
+TXN-52748,2026-07-19,London,Books,1,23.82,3
+TXN-52749,2026-07-19,New York,Home & Kitchen,4,349.44,4
+TXN-52750,2026-07-19,Tokyo,Home & Kitchen,5,386.14,5
+TXN-52751,2026-07-19,London,Fashion,5,416.35,5
+TXN-52752,2026-07-19,Berlin,Fashion,2,131.46,4
+TXN-52753,2026-07-20,New York,Electronics,3,853.39,3
+TXN-52754,2026-07-20,Tokyo,Groceries,4,132.94,3
+TXN-52755,2026-07-20,San Francisco,Fashion,2,138.65,3
+TXN-52756,2026-07-20,San Francisco,Fashion,2,144.34,5
+TXN-52757,2026-07-20,San Francisco,Fashion,5,403.8,4
+TXN-52758,2026-07-20,Tokyo,Electronics,2,501.71,4
+TXN-52759,2026-07-20,Singapore,Home & Kitchen,4,377.28,4
+TXN-52760,2026-07-20,Tokyo,Books,2,45.16,3
+TXN-52761,2026-07-20,San Francisco,Books,3,67.73,3
+TXN-52762,2026-07-20,London,Books,3,68.76,5
+TXN-52763,2026-07-20,Berlin,Books,4,84.82,4
+TXN-52764,2026-07-20,Singapore,Books,5,90.81,5
+TXN-52765,2026-07-20,San Francisco,Fashion,3,211.82,5
+TXN-52766,2026-07-20,Berlin,Electronics,5,1406.88,3
+TXN-52767,2026-07-20,San Francisco,Fashion,4,267.79,3
+TXN-52768,2026-07-20,Tokyo,Groceries,1,35.07,5
+TXN-52769,2026-07-20,Tokyo,Fashion,2,137.97,4
+TXN-52770,2026-07-20,New York,Books,3,71.25,4
+TXN-52771,2026-07-20,San Francisco,Fashion,4,309.32,3
+TXN-52772,2026-07-20,New York,Books,3,66.35,3
+TXN-52773,2026-07-21,New York,Books,2,39.83,5
+TXN-52774,2026-07-21,Tokyo,Home & Kitchen,4,307.18,5
+TXN-52775,2026-07-21,Tokyo,Books,1,19.82,4
+TXN-52776,2026-07-21,Berlin,Electronics,4,1050.62,4
+TXN-52777,2026-07-21,Berlin,Groceries,3,98.02,3
+TXN-52778,2026-07-21,Berlin,Books,4,92.89,3
+TXN-52779,2026-07-21,New York,Fashion,3,248.74,5
+TXN-52780,2026-07-21,London,Home & Kitchen,2,179.26,5
+TXN-52781,2026-07-21,Tokyo,Books,1,20.79,3
+TXN-52782,2026-07-21,Tokyo,Electronics,4,1010.13,5
+TXN-52783,2026-07-21,London,Groceries,4,140.17,4
+TXN-52784,2026-07-21,Berlin,Electronics,3,715.21,4
+TXN-52785,2026-07-21,New York,Books,4,79.79,5
+TXN-52786,2026-07-21,Berlin,Electronics,1,251.79,3
+TXN-52787,2026-07-21,Singapore,Home & Kitchen,4,331.36,3
+TXN-52788,2026-07-21,New York,Home & Kitchen,2,190.07,5
+TXN-52789,2026-07-21,Tokyo,Books,3,60.22,4
+TXN-52790,2026-07-21,San Francisco,Home & Kitchen,5,455.06,3
+TXN-52791,2026-07-22,London,Groceries,1,33.04,5
+TXN-52792,2026-07-22,Tokyo,Electronics,5,1492.6,3
+TXN-52793,2026-07-22,Singapore,Groceries,3,107.81,3
+TXN-52794,2026-07-22,Singapore,Fashion,3,234.46,5
+TXN-52795,2026-07-22,Tokyo,Electronics,1,284.52,5
+TXN-52796,2026-07-22,London,Groceries,5,184.49,3
+TXN-52797,2026-07-22,London,Electronics,5,1302.34,4
+TXN-52798,2026-07-22,Singapore,Groceries,2,68.81,5
+TXN-52799,2026-07-22,Berlin,Electronics,4,1172.92,5
+TXN-52800,2026-07-23,New York,Groceries,4,134.7,4
+TXN-52801,2026-07-23,London,Fashion,3,218.13,5
+TXN-52802,2026-07-23,New York,Groceries,2,67.72,5
+TXN-52803,2026-07-23,San Francisco,Groceries,1,37.92,5
+TXN-52804,2026-07-23,Tokyo,Home & Kitchen,5,436.15,5
+TXN-52805,2026-07-23,Berlin,Groceries,4,145.98,5
+TXN-52806,2026-07-23,London,Electronics,3,746.92,4
+TXN-52807,2026-07-23,Tokyo,Fashion,4,269.69,5
+TXN-52808,2026-07-23,Singapore,Fashion,4,273.48,3
+TXN-52809,2026-07-23,New York,Home & Kitchen,4,363.26,4
+TXN-52810,2026-07-23,San Francisco,Electronics,5,1263.45,4
+TXN-52811,2026-07-23,Tokyo,Groceries,4,127.24,5
+TXN-52812,2026-07-24,Berlin,Fashion,3,224.59,4
+TXN-52813,2026-07-24,London,Electronics,5,1404.02,3
+TXN-52814,2026-07-24,Berlin,Books,2,40.54,3
+TXN-52815,2026-07-24,Tokyo,Electronics,2,481.7,3
+TXN-52816,2026-07-24,London,Home & Kitchen,2,197.11,5
+TXN-52817,2026-07-24,Berlin,Books,4,80.45,3
+TXN-52818,2026-07-24,Berlin,Books,3,59.75,4
+TXN-52819,2026-07-24,Singapore,Electronics,3,788.02,5
+TXN-52820,2026-07-24,San Francisco,Books,4,83.88,4
+TXN-52821,2026-07-24,Tokyo,Groceries,2,82.4,3
+TXN-52822,2026-07-24,London,Books,1,21.2,4
+TXN-52823,2026-07-24,Singapore,Books,2,44.2,3
+TXN-52824,2026-07-24,Berlin,Books,4,95.38,4
+TXN-52825,2026-07-24,Singapore,Fashion,1,76.0,3
+TXN-52826,2026-07-24,Berlin,Home & Kitchen,5,509.86,5
+TXN-52827,2026-07-24,Singapore,Home & Kitchen,4,402.44,4
+TXN-52828,2026-07-24,San Francisco,Home & Kitchen,2,182.03,4
+TXN-52829,2026-07-25,London,Electronics,1,280.72,5
+TXN-52830,2026-07-25,Berlin,Books,5,115.9,3
+TXN-52831,2026-07-25,London,Books,2,38.1,5
+TXN-52832,2026-07-25,London,Fashion,2,138.31,3
+TXN-52833,2026-07-25,Berlin,Fashion,4,290.57,5
+TXN-52834,2026-07-25,Tokyo,Home & Kitchen,2,193.63,4
+TXN-52835,2026-07-25,Singapore,Home & Kitchen,1,96.99,4
+TXN-52836,2026-07-25,San Francisco,Fashion,4,312.65,3
+TXN-52837,2026-07-25,Singapore,Electronics,1,276.15,4
+TXN-52838,2026-07-25,Tokyo,Home & Kitchen,4,313.18,4
+TXN-52839,2026-07-25,Singapore,Groceries,5,163.85,5
+TXN-52840,2026-07-25,Singapore,Home & Kitchen,1,87.68,5
+TXN-52841,2026-07-25,London,Electronics,4,1148.49,5
+TXN-52842,2026-07-25,London,Electronics,4,1114.99,5
+TXN-52843,2026-07-25,Tokyo,Books,1,18.62,4
+TXN-52844,2026-07-25,New York,Home & Kitchen,2,171.69,5
+TXN-52845,2026-07-25,San Francisco,Groceries,2,79.71,3
+TXN-52846,2026-07-25,New York,Groceries,3,114.72,3
+TXN-52847,2026-07-26,San Francisco,Books,3,60.16,5
+TXN-52848,2026-07-26,London,Books,4,88.79,5
+TXN-52849,2026-07-26,Berlin,Groceries,1,39.49,3
+TXN-52850,2026-07-26,London,Home & Kitchen,1,82.14,4
+TXN-52851,2026-07-26,London,Home & Kitchen,3,252.96,5
+TXN-52852,2026-07-26,Berlin,Fashion,3,218.94,4
+TXN-52853,2026-07-26,San Francisco,Groceries,2,66.08,4
+TXN-52854,2026-07-26,London,Books,2,36.34,3
+TXN-52855,2026-07-26,London,Home & Kitchen,2,182.8,4
+TXN-52856,2026-07-26,Singapore,Groceries,5,196.64,5
+TXN-52857,2026-07-26,Tokyo,Books,5,117.0,4
+TXN-52858,2026-07-26,Berlin,Fashion,5,348.0,4
+TXN-52859,2026-07-26,Tokyo,Books,2,46.45,4
+TXN-52860,2026-07-26,Tokyo,Fashion,4,253.2,3
+TXN-52861,2026-07-26,San Francisco,Groceries,3,101.0,3
+TXN-52862,2026-07-27,Singapore,Home & Kitchen,1,93.07,4
+TXN-52863,2026-07-27,Tokyo,Books,5,117.38,3
+TXN-52864,2026-07-27,San Francisco,Home & Kitchen,2,171.54,3
+TXN-52865,2026-07-27,Singapore,Books,1,23.71,5
+TXN-52866,2026-07-27,London,Electronics,5,1485.62,5
+TXN-52867,2026-07-27,New York,Home & Kitchen,1,87.89,5
+TXN-52868,2026-07-27,San Francisco,Fashion,3,239.23,3
+TXN-52869,2026-07-27,San Francisco,Fashion,4,266.9,5
+TXN-52870,2026-07-27,Berlin,Groceries,3,97.38,3
+TXN-52871,2026-07-27,San Francisco,Electronics,5,1238.54,3
+TXN-52872,2026-07-27,San Francisco,Fashion,5,394.98,4
+TXN-52873,2026-07-27,New York,Books,5,116.45,3
+TXN-52874,2026-07-28,San Francisco,Electronics,4,934.92,3
+TXN-52875,2026-07-28,San Francisco,Books,1,21.25,3
+TXN-52876,2026-07-28,Tokyo,Home & Kitchen,3,273.05,5
+TXN-52877,2026-07-28,New York,Books,4,90.66,3
+TXN-52878,2026-07-28,Singapore,Home & Kitchen,5,478.83,3
+TXN-52879,2026-07-28,Tokyo,Groceries,5,171.71,5
+TXN-52880,2026-07-28,London,Fashion,5,365.74,4
+TXN-52881,2026-07-28,London,Groceries,5,170.57,4
+TXN-52882,2026-07-28,Berlin,Home & Kitchen,3,277.38,3
+TXN-52883,2026-07-28,Tokyo,Fashion,1,69.7,5
+TXN-52884,2026-07-28,Tokyo,Books,2,38.15,4
+TXN-52885,2026-07-28,New York,Groceries,4,140.38,5
+TXN-52886,2026-07-28,San Francisco,Home & Kitchen,2,192.72,3
+TXN-52887,2026-07-29,Berlin,Groceries,3,104.58,5
+TXN-52888,2026-07-29,New York,Books,3,70.7,3
+TXN-52889,2026-07-29,Singapore,Home & Kitchen,2,169.51,3
+TXN-52890,2026-07-29,San Francisco,Books,2,43.32,3
+TXN-52891,2026-07-29,Berlin,Groceries,4,153.45,4
+TXN-52892,2026-07-29,San Francisco,Groceries,3,109.37,4
+TXN-52893,2026-07-29,San Francisco,Groceries,3,105.01,4
+TXN-52894,2026-07-29,Tokyo,Groceries,3,107.9,4
+TXN-52895,2026-07-29,New York,Books,4,73.33,4
+TXN-52896,2026-07-29,Singapore,Groceries,2,83.47,4
+TXN-52897,2026-07-29,Singapore,Electronics,2,481.29,5
+TXN-52898,2026-07-30,London,Groceries,1,34.88,4
+TXN-52899,2026-07-30,Berlin,Groceries,5,196.3,3
+TXN-52900,2026-07-30,Berlin,Home & Kitchen,4,393.35,3
+TXN-52901,2026-07-30,San Francisco,Electronics,2,498.82,4
+TXN-52902,2026-07-30,Tokyo,Home & Kitchen,1,96.42,4
+TXN-52903,2026-07-30,San Francisco,Books,3,71.76,5
+TXN-52904,2026-07-30,New York,Books,1,18.34,4
+TXN-52905,2026-07-30,Berlin,Groceries,3,108.3,4
+TXN-52906,2026-07-30,Tokyo,Electronics,2,582.13,3
+TXN-52907,2026-07-30,Singapore,Groceries,4,160.62,3
+TXN-52908,2026-07-30,London,Home & Kitchen,5,408.0,3
+TXN-52909,2026-07-30,San Francisco,Books,3,64.31,5
+TXN-52910,2026-07-31,Berlin,Home & Kitchen,3,282.25,3
+TXN-52911,2026-07-31,Singapore,Electronics,3,890.37,4
+TXN-52912,2026-07-31,Singapore,Books,2,38.21,4
+TXN-52913,2026-07-31,Tokyo,Fashion,3,209.98,5
+TXN-52914,2026-07-31,London,Groceries,5,196.75,3
+TXN-52915,2026-07-31,New York,Fashion,4,287.9,4
+TXN-52916,2026-07-31,Berlin,Electronics,1,293.47,5
+TXN-52917,2026-07-31,New York,Groceries,5,180.45,3
+TXN-52918,2026-07-31,London,Home & Kitchen,5,445.23,5
+TXN-52919,2026-07-31,Singapore,Groceries,1,39.21,5
+TXN-52920,2026-07-31,Berlin,Electronics,1,264.88,5
+TXN-52921,2026-07-31,Berlin,Electronics,4,1083.01,3
+TXN-52922,2026-08-01,Singapore,Electronics,4,1145.33,4
+TXN-52923,2026-08-01,Singapore,Books,2,43.81,3
+TXN-52924,2026-08-01,Singapore,Fashion,5,350.68,5
+TXN-52925,2026-08-01,New York,Books,4,85.79,3
+TXN-52926,2026-08-01,Tokyo,Home & Kitchen,1,76.72,4
+TXN-52927,2026-08-01,San Francisco,Books,3,69.4,5
+TXN-52928,2026-08-01,Berlin,Groceries,4,153.45,3
+TXN-52929,2026-08-01,London,Home & Kitchen,5,401.96,3
+TXN-52930,2026-08-01,London,Fashion,2,130.24,5
+TXN-52931,2026-08-01,New York,Home & Kitchen,2,180.54,3
+TXN-52932,2026-08-01,London,Groceries,2,76.82,3
+TXN-52933,2026-08-01,San Francisco,Groceries,4,167.62,3
+TXN-52934,2026-08-01,London,Fashion,1,65.88,4
+TXN-52935,2026-08-01,Tokyo,Electronics,1,258.3,5
+TXN-52936,2026-08-01,Tokyo,Fashion,1,72.38,4
+TXN-52937,2026-08-01,San Francisco,Fashion,4,301.58,3
+TXN-52938,2026-08-01,San Francisco,Electronics,5,1467.48,5
+TXN-52939,2026-08-01,New York,Home & Kitchen,2,191.59,3
+TXN-52940,2026-08-01,Singapore,Books,5,100.75,4
+TXN-52941,2026-08-01,San Francisco,Books,2,47.82,5
+TXN-52942,2026-08-02,London,Books,5,93.36,4
+TXN-52943,2026-08-02,New York,Electronics,4,1141.02,4
+TXN-52944,2026-08-02,London,Electronics,3,887.79,3
+TXN-52945,2026-08-02,Singapore,Books,3,58.13,5
+TXN-52946,2026-08-02,Singapore,Electronics,4,1162.78,3
+TXN-52947,2026-08-02,Singapore,Groceries,3,95.93,3
+TXN-52948,2026-08-02,Berlin,Fashion,1,65.69,3
+TXN-52949,2026-08-02,Singapore,Fashion,4,316.03,3
+TXN-52950,2026-08-02,San Francisco,Home & Kitchen,3,257.94,4
+TXN-52951,2026-08-02,Tokyo,Fashion,2,133.33,5
+TXN-52952,2026-08-02,Singapore,Fashion,2,141.33,3
+TXN-52953,2026-08-02,New York,Fashion,4,269.14,4
+TXN-52954,2026-08-02,London,Groceries,5,174.36,3
+TXN-52955,2026-08-03,Tokyo,Electronics,1,280.12,3
+TXN-52956,2026-08-03,New York,Books,5,101.31,5
+TXN-52957,2026-08-03,San Francisco,Home & Kitchen,2,158.11,4
+TXN-52958,2026-08-03,New York,Fashion,4,335.01,3
+TXN-52959,2026-08-03,Tokyo,Books,4,92.55,5
+TXN-52960,2026-08-03,San Francisco,Books,5,114.28,3
+TXN-52961,2026-08-03,Tokyo,Groceries,4,163.78,4
+TXN-52962,2026-08-03,London,Fashion,5,353.39,5
+TXN-52963,2026-08-03,Tokyo,Electronics,4,1124.62,5
+TXN-52964,2026-08-03,San Francisco,Fashion,2,147.62,3
+TXN-52965,2026-08-03,Singapore,Fashion,1,78.61,5
+TXN-52966,2026-08-03,London,Books,5,93.16,3
+TXN-52967,2026-08-03,San Francisco,Groceries,3,104.85,4
+TXN-52968,2026-08-04,Berlin,Home & Kitchen,5,456.09,4
+TXN-52969,2026-08-04,London,Fashion,4,283.48,3
+TXN-52970,2026-08-04,Singapore,Home & Kitchen,1,95.57,4
+TXN-52971,2026-08-04,San Francisco,Electronics,2,452.15,5
+TXN-52972,2026-08-04,San Francisco,Electronics,2,509.51,3
+TXN-52973,2026-08-04,Tokyo,Home & Kitchen,4,393.48,3
+TXN-52974,2026-08-04,Tokyo,Home & Kitchen,4,407.26,4
+TXN-52975,2026-08-04,London,Home & Kitchen,5,438.58,5
+TXN-52976,2026-08-04,Singapore,Groceries,5,206.0,4
+TXN-52977,2026-08-04,London,Fashion,3,239.84,4
+TXN-52978,2026-08-04,Tokyo,Home & Kitchen,1,93.53,4
+TXN-52979,2026-08-04,London,Home & Kitchen,1,96.44,4
+TXN-52980,2026-08-04,Berlin,Electronics,2,464.19,4
+TXN-52981,2026-08-04,New York,Electronics,5,1392.26,3
+TXN-52982,2026-08-04,London,Groceries,4,144.32,3
+TXN-52983,2026-08-04,San Francisco,Home & Kitchen,4,389.64,5
+TXN-52984,2026-08-04,San Francisco,Fashion,2,158.59,3
+TXN-52985,2026-08-04,Berlin,Groceries,5,198.45,5
+TXN-52986,2026-08-05,New York,Home & Kitchen,5,428.74,3
+TXN-52987,2026-08-05,San Francisco,Home & Kitchen,3,241.64,5
+TXN-52988,2026-08-05,Singapore,Fashion,5,338.76,5
+TXN-52989,2026-08-05,Berlin,Fashion,5,359.52,3
+TXN-52990,2026-08-05,New York,Groceries,4,138.45,5
+TXN-52991,2026-08-05,Tokyo,Books,4,79.73,5
+TXN-52992,2026-08-05,New York,Groceries,1,34.14,5
+TXN-52993,2026-08-05,San Francisco,Groceries,5,188.68,3
+TXN-52994,2026-08-05,Tokyo,Electronics,2,471.57,3
+TXN-52995,2026-08-05,Tokyo,Fashion,2,153.14,4
+TXN-52996,2026-08-05,San Francisco,Home & Kitchen,2,195.55,3
+TXN-52997,2026-08-05,London,Fashion,2,163.49,3
+TXN-52998,2026-08-05,Singapore,Home & Kitchen,2,163.5,3
+TXN-52999,2026-08-05,London,Groceries,1,38.19,5
+TXN-53000,2026-08-05,Berlin,Groceries,1,39.6,5
+TXN-53001,2026-08-05,San Francisco,Books,4,79.17,3
+TXN-53002,2026-08-06,Tokyo,Home & Kitchen,2,156.59,5
+TXN-53003,2026-08-06,London,Groceries,1,35.51,4
+TXN-53004,2026-08-06,Singapore,Electronics,4,1027.77,3
+TXN-53005,2026-08-06,London,Books,2,42.27,3
+TXN-53006,2026-08-06,Berlin,Home & Kitchen,3,247.96,5
+TXN-53007,2026-08-06,Singapore,Books,4,82.12,5
+TXN-53008,2026-08-06,London,Electronics,3,878.56,5
+TXN-53009,2026-08-06,London,Home & Kitchen,4,374.03,4
+TXN-53010,2026-08-06,New York,Groceries,1,32.56,4
+TXN-53011,2026-08-06,Berlin,Fashion,4,270.6,4
+TXN-53012,2026-08-06,New York,Groceries,4,149.55,5
+TXN-53013,2026-08-06,Berlin,Books,5,116.11,5
+TXN-53014,2026-08-06,New York,Books,5,93.23,5
+TXN-53015,2026-08-06,Berlin,Electronics,1,233.81,3
+TXN-53016,2026-08-06,Berlin,Groceries,5,179.65,4
+TXN-53017,2026-08-06,London,Electronics,4,1155.67,5
+TXN-53018,2026-08-07,Tokyo,Electronics,4,1100.72,3
+TXN-53019,2026-08-07,Berlin,Fashion,2,127.01,4
+TXN-53020,2026-08-07,London,Electronics,4,1140.57,5
+TXN-53021,2026-08-07,London,Books,3,68.73,4
+TXN-53022,2026-08-07,San Francisco,Groceries,3,108.55,3
+TXN-53023,2026-08-07,Tokyo,Groceries,3,118.71,3
+TXN-53024,2026-08-07,Berlin,Fashion,5,383.07,5
+TXN-53025,2026-08-07,London,Books,2,46.14,3
+TXN-53026,2026-08-07,London,Groceries,5,185.76,3
+TXN-53027,2026-08-07,London,Groceries,1,41.1,3
+TXN-53028,2026-08-07,London,Books,5,104.92,3
+TXN-53029,2026-08-07,San Francisco,Books,3,69.41,4
+TXN-53030,2026-08-07,London,Groceries,4,163.62,3
+TXN-53031,2026-08-07,London,Fashion,1,65.34,5
+TXN-53032,2026-08-07,Berlin,Groceries,5,173.05,5
+TXN-53033,2026-08-07,San Francisco,Home & Kitchen,4,369.08,3
+TXN-53034,2026-08-08,New York,Electronics,5,1468.01,5
+TXN-53035,2026-08-08,London,Books,2,44.59,5
+TXN-53036,2026-08-08,Tokyo,Groceries,2,82.35,3
+TXN-53037,2026-08-08,Berlin,Groceries,5,208.46,4
+TXN-53038,2026-08-08,Tokyo,Fashion,1,68.16,3
+TXN-53039,2026-08-08,New York,Groceries,4,135.43,5
+TXN-53040,2026-08-08,San Francisco,Fashion,2,144.49,3
+TXN-53041,2026-08-08,New York,Fashion,3,204.35,3
+TXN-53042,2026-08-08,Tokyo,Home & Kitchen,4,348.28,5
+TXN-53043,2026-08-08,San Francisco,Home & Kitchen,4,324.98,5
+TXN-53044,2026-08-08,Tokyo,Home & Kitchen,5,495.8,4
+TXN-53045,2026-08-09,Singapore,Groceries,3,119.81,4
+TXN-53046,2026-08-09,London,Books,3,70.2,3
+TXN-53047,2026-08-09,Berlin,Groceries,3,96.93,5
+TXN-53048,2026-08-09,London,Fashion,2,159.41,5
+TXN-53049,2026-08-09,New York,Fashion,5,389.38,5
+TXN-53050,2026-08-09,New York,Groceries,5,169.46,4
+TXN-53051,2026-08-09,San Francisco,Home & Kitchen,4,333.45,3
+TXN-53052,2026-08-09,Berlin,Books,4,83.93,4
+TXN-53053,2026-08-09,San Francisco,Electronics,1,267.0,5
+TXN-53054,2026-08-09,London,Electronics,4,1160.27,3
+TXN-53055,2026-08-09,Singapore,Electronics,3,689.72,5
+TXN-53056,2026-08-09,Berlin,Groceries,3,124.34,5
+TXN-53057,2026-08-09,Singapore,Electronics,5,1309.05,5
+TXN-53058,2026-08-09,Tokyo,Fashion,2,153.8,4
+TXN-53059,2026-08-09,Singapore,Home & Kitchen,3,254.79,5
+TXN-53060,2026-08-09,Tokyo,Home & Kitchen,2,192.08,5
+TXN-53061,2026-08-09,London,Home & Kitchen,1,101.26,3
+TXN-53062,2026-08-09,Berlin,Groceries,1,39.63,3
+TXN-53063,2026-08-09,New York,Home & Kitchen,5,435.25,3
+TXN-53064,2026-08-10,San Francisco,Fashion,5,396.24,3
+TXN-53065,2026-08-10,New York,Fashion,4,313.21,4
+TXN-53066,2026-08-10,New York,Electronics,4,1072.2,5
+TXN-53067,2026-08-10,Tokyo,Books,4,88.71,3
+TXN-53068,2026-08-10,San Francisco,Groceries,1,34.77,3
+TXN-53069,2026-08-10,London,Books,4,74.18,4
+TXN-53070,2026-08-10,San Francisco,Books,2,40.21,5
+TXN-53071,2026-08-10,London,Electronics,4,1125.54,5
+TXN-53072,2026-08-10,New York,Groceries,5,160.7,5
+TXN-53073,2026-08-10,Singapore,Electronics,3,696.49,3
+TXN-53074,2026-08-10,New York,Home & Kitchen,1,84.83,4
+TXN-53075,2026-08-10,Berlin,Electronics,5,1265.56,3
+TXN-53076,2026-08-10,San Francisco,Fashion,5,367.31,5
+TXN-53077,2026-08-10,London,Fashion,1,81.31,3
+TXN-53078,2026-08-10,London,Home & Kitchen,5,405.06,4
+TXN-53079,2026-08-10,Berlin,Fashion,2,160.2,4
+TXN-53080,2026-08-10,Berlin,Electronics,1,295.15,3
+TXN-53081,2026-08-10,London,Groceries,1,35.17,3
+TXN-53082,2026-08-10,Berlin,Home & Kitchen,2,198.91,4
+TXN-53083,2026-08-11,San Francisco,Home & Kitchen,5,499.8,4
+TXN-53084,2026-08-11,Tokyo,Home & Kitchen,4,402.29,5
+TXN-53085,2026-08-11,New York,Home & Kitchen,3,248.34,3
+TXN-53086,2026-08-11,Tokyo,Fashion,2,159.35,3
+TXN-53087,2026-08-11,New York,Groceries,4,160.06,5
+TXN-53088,2026-08-11,New York,Home & Kitchen,5,394.1,5
+TXN-53089,2026-08-11,Berlin,Groceries,5,187.69,5
+TXN-53090,2026-08-11,Tokyo,Home & Kitchen,5,464.51,4
+TXN-53091,2026-08-11,San Francisco,Groceries,4,158.07,4
+TXN-53092,2026-08-11,Tokyo,Books,4,81.05,4
+TXN-53093,2026-08-11,Tokyo,Electronics,1,249.11,4
+TXN-53094,2026-08-12,London,Books,4,95.81,4
+TXN-53095,2026-08-12,Berlin,Electronics,1,239.11,3
+TXN-53096,2026-08-12,Berlin,Groceries,5,186.0,5
+TXN-53097,2026-08-12,Singapore,Groceries,1,37.11,3
+TXN-53098,2026-08-12,Tokyo,Groceries,2,70.39,5
+TXN-53099,2026-08-12,Singapore,Electronics,4,1121.56,5
+TXN-53100,2026-08-12,Berlin,Fashion,3,231.91,3
+TXN-53101,2026-08-12,New York,Fashion,4,331.8,3
+TXN-53102,2026-08-12,New York,Groceries,2,73.4,5
+TXN-53103,2026-08-12,New York,Home & Kitchen,1,100.01,3
+TXN-53104,2026-08-12,London,Electronics,1,292.83,5
+TXN-53105,2026-08-12,San Francisco,Groceries,4,160.72,4
+TXN-53106,2026-08-12,New York,Books,2,37.7,3
+TXN-53107,2026-08-12,Singapore,Home & Kitchen,3,296.97,4
+TXN-53108,2026-08-12,Singapore,Home & Kitchen,3,245.17,5
+TXN-53109,2026-08-12,Tokyo,Groceries,1,35.87,4
+TXN-53110,2026-08-12,London,Books,2,45.8,4
+TXN-53111,2026-08-13,New York,Home & Kitchen,4,310.26,4
+TXN-53112,2026-08-13,Singapore,Fashion,2,128.96,3
+TXN-53113,2026-08-13,San Francisco,Electronics,4,919.95,5
+TXN-53114,2026-08-13,San Francisco,Groceries,3,124.59,5
+TXN-53115,2026-08-13,London,Books,5,98.59,5
+TXN-53116,2026-08-13,New York,Groceries,1,35.65,3
+TXN-53117,2026-08-13,Berlin,Electronics,4,960.24,5
+TXN-53118,2026-08-13,Tokyo,Electronics,4,932.8,3
+TXN-53119,2026-08-13,Tokyo,Electronics,2,462.54,5
+TXN-53120,2026-08-13,San Francisco,Electronics,4,1084.6,4
+TXN-53121,2026-08-13,Tokyo,Fashion,5,395.76,5
+TXN-53122,2026-08-13,San Francisco,Home & Kitchen,2,189.97,3
+TXN-53123,2026-08-14,San Francisco,Electronics,3,868.38,4
+TXN-53124,2026-08-14,London,Fashion,4,268.85,5
+TXN-53125,2026-08-14,Tokyo,Electronics,4,945.93,4
+TXN-53126,2026-08-14,New York,Home & Kitchen,2,162.38,3
+TXN-53127,2026-08-14,Singapore,Groceries,4,127.06,4
+TXN-53128,2026-08-14,San Francisco,Electronics,5,1323.21,5
+TXN-53129,2026-08-14,San Francisco,Fashion,5,416.24,3
+TXN-53130,2026-08-14,Singapore,Electronics,1,255.74,5
+TXN-53131,2026-08-14,Berlin,Electronics,2,558.61,4
+TXN-53132,2026-08-14,New York,Groceries,2,81.93,5
+TXN-53133,2026-08-14,New York,Fashion,4,252.29,3
+TXN-53134,2026-08-14,Berlin,Books,1,23.14,5
+TXN-53135,2026-08-14,Berlin,Electronics,5,1152.72,5
+TXN-53136,2026-08-14,Berlin,Books,4,78.78,5
+TXN-53137,2026-08-14,Tokyo,Books,2,44.19,5
+TXN-53138,2026-08-14,London,Groceries,4,146.12,3
+TXN-53139,2026-08-14,Berlin,Books,3,58.03,4
+TXN-53140,2026-08-15,Tokyo,Fashion,3,244.56,4
+TXN-53141,2026-08-15,Tokyo,Electronics,3,707.4,4
+TXN-53142,2026-08-15,Singapore,Books,5,115.55,4
+TXN-53143,2026-08-15,Singapore,Fashion,3,202.11,4
+TXN-53144,2026-08-15,Tokyo,Books,4,89.6,4
+TXN-53145,2026-08-15,Tokyo,Books,3,60.08,5
+TXN-53146,2026-08-15,San Francisco,Books,5,96.18,3
+TXN-53147,2026-08-15,Berlin,Fashion,2,165.82,5
+TXN-53148,2026-08-15,London,Home & Kitchen,4,361.92,4
+TXN-53149,2026-08-15,Singapore,Groceries,3,101.23,3
+TXN-53150,2026-08-15,New York,Books,5,109.57,4
+TXN-53151,2026-08-15,Tokyo,Home & Kitchen,1,81.58,4
+TXN-53152,2026-08-15,San Francisco,Home & Kitchen,4,401.59,4
+TXN-53153,2026-08-15,Tokyo,Fashion,1,77.57,4
+TXN-53154,2026-08-15,Singapore,Home & Kitchen,2,166.94,5
+TXN-53155,2026-08-15,San Francisco,Home & Kitchen,4,364.66,3
+TXN-53156,2026-08-15,Tokyo,Fashion,3,218.52,5
+TXN-53157,2026-08-15,Tokyo,Fashion,3,227.45,5
+TXN-53158,2026-08-16,Singapore,Electronics,1,284.02,3
+TXN-53159,2026-08-16,New York,Electronics,1,249.86,3
+TXN-53160,2026-08-16,London,Groceries,2,78.62,3
+TXN-53161,2026-08-16,New York,Groceries,3,114.13,4
+TXN-53162,2026-08-16,Tokyo,Home & Kitchen,4,340.54,3
+TXN-53163,2026-08-16,London,Groceries,1,39.92,3
+TXN-53164,2026-08-16,San Francisco,Fashion,4,261.95,5
+TXN-53165,2026-08-16,San Francisco,Books,5,106.57,4
+TXN-53166,2026-08-16,Singapore,Groceries,2,83.5,5
+TXN-53167,2026-08-16,Tokyo,Fashion,1,78.87,3
+TXN-53168,2026-08-16,Tokyo,Books,4,83.45,3
+TXN-53169,2026-08-16,Singapore,Home & Kitchen,3,300.72,5
+TXN-53170,2026-08-16,San Francisco,Home & Kitchen,4,397.19,4
+TXN-53171,2026-08-16,London,Home & Kitchen,3,305.07,4
+TXN-53172,2026-08-16,San Francisco,Electronics,2,543.6,5
+TXN-53173,2026-08-16,San Francisco,Books,1,23.96,5
+TXN-53174,2026-08-17,London,Groceries,1,35.22,4
+TXN-53175,2026-08-17,Berlin,Electronics,5,1281.65,3
+TXN-53176,2026-08-17,London,Groceries,2,73.78,5
+TXN-53177,2026-08-17,Tokyo,Electronics,3,878.81,3
+TXN-53178,2026-08-17,Singapore,Fashion,3,205.58,4
+TXN-53179,2026-08-17,New York,Groceries,3,118.12,5
+TXN-53180,2026-08-17,Singapore,Books,1,20.0,3
+TXN-53181,2026-08-17,Berlin,Fashion,1,78.43,3
+TXN-53182,2026-08-17,Tokyo,Groceries,2,82.0,4
+TXN-53183,2026-08-17,New York,Books,3,66.54,4
+TXN-53184,2026-08-17,Berlin,Groceries,4,143.1,4
+TXN-53185,2026-08-18,Singapore,Groceries,3,111.9,4
+TXN-53186,2026-08-18,London,Groceries,1,41.09,5
+TXN-53187,2026-08-18,Singapore,Electronics,3,868.83,3
+TXN-53188,2026-08-18,San Francisco,Electronics,1,243.22,3
+TXN-53189,2026-08-18,New York,Groceries,2,75.01,3
+TXN-53190,2026-08-18,New York,Electronics,1,279.23,5
+TXN-53191,2026-08-18,Berlin,Groceries,1,33.14,5
+TXN-53192,2026-08-18,Singapore,Books,3,68.15,3
+TXN-53193,2026-08-18,New York,Home & Kitchen,1,94.46,3
+TXN-53194,2026-08-18,San Francisco,Electronics,1,278.87,3
+TXN-53195,2026-08-19,Singapore,Books,2,38.52,5
+TXN-53196,2026-08-19,Tokyo,Electronics,3,815.73,3
+TXN-53197,2026-08-19,San Francisco,Books,4,86.53,3
+TXN-53198,2026-08-19,London,Books,5,115.95,3
+TXN-53199,2026-08-19,San Francisco,Books,5,90.19,3
+TXN-53200,2026-08-19,London,Fashion,2,162.88,5
+TXN-53201,2026-08-19,Singapore,Fashion,1,77.76,3
+TXN-53202,2026-08-19,San Francisco,Fashion,3,236.65,3
+TXN-53203,2026-08-20,Singapore,Books,5,98.9,4
+TXN-53204,2026-08-20,Singapore,Home & Kitchen,3,246.2,4
+TXN-53205,2026-08-20,Singapore,Groceries,2,74.14,5
+TXN-53206,2026-08-20,London,Groceries,2,64.36,3
+TXN-53207,2026-08-20,London,Books,1,21.72,4
+TXN-53208,2026-08-20,Singapore,Electronics,4,903.6,5
+TXN-53209,2026-08-20,London,Electronics,5,1414.27,4
+TXN-53210,2026-08-20,Singapore,Home & Kitchen,1,91.01,5
+TXN-53211,2026-08-20,Tokyo,Groceries,3,117.88,4
+TXN-53212,2026-08-20,Tokyo,Groceries,3,118.55,4
+TXN-53213,2026-08-21,San Francisco,Fashion,5,332.91,5
+TXN-53214,2026-08-21,Tokyo,Groceries,4,162.96,4
+TXN-53215,2026-08-21,Tokyo,Books,4,82.85,3
+TXN-53216,2026-08-21,Tokyo,Books,1,23.24,4
+TXN-53217,2026-08-21,Singapore,Books,2,40.79,3
+TXN-53218,2026-08-21,Singapore,Books,2,37.81,3
+TXN-53219,2026-08-21,New York,Fashion,1,71.22,3
+TXN-53220,2026-08-21,London,Groceries,2,63.46,4
+TXN-53221,2026-08-21,London,Fashion,5,344.16,3
+TXN-53222,2026-08-21,Berlin,Books,4,82.39,3
+TXN-53223,2026-08-21,Singapore,Books,1,20.12,3
+TXN-53224,2026-08-21,London,Electronics,4,1082.35,3
+TXN-53225,2026-08-21,Berlin,Fashion,4,319.5,4
+TXN-53226,2026-08-21,New York,Books,3,65.37,4
+TXN-53227,2026-08-21,Singapore,Groceries,5,180.02,3
+TXN-53228,2026-08-21,San Francisco,Home & Kitchen,5,418.44,5
+TXN-53229,2026-08-22,London,Fashion,5,416.9,3
+TXN-53230,2026-08-22,Tokyo,Electronics,3,768.83,3
+TXN-53231,2026-08-22,Singapore,Groceries,2,82.11,4
+TXN-53232,2026-08-22,London,Books,5,100.22,4
+TXN-53233,2026-08-22,San Francisco,Fashion,3,238.24,5
+TXN-53234,2026-08-22,Singapore,Fashion,5,378.99,3
+TXN-53235,2026-08-22,Berlin,Books,4,93.37,4
+TXN-53236,2026-08-22,New York,Home & Kitchen,4,382.52,5
+TXN-53237,2026-08-22,New York,Groceries,5,183.27,5
+TXN-53238,2026-08-22,New York,Groceries,4,142.36,3
+TXN-53239,2026-08-22,Singapore,Groceries,2,70.64,3
+TXN-53240,2026-08-22,San Francisco,Books,2,43.6,4
+TXN-53241,2026-08-22,Berlin,Groceries,4,149.6,4
+TXN-53242,2026-08-23,London,Books,5,116.5,3
+TXN-53243,2026-08-23,Berlin,Fashion,5,327.64,5
+TXN-53244,2026-08-23,Singapore,Electronics,2,528.53,5
+TXN-53245,2026-08-23,San Francisco,Groceries,4,143.77,3
+TXN-53246,2026-08-23,London,Groceries,2,66.03,3
+TXN-53247,2026-08-23,Singapore,Electronics,4,923.61,4
+TXN-53248,2026-08-23,Tokyo,Fashion,4,298.64,5
+TXN-53249,2026-08-23,London,Books,1,23.62,4
+TXN-53250,2026-08-23,San Francisco,Groceries,5,181.3,3
+TXN-53251,2026-08-23,San Francisco,Home & Kitchen,3,302.64,3
+TXN-53252,2026-08-23,London,Electronics,5,1303.91,3
+TXN-53253,2026-08-23,Singapore,Groceries,4,149.11,5
+TXN-53254,2026-08-23,Singapore,Books,3,61.12,4
+TXN-53255,2026-08-24,Singapore,Electronics,3,747.9,5
+TXN-53256,2026-08-24,Berlin,Electronics,1,279.21,5
+TXN-53257,2026-08-24,Tokyo,Fashion,1,82.47,3
+TXN-53258,2026-08-24,New York,Fashion,5,332.16,5
+TXN-53259,2026-08-24,New York,Fashion,3,250.26,4
+TXN-53260,2026-08-24,Tokyo,Electronics,3,843.94,4
+TXN-53261,2026-08-24,Berlin,Books,1,21.15,5
+TXN-53262,2026-08-24,Singapore,Books,2,42.58,3
+TXN-53263,2026-08-24,Tokyo,Fashion,2,130.84,4
+TXN-53264,2026-08-24,San Francisco,Fashion,1,76.54,5
+TXN-53265,2026-08-24,New York,Electronics,2,521.8,3
+TXN-53266,2026-08-24,San Francisco,Fashion,2,166.09,3
+TXN-53267,2026-08-24,London,Home & Kitchen,3,259.15,5
+TXN-53268,2026-08-24,New York,Books,5,112.97,4
+TXN-53269,2026-08-24,Singapore,Electronics,4,1065.01,3
+TXN-53270,2026-08-24,Berlin,Fashion,1,67.39,5
+TXN-53271,2026-08-24,New York,Books,3,66.63,5
+TXN-53272,2026-08-25,San Francisco,Home & Kitchen,4,327.7,5
+TXN-53273,2026-08-25,Singapore,Electronics,5,1230.53,5
+TXN-53274,2026-08-25,Berlin,Groceries,4,132.71,3
+TXN-53275,2026-08-25,London,Home & Kitchen,3,244.48,4
+TXN-53276,2026-08-25,New York,Books,3,62.13,4
+TXN-53277,2026-08-25,Singapore,Home & Kitchen,5,480.68,3
+TXN-53278,2026-08-25,New York,Fashion,1,71.14,3
+TXN-53279,2026-08-25,San Francisco,Fashion,5,392.25,4
+TXN-53280,2026-08-25,Berlin,Fashion,3,211.74,3
+TXN-53281,2026-08-25,Berlin,Fashion,3,202.66,3
+TXN-53282,2026-08-25,New York,Groceries,2,80.42,4
+TXN-53283,2026-08-25,Tokyo,Fashion,4,312.48,4
+TXN-53284,2026-08-25,Berlin,Books,2,47.05,4
+TXN-53285,2026-08-26,London,Home & Kitchen,2,156.96,3
+TXN-53286,2026-08-26,New York,Electronics,5,1143.76,3
+TXN-53287,2026-08-26,New York,Groceries,3,108.52,5
+TXN-53288,2026-08-26,San Francisco,Home & Kitchen,1,77.87,3
+TXN-53289,2026-08-26,Tokyo,Fashion,3,193.79,4
+TXN-53290,2026-08-26,London,Electronics,1,292.39,4
+TXN-53291,2026-08-26,London,Fashion,4,330.13,3
+TXN-53292,2026-08-26,Singapore,Electronics,1,291.02,4
+TXN-53293,2026-08-26,New York,Fashion,1,64.81,3
+TXN-53294,2026-08-26,Berlin,Books,5,98.19,3
+TXN-53295,2026-08-26,Tokyo,Home & Kitchen,1,95.15,3
+TXN-53296,2026-08-26,New York,Fashion,4,308.95,3
+TXN-53297,2026-08-26,Tokyo,Electronics,4,1149.14,4
+TXN-53298,2026-08-26,New York,Fashion,5,409.23,5
+TXN-53299,2026-08-26,London,Electronics,3,836.75,3
+TXN-53300,2026-08-26,New York,Groceries,3,124.84,3
+TXN-53301,2026-08-27,New York,Books,1,23.24,4
+TXN-53302,2026-08-27,Singapore,Home & Kitchen,4,386.78,5
+TXN-53303,2026-08-27,London,Electronics,3,694.89,4
+TXN-53304,2026-08-27,Tokyo,Books,5,94.92,5
+TXN-53305,2026-08-27,Singapore,Groceries,5,185.89,4
+TXN-53306,2026-08-27,Tokyo,Groceries,2,75.18,4
+TXN-53307,2026-08-27,London,Books,3,56.66,5
+TXN-53308,2026-08-27,Singapore,Books,5,102.23,4
+TXN-53309,2026-08-27,Berlin,Electronics,3,874.07,4
+TXN-53310,2026-08-27,Singapore,Groceries,4,144.93,5
+TXN-53311,2026-08-27,New York,Fashion,3,220.9,5
+TXN-53312,2026-08-28,London,Home & Kitchen,5,463.17,5
+TXN-53313,2026-08-28,Berlin,Fashion,2,167.04,3
+TXN-53314,2026-08-28,New York,Books,4,93.14,5
+TXN-53315,2026-08-28,New York,Home & Kitchen,5,395.74,3
+TXN-53316,2026-08-28,Berlin,Groceries,2,78.53,5
+TXN-53317,2026-08-28,Tokyo,Groceries,1,34.92,4
+TXN-53318,2026-08-28,Tokyo,Home & Kitchen,5,466.25,4
+TXN-53319,2026-08-28,Berlin,Fashion,3,236.24,5
+TXN-53320,2026-08-28,San Francisco,Electronics,4,946.71,5
+TXN-53321,2026-08-28,Singapore,Fashion,1,81.76,5
+TXN-53322,2026-08-29,Tokyo,Electronics,2,587.38,5
+TXN-53323,2026-08-29,San Francisco,Groceries,4,138.72,3
+TXN-53324,2026-08-29,Singapore,Home & Kitchen,1,100.76,3
+TXN-53325,2026-08-29,New York,Electronics,1,247.18,3
+TXN-53326,2026-08-29,Singapore,Fashion,1,64.41,4
+TXN-53327,2026-08-29,Tokyo,Electronics,3,823.86,3
+TXN-53328,2026-08-29,London,Home & Kitchen,3,259.16,3
+TXN-53329,2026-08-29,Tokyo,Groceries,5,188.46,4
+TXN-53330,2026-08-29,Berlin,Home & Kitchen,1,93.82,3
+TXN-53331,2026-08-29,London,Books,3,54.56,5
+TXN-53332,2026-08-29,Tokyo,Books,5,113.09,4
+TXN-53333,2026-08-29,Berlin,Home & Kitchen,3,302.11,5
+TXN-53334,2026-08-29,New York,Books,4,72.93,4
+TXN-53335,2026-08-29,Tokyo,Electronics,3,797.34,3
+TXN-53336,2026-08-29,Singapore,Fashion,1,72.55,5
+TXN-53337,2026-08-29,San Francisco,Groceries,5,209.16,3
+TXN-53338,2026-08-29,London,Groceries,5,198.3,4
+TXN-53339,2026-08-29,Berlin,Fashion,4,259.98,5
+TXN-53340,2026-08-29,Berlin,Fashion,1,82.65,4
+TXN-53341,2026-08-29,Berlin,Electronics,2,519.48,5
+TXN-53342,2026-08-30,Berlin,Books,1,19.52,3
+TXN-53343,2026-08-30,Tokyo,Home & Kitchen,2,199.02,4
+TXN-53344,2026-08-30,New York,Fashion,3,226.87,4
+TXN-53345,2026-08-30,Singapore,Electronics,2,595.28,3
+TXN-53346,2026-08-30,Tokyo,Fashion,4,272.92,4
+TXN-53347,2026-08-30,Tokyo,Fashion,1,69.35,3
+TXN-53348,2026-08-30,Singapore,Groceries,5,201.89,3
+TXN-53349,2026-08-30,Singapore,Books,1,18.61,3
+TXN-53350,2026-08-30,Singapore,Fashion,5,374.09,4
+TXN-53351,2026-08-30,London,Books,4,72.49,5
+TXN-53352,2026-08-30,Singapore,Groceries,5,163.08,4
+TXN-53353,2026-08-30,London,Electronics,4,1067.18,4
+TXN-53354,2026-08-30,New York,Electronics,1,244.71,5
+TXN-53355,2026-08-30,Tokyo,Groceries,4,147.3,3
+TXN-53356,2026-08-30,New York,Fashion,1,66.4,5
+TXN-53357,2026-08-30,Singapore,Fashion,2,144.74,5
+TXN-53358,2026-08-30,Berlin,Groceries,3,109.55,5
+TXN-53359,2026-08-31,Tokyo,Home & Kitchen,1,90.77,3
+TXN-53360,2026-08-31,San Francisco,Fashion,3,197.39,5
+TXN-53361,2026-08-31,New York,Books,3,55.08,3
+TXN-53362,2026-08-31,Berlin,Electronics,3,806.75,3
+TXN-53363,2026-08-31,San Francisco,Groceries,3,123.5,4
+TXN-53364,2026-08-31,San Francisco,Fashion,4,292.18,3
+TXN-53365,2026-08-31,San Francisco,Electronics,4,1065.91,5
+TXN-53366,2026-08-31,New York,Home & Kitchen,2,187.02,5
+TXN-53367,2026-08-31,New York,Fashion,4,295.12,3
+TXN-53368,2026-08-31,San Francisco,Home & Kitchen,2,184.97,4
