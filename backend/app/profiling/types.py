@@ -107,19 +107,141 @@ def infer_column_type(values: List[Any], col_name: str) -> Tuple[str, List[str]]
     # 5. Fallback VARCHAR
     return "VARCHAR", notices
 
-def cast_and_recreate_table(con: duckdb.DuckDBPyConnection, table_name: str, col_types: dict[str, str]) -> List[str]:
+# strptime patterns DuckDB tries, in this order, on text dates. TRY_CAST is tried
+# first and only understands ISO, so anything written DD/MM/YYYY needs these.
+_NEUTRAL_FORMATS = ["%Y/%m/%d", "%d-%b-%Y", "%b %d, %Y"]
+_DAY_FIRST_FORMATS = ["%d/%m/%Y", "%d-%m-%Y"]
+_MONTH_FIRST_FORMATS = ["%m/%d/%Y", "%m-%d-%Y"]
+
+_LEADING_PARTS = r"'^(\d{1,2})[/.-](\d{1,2})[/.-](\d{2,4})'"
+
+
+def _text_date_expression(col: str, target: str, month_first: bool) -> str:
+    """
+    SQL that reads a column of mixed native and text dates as `target`.
+
+    Every format is always attempted; `month_first` only decides which convention
+    wins for a value that is valid both ways (01/02/2025). A value that is only
+    valid one way (16/01/2025) is read correctly whichever comes first.
+    """
+    text = f'CAST("{col}" AS VARCHAR)'
+    ordered = _NEUTRAL_FORMATS + (
+        _MONTH_FIRST_FORMATS + _DAY_FIRST_FORMATS if month_first
+        else _DAY_FIRST_FORMATS + _MONTH_FIRST_FORMATS
+    )
+    ordered += [f"{fmt} %H:%M:%S" for fmt in ordered]
+
+    attempts = [f'TRY_CAST("{col}" AS {target})']
+    attempts += [f"TRY_CAST(TRY_STRPTIME({text}, '{fmt}') AS {target})" for fmt in ordered]
+    return "COALESCE(" + ", ".join(attempts) + ")"
+
+
+def _convert_text_dates(
+    con: duckdb.DuckDBPyConnection, table_name: str, col: str, target: str
+) -> Tuple[str, List[dict]]:
+    """
+    Returns (select expression, quality issues) for a date column stored as text.
+
+    Follows the data-engine spec: DD/MM vs MM/DD is settled by unambiguous values
+    (a first part above 12 means day-first, a second part above 12 means
+    month-first); with no such value, day-first is assumed and the issue says so.
+    Values that match no format become NULL and are counted, never dropped quietly.
+    """
+    text = f'CAST("{col}" AS VARCHAR)'
+    clues = con.execute(
+        f"""
+        SELECT
+          COUNT(*) FILTER (WHERE regexp_matches(s, {_LEADING_PARTS})
+              AND TRY_CAST(regexp_extract(s, {_LEADING_PARTS}, 1) AS INTEGER) > 12
+              AND TRY_CAST(regexp_extract(s, {_LEADING_PARTS}, 2) AS INTEGER) <= 12),
+          COUNT(*) FILTER (WHERE regexp_matches(s, {_LEADING_PARTS})
+              AND TRY_CAST(regexp_extract(s, {_LEADING_PARTS}, 2) AS INTEGER) > 12
+              AND TRY_CAST(regexp_extract(s, {_LEADING_PARTS}, 1) AS INTEGER) <= 12)
+        FROM (SELECT {text} AS s FROM "{table_name}") WHERE s IS NOT NULL
+        """
+    ).fetchone()
+    day_first_clues, month_first_clues = int(clues[0]), int(clues[1])
+    month_first = month_first_clues > 0 and day_first_clues == 0
+    expression = _text_date_expression(col, target, month_first)
+
+    total, needed_other_format, unreadable = con.execute(
+        f"""
+        SELECT
+          COUNT(*),
+          COUNT(*) FILTER (WHERE TRY_CAST("{col}" AS {target}) IS NULL AND {expression} IS NOT NULL),
+          COUNT(*) FILTER (WHERE {expression} IS NULL)
+        FROM (SELECT * FROM "{table_name}") WHERE "{col}" IS NOT NULL AND TRIM({text}) <> ''
+        """
+    ).fetchone()
+
+    issues: List[dict] = []
+    # A column written consistently in one non-ISO format (every value 16-01-2025)
+    # is just a format, not a problem. It is worth reporting only when formats are
+    # mixed, both conventions occur, or the day/month order had to be assumed.
+    parsed = total - unreadable
+    mixed_formats = 0 < needed_other_format < parsed
+    ambiguous = not day_first_clues and not month_first_clues
+    both_conventions = bool(day_first_clues and month_first_clues)
+    if needed_other_format and (mixed_formats or ambiguous or both_conventions):
+        if day_first_clues and month_first_clues:
+            convention = "Both day-first and month-first values occur, so each was read the way it is valid."
+        elif day_first_clues:
+            convention = "The dates were read as day-first (DD/MM/YYYY)."
+        elif month_first_clues:
+            convention = "The dates were read as month-first (MM/DD/YYYY)."
+        else:
+            convention = "Nothing settled day-first versus month-first, so day-first was assumed."
+        issues.append({
+            "id": f"dq_dates_{table_name}_{col}",
+            "severity": "medium",
+            "type": "inconsistent_dates",
+            "table": table_name,
+            "column": col,
+            "count": int(needed_other_format),
+            "pct": round(needed_other_format / total * 100, 2),
+            "message": (
+                f"{needed_other_format} of {total} '{col}' values were stored as text in a "
+                f"different date format and were converted."
+            ),
+            "impact": f"{convention} If that is wrong, monthly figures may shift.",
+        })
+    if unreadable:
+        pct = round(unreadable / total * 100, 2)
+        issues.append({
+            "id": f"dq_dates_invalid_{table_name}_{col}",
+            "severity": "high" if pct >= 20.0 else ("medium" if pct >= 2.0 else "low"),
+            "type": "invalid_values",
+            "table": table_name,
+            "column": col,
+            "count": int(unreadable),
+            "pct": pct,
+            "message": f"{unreadable} '{col}' values could not be read as dates ({pct}%).",
+            "impact": "Those rows are treated as having no date and are left out of any question that filters or groups by date.",
+        })
+    return expression, issues
+
+
+def cast_and_recreate_table(con: duckdb.DuckDBPyConnection, table_name: str, col_types: dict[str, str]) -> List[dict]:
     """
     Alters table columns to their strongly typed versions in DuckDB.
-    Returns any casting notices.
+    Returns the quality issues raised while converting (mixed date formats, values
+    that could not be read), in the same shape the quality checks produce.
     """
-    notices = []
+    issues: List[dict] = []
     cast_exprs = []
+    current_types = {
+        row[0]: str(row[1]).upper() for row in con.execute(f'DESCRIBE "{table_name}"').fetchall()
+    }
 
     for col, dtype in col_types.items():
-        if dtype == "DATE":
-            cast_exprs.append(f"TRY_CAST(\"{col}\" AS DATE) AS \"{col}\"")
-        elif dtype == "TIMESTAMP":
-            cast_exprs.append(f"TRY_CAST(\"{col}\" AS TIMESTAMP) AS \"{col}\"")
+        if dtype in ("DATE", "TIMESTAMP"):
+            if current_types.get(col, "VARCHAR") == "VARCHAR":
+                # Text dates: TRY_CAST alone reads only ISO and turns the rest to NULL.
+                expression, col_issues = _convert_text_dates(con, table_name, col, dtype)
+                issues.extend(col_issues)
+                cast_exprs.append(f'{expression} AS "{col}"')
+            else:
+                cast_exprs.append(f'TRY_CAST("{col}" AS {dtype}) AS "{col}"')
         elif dtype == "BIGINT":
             cast_exprs.append(f"TRY_CAST(REPLACE(CAST(\"{col}\" AS VARCHAR), ',', '') AS BIGINT) AS \"{col}\"")
         elif dtype == "DOUBLE":
@@ -131,4 +253,4 @@ def cast_and_recreate_table(con: duckdb.DuckDBPyConnection, table_name: str, col
 
     select_clause = ", ".join(cast_exprs)
     con.execute(f'CREATE OR REPLACE TABLE "{table_name}" AS SELECT {select_clause} FROM "{table_name}"')
-    return notices
+    return issues

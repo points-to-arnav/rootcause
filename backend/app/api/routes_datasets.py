@@ -36,7 +36,7 @@ def process_and_save_dataset(dataset_id: str, file_paths: List[str]) -> Semantic
             dtype, _ = infer_column_type(sample_vals, c)
             col_types[c] = dtype
 
-        cast_and_recreate_table(con, tbl, col_types)
+        all_issues.extend(cast_and_recreate_table(con, tbl, col_types))
         prof = profile_table(con, tbl, col_types)
         table_profs[tbl] = prof
 
