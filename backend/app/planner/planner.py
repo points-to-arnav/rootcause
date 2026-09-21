@@ -62,10 +62,15 @@ def plan_query(
     value_index: Optional[ValueIndex] = None,
     current_plan: Optional[Dict[str, Any]] = None,
     recent_turns: Optional[List[Dict[str, Any]]] = None,
-    last_result_head: Optional[Dict[str, Any]] = None
+    last_result_head: Optional[Dict[str, Any]] = None,
+    validation_feedback: Optional[str] = None,
 ) -> PlannerOutput:
     """
     Translates the user's question into a structured PlannerOutput using the LLM.
+
+    `validation_feedback` is set on the single re-plan that follows a rejected plan:
+    it tells the model exactly what the validator refused, so it can correct that
+    rather than resubmit the same plan.
     """
     system_prompt = load_system_prompt()
     dataset_context = build_dataset_context(semantic)
@@ -99,6 +104,13 @@ def plan_query(
 <question>
 {question}
 </question>
+"""
+    if validation_feedback:
+        turn_prompt += f"""
+<validation_feedback>
+Your previous plan for this question was rejected by the validator: {validation_feedback}
+Return a corrected plan that fixes exactly this and keeps everything else the user asked for.
+</validation_feedback>
 """
 
     return complete_json(

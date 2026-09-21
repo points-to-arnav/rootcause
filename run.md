@@ -77,7 +77,9 @@ Then go to **Ask** and try *"Show revenue by month"*.
 
 ## Choosing an LLM
 
-The app runs with no configuration. To pick a provider explicitly, either:
+The app runs with no configuration: if the configured provider (default `openrouter`) has no key
+but another provider works, such as the Claude Code CLI, the backend starts on that one and logs
+the switch. To pick a provider explicitly, either:
 
 - click the **settings** control in the app's left sidebar and choose one, or
 - create `backend/.env` (start from `backend/.env.example`) and restart the backend:

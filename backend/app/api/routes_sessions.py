@@ -1,10 +1,13 @@
+import logging
 from typing import Optional
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from app.memory.session import create_session, load_session
-from app.pipeline import run_ask_pipeline
+from app.pipeline import run_ask_pipeline, starter_suggestions
 from app.semantic.store import load_semantic_layer
 from app.semantic.value_index import ValueIndex
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/sessions", tags=["sessions"])
 
@@ -65,20 +68,24 @@ def ask_question(sid: str, req: AskRequest):
             value_index=v_index
         )
         return response
-    except Exception as e:
+    except Exception:
+        # Details go to the log; the user gets a message they can act on, not a
+        # database internals string.
+        logger.exception("Ask pipeline failed for session %s: %r", sid, req.question)
+        message = "That question could not be answered. Try rephrasing it, or start from one of the suggestions."
         return {
             "status": "error",
-            "message": str(e),
+            "message": message,
             "plan": None,
             "assumptions": [],
             "resolved_time": None,
             "sql": None,
             "result": None,
             "chart": None,
-            "narrative": f"Error running analysis: {str(e)}",
+            "narrative": message,
             "dq_warnings": [],
             "why": None,
-            "suggestions": ["Show total revenue", "Revenue by region"],
+            "suggestions": starter_suggestions(semantic),
             "mode": "plan"
         }
 

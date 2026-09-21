@@ -23,19 +23,25 @@ def generate_alerts(
         dp = kpi.get("delta_pct")
         metric = kpi.get("metric", "revenue")
         if dp is not None and dp <= -settings.ALERT_DROP_PCT:
-            alerts.append({
+            alert = {
                 "id": f"alert_drop_{metric}",
                 "severity": "high" if dp <= -20.0 else "medium",
                 "type": "kpi_drop",
                 "title": f"Significant Drop in {kpi.get('label', metric)}",
                 "detail": f"{kpi.get('label', metric)} fell {abs(dp)}% ({kpi.get('delta', 0):,.2f}) in {current_period} compared to previous month.",
-                "plan": {
+            }
+            # The Investigate button runs this plan. A rate or average cannot be
+            # decomposed into segments (rule 10), so offering it would only lead the
+            # user to a refusal; without a plan the alert is shown but not actionable.
+            metric_obj = next((m for m in semantic.metrics if m.name == metric), None)
+            if metric_obj is None or metric_obj.additive:
+                alert["plan"] = {
                     "intent": "why",
                     "metric": metric,
                     "time": {"range": {"type": "last_n", "unit": "month", "n": 1}},
                     "comparison": {"type": "previous_period"}
                 }
-            })
+            alerts.append(alert)
 
     # 2. Low Stock Alerts (defensively check table and required columns)
     if "inventory" in semantic.tables:

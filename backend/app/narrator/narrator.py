@@ -21,6 +21,11 @@ def compute_derived_stats(plan: Plan, result: Dict[str, Any]) -> Dict[str, Any]:
     if not rows:
         return derived
 
+    # A record listing has no total or top segment: its rows are individual records,
+    # not shares of a whole, so a "top_share" over them would be a meaningless figure.
+    if plan.intent == "detail":
+        return derived
+
     if "current" in cols and "previous" in cols and "delta" in cols:
         cur_sum = sum(r[cols.index("current")] for r in rows if r[cols.index("current")] is not None)
         prev_sum = sum(r[cols.index("previous")] for r in rows if r[cols.index("previous")] is not None)
@@ -100,6 +105,19 @@ def generate_templated_narrative(
             peak_label = rows[max_idx][0]
             low_label = rows[min_idx][0]
             return f"Total {metric_title.lower()} across {period_label} was {tot:,.2f} over {len(rows)} periods, peaking in {peak_label} ({max(vals):,.2f}) and reaching its lowest in {low_label} ({min(vals):,.2f})."
+
+    # A listing of individual records, not a breakdown: never call a row a "segment".
+    if plan.intent == "detail":
+        first = rows[0][0] if rows and cols else None
+        last = rows[-1][0] if rows and cols else None
+        ranked = plan.sort is not None and plan.sort.by == "metric" and isinstance(plan.metric, str)
+        if ranked and isinstance(first, (int, float)) and isinstance(last, (int, float)):
+            order = "highest" if plan.sort.dir == "desc" else "lowest"
+            return (
+                f"Showing the {len(rows)} records with the {order} {cols[0].replace('_', ' ')} for {period_label}, "
+                f"from {first:,} to {last:,}."
+            )
+        return f"Showing {len(rows)} records for {period_label}."
 
     if len(cols) >= 2 and rows:
         top_item = rows[0][0]

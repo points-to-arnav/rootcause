@@ -1,3 +1,4 @@
+import json
 import os
 from typing import Any, Dict, List, Optional
 from app.config import settings
@@ -20,11 +21,71 @@ from app.planner.timeutil import resolve_comparison_window, resolve_time_window
 from app.planner.validator import validate_plan
 from app.semantic.model import SemanticLayer
 from app.semantic.value_index import ValueIndex
+from app.viz.chart_request import chart_request_note, parse_chart_request
 from app.viz.selector import select_chart
 from app.analysis.why_engine import run_why_analysis
 
-def generate_suggestions_by_intent(plan: Plan) -> List[str]:
+def _is_retail(semantic: SemanticLayer) -> bool:
+    """The demo wording below (revenue, region, product category) only fits data that has a revenue metric."""
+    return any(m.name == "revenue" for m in semantic.metrics)
+
+
+def _metric_for(plan: Optional[Plan], semantic: SemanticLayer):
+    name = plan.metric if plan is not None and isinstance(plan.metric, str) else None
+    found = next((m for m in semantic.metrics if m.name == name), None)
+    return found or (semantic.metrics[0] if semantic.metrics else None)
+
+
+def _first_dimension(semantic: SemanticLayer, exclude: Optional[List[str]] = None) -> Optional[str]:
+    """A readable name for the first categorical column, fact table first."""
+    skip = set(exclude or [])
+    fact = semantic.fact_table
+    for tname in sorted(semantic.tables, key=lambda t: t != fact):
+        for cname, cmeta in semantic.tables[tname].columns.items():
+            if cmeta.role == "dimension" and f"{tname}.{cname}" not in skip:
+                return cname.replace("_", " ")
+    return None
+
+
+def starter_suggestions(semantic: SemanticLayer) -> List[str]:
+    """Questions that are certain to be answerable for this dataset."""
+    if _is_retail(semantic):
+        return ["Show total revenue", "Revenue by region"]
+    metric = _metric_for(None, semantic)
+    if metric is None:
+        return []
+    label = metric.label.lower()
+    dim = _first_dimension(semantic)
+    questions = [f"What is total {label}?", f"Show {label} by month"]
+    if dim:
+        questions.append(f"{label.capitalize()} by {dim}")
+    return questions
+
+
+def _generic_suggestions(plan: Plan, semantic: SemanticLayer) -> List[str]:
+    metric = _metric_for(plan, semantic)
+    if metric is None:
+        return []
+    label = metric.label.lower()
+    dim = _first_dimension(semantic, plan.dimensions)
+    by_dim = [f"{label.capitalize()} by {dim}"] if dim else []
+    why = [f"Why did {label} change last month?"] if metric.additive else []
+
+    if plan.intent == "kpi":
+        options = [f"Show {label} by month"] + by_dim + [f"Compare {label} with the previous month"]
+    elif plan.intent == "trend":
+        options = by_dim + ["Only the last three months"] + why
+    elif plan.intent in ("breakdown", "ranking"):
+        options = ["Only the last three months", "Compare it with the previous period", f"Show {label} by month"]
+    else:
+        options = [f"Show {label} by month"] + by_dim + ["Only the last three months"]
+    return options[:3]
+
+
+def generate_suggestions_by_intent(plan: Plan, semantic: Optional[SemanticLayer] = None) -> List[str]:
     """Generates intelligent follow-up suggestions for the user."""
+    if semantic is not None and not _is_retail(semantic):
+        return _generic_suggestions(plan, semantic)
     intent = plan.intent
     if intent == "kpi":
         return ["Show monthly trend for 2026", "Breakdown by region", "Compare with previous month"]
@@ -57,16 +118,25 @@ def match_dq_warnings(plan: Plan, semantic: SemanticLayer) -> List[Dict[str, Any
             used_tables.add(t)
             used_cols.add(f"{t}.{c}")
 
+    # Every query is bounded by a time window, and a row with no readable date
+    # falls outside all of them. So an issue on the time column changes the answer
+    # even when the plan never names that column - and it is listed first, so the
+    # cap below can never push it out.
+    time_col = plan.time.column if plan.time and plan.time.column else semantic.time.primary_column
+    if time_col:
+        used_cols.add(time_col)
+
+    time_warnings = []
     warnings = []
     for issue in semantic.quality_issues:
         iss_tbl = issue.get("table")
         iss_col = issue.get("column")
         if iss_col and f"{iss_tbl}.{iss_col}" in used_cols:
-            warnings.append(issue)
+            (time_warnings if f"{iss_tbl}.{iss_col}" == time_col else warnings).append(issue)
         elif not iss_col and iss_tbl in used_tables:
             warnings.append(issue)
 
-    return warnings[:3]
+    return (time_warnings + warnings)[:3]
 
 import logging
 
@@ -91,11 +161,24 @@ def run_ask_pipeline(
     stats_mark = STATS.current_seq()
 
     norm_q = question.strip().lower()
-    cache_key = f"{session.dataset_id}:{norm_q}"
+    # The same words mean different things in different conversations ("break it
+    # down by region" patches whatever plan came before), so the plan the session
+    # is currently holding is part of the key.
+    context = json.dumps(session.current_plan, sort_keys=True, default=str) if session.current_plan else ""
+    cache_key = f"{session.dataset_id}:{norm_q}:{context}"
 
     # Fast-path cache hit for instant demo responses (<50ms)
     if cache_key in _DEMO_QUERY_CACHE:
         cached_resp = dict(_DEMO_QUERY_CACHE[cache_key])
+        # Replay must leave the session exactly as a live answer would, or the next
+        # follow-up patches a stale plan.
+        session.current_plan = cached_resp.get("plan")
+        cached_rows = (cached_resp.get("result") or {}).get("rows")
+        if cached_rows:
+            session.last_result_head = {
+                "columns": (cached_resp["result"].get("columns") or [])[:5],
+                "rows": cached_rows[:5],
+            }
         session.history.append(Turn(
             turn=len(session.history) + 1,
             question=question,
@@ -112,6 +195,7 @@ def run_ask_pipeline(
 
     # 1. LLM Planning with network-resilient heuristic fallback
     current_plan_dict = session.current_plan
+    used_heuristic_fallback = False
     try:
         planner_out: PlannerOutput = plan_query(
             question=question,
@@ -123,6 +207,7 @@ def run_ask_pipeline(
         )
     except Exception as e:
         logger.warning(f"LLM planner call failed ({e}). Falling back to heuristic rule planner.")
+        used_heuristic_fallback = True
         # Determine anchor year dynamically
         from app.planner.timeutil import parse_iso_date
         ayear = "2026"
@@ -191,30 +276,63 @@ def run_ask_pipeline(
             "narrative": planner_out.message or "Unsupported question.",
             "dq_warnings": [],
             "why": None,
-            "suggestions": ["Show total revenue", "Monthly revenue for 2026", "Create management dashboard"],
+            "suggestions": (
+                ["Show total revenue", "Monthly revenue for 2026", "Create management dashboard"]
+                if _is_retail(semantic) else starter_suggestions(semantic)
+            ),
             "mode": "plan",
             "from_cache": False,
             "llm_stats": STATS.turn_summary(stats_mark),
             "llm_totals": STATS.summary(),
         }
 
-    # 2. Follow-up Patch or New Plan
-    # `changes` may legitimately be an empty dict - a follow-up that alters no
-    # fields, such as "show that as a pie chart". Testing it for truthiness would
-    # drop the current plan and reset to a default KPI, so test for presence.
-    if planner_out.is_follow_up and planner_out.changes is not None and current_plan_dict:
-        plan = patch_plan(current_plan_dict, planner_out.changes)
-    else:
-        plan = planner_out.plan or Plan(intent="kpi", metric="revenue")
+    def _resolve_and_validate(out: PlannerOutput):
+        # 2. Follow-up Patch or New Plan
+        # `changes` may legitimately be an empty dict - a follow-up that alters no
+        # fields, such as "show that as a pie chart". Testing it for truthiness would
+        # drop the current plan and reset to a default KPI, so test for presence.
+        if out.is_follow_up and out.changes is not None and current_plan_dict:
+            resolved = patch_plan(current_plan_dict, out.changes)
+        else:
+            resolved = out.plan or Plan(
+                intent="kpi", metric=semantic.metrics[0].name if semantic.metrics else None
+            )
 
-    # Heal intent if question clearly indicates a "why" root cause inquiry
-    q_lower = question.lower()
-    why_keywords = ["why did", "why has", "why is", "why was", "why were", "what caused", "explain drop", "explain fall", "explain decline", "reason for drop", "reason for fall", "why"]
-    if any(kw in q_lower for kw in why_keywords) and plan.intent != "why":
-        plan.intent = "why"
+        # Heal intent if question clearly indicates a "why" root cause inquiry
+        q_lower = question.lower()
+        why_keywords = ["why did", "why has", "why is", "why was", "why were", "what caused", "explain drop", "explain fall", "explain decline", "reason for drop", "reason for fall", "why"]
+        if any(kw in q_lower for kw in why_keywords) and resolved.intent != "why":
+            resolved.intent = "why"
 
-    # 3. Validate Plan
-    plan, errors, val_assumptions = validate_plan(plan, semantic)
+        # 3. Validate Plan
+        return validate_plan(resolved, semantic)
+
+    plan, errors, val_assumptions = _resolve_and_validate(planner_out)
+
+    # A rejected plan gets exactly one re-plan, told what the validator refused. That
+    # turns "the model swapped the metric and a grouping column" from a dead end into
+    # a correction; it is skipped where no plan could help (no date column, no metric)
+    # and for the heuristic fallback, which has no model to ask.
+    unfixable = ("NO_TIME_COLUMN", "NO_METRICS")
+    if errors and not used_heuristic_fallback and not any(e.startswith(unfixable) for e in errors):
+        try:
+            retry_out = plan_query(
+                question=question,
+                semantic=semantic,
+                value_index=value_index,
+                current_plan=current_plan_dict,
+                recent_turns=[{"question": t.question, "summary": t.summary} for t in session.history[-3:]],
+                last_result_head=session.last_result_head,
+                validation_feedback="; ".join(e.split(": ", 1)[-1] for e in errors),
+            )
+            if retry_out.status == "ok":
+                retry_plan, retry_errors, retry_notes = _resolve_and_validate(retry_out)
+                if not retry_errors:
+                    logger.info("Re-plan after validation errors succeeded (%s)", "; ".join(errors))
+                    planner_out, plan, errors, val_assumptions = retry_out, retry_plan, retry_errors, retry_notes
+        except Exception as exc:
+            logger.warning("Re-plan after validation errors failed (%s); keeping the first result.", exc)
+
     all_assumptions = planner_out.assumptions + val_assumptions
 
     if errors:
@@ -227,10 +345,13 @@ def run_ask_pipeline(
             "sql": None,
             "result": None,
             "chart": None,
-            "narrative": "Unable to execute query due to schema constraints.",
+            # Say why, not just that it failed: "UNKNOWN_METRIC: ..." -> the sentence after the code.
+            "narrative": "I couldn't run that question. " + " ".join(
+                e.split(": ", 1)[-1] for e in errors
+            ),
             "dq_warnings": [],
             "why": None,
-            "suggestions": ["Show total revenue", "Revenue by region"],
+            "suggestions": starter_suggestions(semantic),
             "mode": "plan",
             "from_cache": False,
             "llm_stats": STATS.turn_summary(stats_mark),
@@ -267,7 +388,9 @@ def run_ask_pipeline(
 
     if plan.intent == "why":
         # Execute Why Engine
-        metric_name = plan.metric if isinstance(plan.metric, str) else "revenue"
+        metric_name = plan.metric if isinstance(plan.metric, str) else (
+            semantic.metrics[0].name if semantic.metrics else ""
+        )
         candidate_dims = plan.why.dimensions if plan.why and plan.why.dimensions else None
         max_d = plan.why.max_depth if plan.why else 3
 
@@ -305,12 +428,25 @@ def run_ask_pipeline(
 
     # 6. Chart Selection
     metric_format = "currency"
+    metric_additive = True
     if isinstance(plan.metric, str):
         m_obj = next((m for m in semantic.metrics if m.name == plan.metric), None)
         if m_obj:
             metric_format = m_obj.format
+            metric_additive = m_obj.additive
 
-    chart = select_chart(plan, result, metric_format)
+    # The chart type the user asked for ("bar graph", "as a table") is read from
+    # their own words. The planner is never asked for it, and the plan is unchanged.
+    chart_request = parse_chart_request(question)
+    chart = select_chart(
+        plan, result, metric_format,
+        requested=chart_request.kind if chart_request else None,
+        additive=metric_additive,
+    )
+    if chart_request:
+        note = chart_request_note(chart_request, chart["type"])
+        if note and note not in all_assumptions:
+            all_assumptions = all_assumptions + [note]
 
     # 7. Data Quality Warnings
     dq_warnings = match_dq_warnings(plan, semantic)
@@ -326,7 +462,7 @@ def run_ask_pipeline(
         why_result=why_result
     )
 
-    suggestions = generate_suggestions_by_intent(plan)
+    suggestions = generate_suggestions_by_intent(plan, semantic)
 
     # 9. Update & Persist Session
     session.current_plan = plan.model_dump()
@@ -359,7 +495,11 @@ def run_ask_pipeline(
         "mode": "plan"
     }
     # Cache the analysis, not the telemetry - a replay has its own (zero) usage.
-    _DEMO_QUERY_CACHE[cache_key] = dict(resp)
+    # A heuristic-fallback answer is a stand-in for one the LLM failed to plan, and
+    # a follow-up only makes sense against the plan that preceded it. Caching either
+    # would keep replaying the wrong chart long after the cause was fixed.
+    if not used_heuristic_fallback and not planner_out.is_follow_up:
+        _DEMO_QUERY_CACHE[cache_key] = dict(resp)
     resp["from_cache"] = False
     resp["llm_stats"] = STATS.turn_summary(stats_mark)
     resp["llm_totals"] = STATS.summary()

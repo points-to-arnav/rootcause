@@ -4,7 +4,9 @@ from app.semantic.model import ColumnMeta, ColumnRole
 
 ID_PATTERN = re.compile(r"(^|_)(id|key|code|no|number)$", re.IGNORECASE)
 MEASURE_PATTERN = re.compile(
-    r"(amount|price|cost|revenue|sales|total|qty|quantity|units|stock|discount|profit|margin|balance|value|fee|tax|refund)",
+    r"(amount|price|cost|revenue|sales|total|qty|quantity|units|stock|discount|profit|margin|balance|value|fee|tax|refund)"
+    # Whole-word only, so `count` does not match `country`.
+    r"|(?:^|_)(?:count|rate|pct|percent|ratio|latency|spend|duration|volume|clicks|views|visits|hits)(?:_|$)",
     re.IGNORECASE
 )
 NON_ENTITY_PATTERN = re.compile(
@@ -29,12 +31,24 @@ def tag_column(col_name: str, display_name: str, profile: Dict[str, Any], table_
     if dtype in ["DATE", "TIMESTAMP"]:
         role = "time"
 
-    # 2. ID
-    elif (ID_PATTERN.search(col_name) and distinct_ratio >= 0.40) or (distinct == table_row_count and table_row_count > 1):
+    # 2. ID. Being unique in every row is not enough on its own: a small table of
+    # amounts or counts is often all-distinct, and calling those IDs leaves the
+    # dataset with nothing to measure. A float is never a key, and a column named
+    # like a measure (spend, request_count) is a measure whatever its cardinality.
+    elif (ID_PATTERN.search(col_name) and distinct_ratio >= 0.40) or (
+        distinct == table_row_count
+        and table_row_count > 1
+        and dtype != "DOUBLE"
+        and not MEASURE_PATTERN.search(col_name)
+    ):
         role = "id"
 
-    # 3. Measure
-    elif dtype in ["BIGINT", "DOUBLE"] and (MEASURE_PATTERN.search(col_name) or distinct_ratio > 0.05):
+    # 3. Measure. A DOUBLE is a measure however few distinct values it has: rates and
+    # percentages repeat a lot (0.097, 48.8) yet are still things to aggregate, and a
+    # float is almost never a category. Low-cardinality integers stay ambiguous.
+    elif dtype == "DOUBLE" or (
+        dtype == "BIGINT" and (MEASURE_PATTERN.search(col_name) or distinct_ratio > 0.05)
+    ):
         role = "measure"
 
     # 4. Dimension
@@ -42,6 +56,14 @@ def tag_column(col_name: str, display_name: str, profile: Dict[str, Any], table_
         role = "dimension"
     elif dtype in ["BIGINT"] and distinct <= 20 and not MEASURE_PATTERN.search(col_name):
         role = "dimension"
+
+    # A whole-number column that reached here has more than 20 distinct values but
+    # under 5% of the rows (delay_minutes: 94 values in 3,306 rows). It is a number
+    # somebody will want to rank and total, not free text, and calling it text meant
+    # it never became a metric - so a question about it could only be answered by
+    # substituting some other measure.
+    elif dtype == "BIGINT":
+        role = "measure"
 
     # 5. Text / Entity
     else:

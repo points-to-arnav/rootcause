@@ -1,8 +1,41 @@
+import re
 from datetime import date
 from typing import Any, Dict, List, Optional, Tuple
 from app.planner.plan_schema import Plan, AdHocMetric
 from app.semantic.model import Metric, SemanticLayer
 from app.semantic.join_graph import JoinGraph
+
+# A metric that is one aggregate over one column: SUM("t"."c"), AVG("t"."c")...
+_COLUMN_AGGREGATE = re.compile(r'^(?:SUM|AVG|MIN|MAX)\(\s*"([^"]+)"\s*\.\s*"([^"]+)"\s*\)$', re.IGNORECASE)
+
+
+def record_sort_column(plan: Plan, semantic: SemanticLayer, fact_table: str) -> Optional[Tuple[str, str]]:
+    """
+    The (table, column) a record-level plan is ordered by, or None when it cannot be.
+
+    "Top 10 records by delay_minutes" is a `detail` plan whose metric is delay_minutes:
+    the metric names the column to rank, and this recovers that column from the
+    metric's definition. Only a metric that is a plain aggregate of a column on the
+    fact table qualifies - the ratio of two aggregates (average order value) has no
+    per-record value to order by.
+    """
+    table_column: Optional[Tuple[str, str]] = None
+
+    if isinstance(plan.metric, AdHocMetric):
+        if "." in plan.metric.column:
+            table_column = tuple(plan.metric.column.split(".", 1))  # type: ignore[assignment]
+    elif isinstance(plan.metric, str):
+        metric = next((m for m in semantic.metrics if m.name == plan.metric), None)
+        match = _COLUMN_AGGREGATE.match(metric.expr.strip()) if metric else None
+        if match:
+            table_column = (match.group(1), match.group(2))
+
+    if not table_column:
+        return None
+    table, column = table_column
+    if table != fact_table or table not in semantic.tables or column not in semantic.tables[table].columns:
+        return None
+    return table, column
 
 
 def period_expr(metric_obj: Optional[Metric], metric_expr: str, cond_sql: str) -> str:
@@ -37,9 +70,11 @@ def compile_plan_to_sql(
             metric_obj = m
             break
 
-    fact_table = metric_obj.table if metric_obj else "sales"
+    fact_table = metric_obj.table if metric_obj else semantic.fact_table
     if fact_table not in semantic.tables:
-        fact_table = "sales"
+        fact_table = semantic.fact_table
+    if not fact_table:
+        raise ValueError("This dataset has no tables to query.")
 
     # Primary time column
     time_col = None
@@ -50,7 +85,9 @@ def compile_plan_to_sql(
     elif semantic.time.primary_column:
         time_col = semantic.time.primary_column
     else:
-        time_col = f"{fact_table}.order_date"
+        # Never invent a column: guessing `order_date` is what made every non-retail
+        # dataset fail with a missing-table or missing-column error.
+        raise ValueError("This dataset has no date column, so a time window cannot be applied.")
 
     t_tbl, t_col = time_col.split(".", 1)
 
@@ -126,7 +163,9 @@ def compile_plan_to_sql(
             m_tbl, m_col = plan.metric.column.split(".", 1)
             metric_expr = f'{agg_fn}("{m_tbl}"."{m_col}")'
     else:
-        metric_expr = f'SUM("{fact_table}"."amount")'
+        # No metric resolved (only reachable for intents that do not aggregate one).
+        # A row count is valid on any table, unlike a column named `amount`.
+        metric_expr = "COUNT(*)"
 
     metric_alias = metric_name or "metric_val"
 
@@ -316,11 +355,28 @@ def compile_plan_to_sql(
         else:
             cols_select.append(f'"{fact_table}".*')
 
+        # "Top / bottom N records by <column>": order by the metric's column, and lead
+        # with it so the ranked value is the first thing in every row. A plan with no
+        # sort, or a metric that is not one column, keeps the original unordered listing.
+        order_clause = ""
+        sort_column = (
+            record_sort_column(plan, semantic, fact_table)
+            if plan.sort and plan.sort.by == "metric" else None
+        )
+        if sort_column:
+            ref = f'"{sort_column[0]}"."{sort_column[1]}"'
+            if plan.dimensions:
+                cols_select = [ref] + [c for c in cols_select if c != ref]
+            direction = "ASC" if plan.sort.dir == "asc" else "DESC"
+            # rowid breaks ties, so the same question always returns the same rows.
+            order_clause = f'ORDER BY {ref} {direction} NULLS LAST, "{fact_table}".rowid'
+
         sql = f'''
         SELECT {", ".join(cols_select)}
         FROM "{fact_table}"
         {joins_clause}
         {where_clause}
+        {order_clause}
         LIMIT {limit_val}
         '''
         return sql.strip(), tuple(params)

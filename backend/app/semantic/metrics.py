@@ -1,5 +1,83 @@
+import re
 from typing import Any, Dict, List
 from app.semantic.model import Metric, TableMeta
+
+# Column-name vocabulary for datasets that are not retail. Whole words only.
+_WORDS = r"(?:^|_)(?:{})(?:_|$)"
+# Quantities that describe a level or a proportion, so summing rows is meaningless.
+_AVERAGE_NAME = re.compile(
+    _WORDS.format("rate|pct|percent|percentage|ratio|latency|utilization|utilisation|avg|average|mean|score|rating|price|temperature"),
+    re.IGNORECASE,
+)
+_PERCENT_NAME = re.compile(
+    _WORDS.format("rate|pct|percent|percentage|ratio|utilization|utilisation|share"), re.IGNORECASE
+)
+_MONEY_NAME = re.compile(
+    _WORDS.format("spend|cost|revenue|amount|price|usd|eur|gbp|inr|sales|profit|margin|fee|tax|refund|salary|budget|income|expense"),
+    re.IGNORECASE,
+)
+_UNIT_SUFFIX = re.compile(r"_(?:usd|eur|gbp|inr|pct|percent|ms|s)$", re.IGNORECASE)
+
+
+def _generic_metrics(fact_table: str, fact_meta: TableMeta, time_column: Any) -> List[Metric]:
+    """
+    One metric per measure column, for datasets whose columns the retail rules do
+    not recognise (cloud usage, HR, support tickets...).
+
+    A rate, percentage or latency is averaged and marked non-additive, so the Why
+    engine refuses to decompose it rather than summing something meaningless
+    (project rule 10). Everything else is summed. A row count is always offered.
+    """
+    metrics: List[Metric] = []
+    sums: List[Metric] = []
+    averages: List[Metric] = []
+
+    for cname, cmeta in fact_meta.columns.items():
+        if cmeta.role != "measure":
+            continue
+
+        spaced = cname.replace("_", " ")
+        stripped = _UNIT_SUFFIX.sub("", cname).replace("_", " ")
+        synonyms = [s for s in dict.fromkeys([spaced, stripped, cmeta.display_name.lower()]) if s != cname]
+        is_average = bool(_AVERAGE_NAME.search(cname))
+
+        if is_average:
+            fmt = "percent" if _PERCENT_NAME.search(cname) else ("currency" if _MONEY_NAME.search(cname) else "number")
+        else:
+            fmt = "currency" if _MONEY_NAME.search(cname) else ("count" if cmeta.dtype == "BIGINT" else "number")
+
+        metric = Metric(
+            name=cname,
+            # Keep a header a person wrote ("Cloud Spend"); humanise a raw snake_case one.
+            label=spaced.capitalize() if cmeta.display_name == cname else cmeta.display_name,
+            table=fact_table,
+            expr=f'{"AVG" if is_average else "SUM"}("{fact_table}"."{cname}")',
+            additive=not is_average,
+            format=fmt,
+            time_behavior="flow",
+            time_column=time_column,
+            synonyms=synonyms,
+            description=f'{"Average" if is_average else "Total"} {stripped or spaced}',
+        )
+        (averages if is_average else sums).append(metric)
+
+    metrics.extend(sums + averages)
+
+    if "records" not in fact_meta.columns:
+        metrics.append(Metric(
+            name="records",
+            label="Records",
+            table=fact_table,
+            expr="COUNT(*)",
+            additive=True,
+            format="count",
+            time_behavior="flow",
+            time_column=time_column,
+            synonyms=["rows", "row count", "count", "number of records", "entries"],
+            description="Number of rows",
+        ))
+    return metrics
+
 
 def register_metrics(tables: Dict[str, TableMeta], fact_table: str) -> List[Metric]:
     """
@@ -100,6 +178,11 @@ def register_metrics(tables: Dict[str, TableMeta], fact_table: str) -> List[Metr
             synonyms=["aov", "average basket", "ticket size"],
             description="Average revenue generated per order"
         ))
+
+    # Nothing above matched, so this is not retail-shaped data: derive metrics from
+    # the columns themselves rather than leaving the dataset with none.
+    if not metrics:
+        metrics.extend(_generic_metrics(fact_table, fact_meta, fact_time_col))
 
     # 5. Returns / Refunds (if returns table exists)
     if "returns" in tables:

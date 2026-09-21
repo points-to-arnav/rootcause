@@ -19,6 +19,23 @@ The selector receives the executed `Plan`, the result columns with their kinds, 
 | 9 | 2 dimensions + measure | `bar` grouped by the second dimension (up to 6 groups), otherwise `table` | |
 | 10 | anything else | `table` | |
 
+**Requested chart type.** The LLM still does not choose charts, but the *user* can. `viz/chart_request.py` reads an explicit type from the question text ("bar graph", "horizontal bar chart", "line chart", "as a table"); `select_chart(..., requested=)` honours it whenever the result's shape can carry it:
+
+| Asked for | Shape | Result |
+|---|---|---|
+| bar | time series, or time + dimension | vertical bars, chronological (never flipped horizontal) |
+| bar | breakdown / ranking | the selector's own `bar` / `bar_h` choice (both are bar graphs) |
+| horizontal bar | any 2-column result | `bar_h` |
+| line | time series | `line` |
+| line | category breakdown | not forced (a line implies an order): bars, with a note |
+| table | anything except `why` and a single figure | `table` (the UI opens on the table view) |
+| bar / line | single figure, `why` | `kpi` / `contribution` unchanged; a note says why |
+| pie, donut, scatter, heatmap... | any | bars, with a note that the type is unavailable |
+
+Whenever what is drawn differs from what was asked, one sentence is added to `assumptions` (never silently ignored). The plan schema and API contract are unchanged.
+
+**Period + dimension + measure** (three columns from a `trend` with a dimension) draws one series per dimension value: lines by default, grouped bars when bars are requested. More than 6 series: top 5 plus "Other" for an additive measure; a `table` for a non-additive one (an average cannot be summed).
+
 **Ordinal dimensions** (keep natural order instead of sorting by value): month names, weekdays, quarters, numeric bins, years, ratings.
 
 **Always:** a table view is available as a toggle (`ResultTable`). No pie or donut charts by default.

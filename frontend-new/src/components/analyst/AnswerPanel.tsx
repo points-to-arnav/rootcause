@@ -16,7 +16,10 @@ interface AnswerPanelProps {
 }
 
 export function AnswerPanel({ response, onAsk }: AnswerPanelProps) {
-  const [view, setView] = useState<'chart' | 'table'>('chart');
+  // A question that asked for a table, or a result no chart can carry, opens as one.
+  const [view, setView] = useState<'chart' | 'table'>(
+    response.chart?.type === 'table' ? 'table' : 'chart',
+  );
 
   const rows = response.result?.rows ?? [];
   const hasRows = rows.length > 0;
