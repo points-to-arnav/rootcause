@@ -144,6 +144,17 @@ def warmup_on_startup():
         logger.info("Warmup: Demo dataset 'ds_retail_sample' pre-loaded and ready.")
 
     available = [p["id"] for p in provider_status() if p["available"]]
+    if available and settings.LLM_PROVIDER not in available:
+        # The default is openrouter, whose chain never reaches claude_code, so with
+        # no keys and the Claude CLI installed every question silently fell to the
+        # heuristic planner. Start on a provider that can actually answer instead.
+        logger.warning(
+            "Configured LLM provider '%s' is not usable; starting on '%s' instead. "
+            "Set LLM_PROVIDER in backend/.env to choose explicitly.",
+            settings.LLM_PROVIDER, available[0],
+        )
+        settings.LLM_PROVIDER = available[0]
+
     if available:
         logger.info("LLM providers available: %s (active: %s)",
                     ", ".join(available), settings.LLM_PROVIDER)

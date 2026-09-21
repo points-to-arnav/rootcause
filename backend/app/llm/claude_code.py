@@ -6,7 +6,7 @@ model's text plus its real token usage. This uses whatever credentials the CLI i
 already logged in with, so it needs no API key in .env.
 
 Two things keep the call cheap and predictable:
-  * --system-prompt replaces Claude Code's own ~40k-token harness prompt with ours.
+  * --system-prompt-file replaces Claude Code's own ~40k-token harness prompt with ours.
   * every built-in tool is disabled — this is a text-in/text-out call, and a planner
     that could read the filesystem is both slower and a liability.
 
@@ -15,8 +15,10 @@ same dataset report cache_read_input_tokens instead of cache_creation_input_toke
 """
 import json
 import logging
+import os
 import shutil
 import subprocess
+import tempfile
 import time
 from typing import Any, Dict, Optional, Tuple
 
@@ -49,7 +51,6 @@ def resolve_binary() -> Optional[str]:
 
 
 def _looks_like_path(value: str) -> bool:
-    import os
     return os.path.sep in value and os.path.exists(value)
 
 
@@ -72,35 +73,50 @@ def complete(
     chosen_model = model or settings.CLAUDE_CODE_MODEL
     limit = timeout or settings.CLAUDE_CODE_TIMEOUT_S
 
-    cmd = [
-        binary,
-        "--print",
-        "--output-format", "json",
-        "--model", chosen_model,
-        "--system-prompt", system_prompt,
-        "--disallowed-tools", *_DENIED_TOOLS,
-        "--strict-mcp-config",
-        "--disable-slash-commands",
-        "--setting-sources", "",
-    ]
-
-    start = time.time()
+    # Neither prompt may travel on the command line. On Windows the `claude` shim
+    # is a .cmd file run through cmd.exe, which rejects anything over ~8,000
+    # characters with "The command line is too long" - and the planner prompt plus
+    # dataset context is several times that. The user prompt goes in on stdin and
+    # the system prompt through a file. The CLI still caches it by content.
+    prompt_file = tempfile.NamedTemporaryFile(
+        "w", suffix=".md", prefix="rootcause_system_", delete=False, encoding="utf-8"
+    )
     try:
-        # The prompt goes in on stdin: schema dumps routinely exceed the Windows
-        # command-line length limit when passed as an argument.
-        proc = subprocess.run(
-            cmd,
-            input=user_prompt,
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-            timeout=limit,
-        )
-    except subprocess.TimeoutExpired as exc:
-        raise ClaudeCodeUnavailable(f"Claude Code CLI timed out after {limit}s.") from exc
-    except OSError as exc:
-        raise ClaudeCodeUnavailable(f"Could not run the Claude Code CLI: {exc}") from exc
+        with prompt_file:
+            prompt_file.write(system_prompt)
+
+        cmd = [
+            binary,
+            "--print",
+            "--output-format", "json",
+            "--model", chosen_model,
+            "--system-prompt-file", prompt_file.name,
+            "--disallowed-tools", *_DENIED_TOOLS,
+            "--strict-mcp-config",
+            "--disable-slash-commands",
+            "--setting-sources", "",
+        ]
+
+        start = time.time()
+        try:
+            proc = subprocess.run(
+                cmd,
+                input=user_prompt,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                timeout=limit,
+            )
+        except subprocess.TimeoutExpired as exc:
+            raise ClaudeCodeUnavailable(f"Claude Code CLI timed out after {limit}s.") from exc
+        except OSError as exc:
+            raise ClaudeCodeUnavailable(f"Could not run the Claude Code CLI: {exc}") from exc
+    finally:
+        try:
+            os.unlink(prompt_file.name)
+        except OSError:
+            logger.debug("Could not remove temp prompt file %s", prompt_file.name)
 
     elapsed = time.time() - start
 
